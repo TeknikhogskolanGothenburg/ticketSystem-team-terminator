@@ -21,8 +21,8 @@ namespace TicketApi.Controllers
         }
 
         // GET: api/Ticket/5
-        [HttpGet("{Search}", Name = "Get")]
-        public List<Venue> Get(string Search)
+        [HttpGet("{Search}",Name ="Get")]
+        public List<Venue> GetVenues(string Search)
         {
             ITicketDatabase test = new TicketDatabase();
 
@@ -33,8 +33,10 @@ namespace TicketApi.Controllers
         
         // POST: api/Ticket
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Venue value)
         {
+            ITicketDatabase test = new TicketDatabase();
+            test.VenueAdd(value.VenueName, value.Address, value.City, value.Country);
         }
         
         // PUT: api/Ticket/5

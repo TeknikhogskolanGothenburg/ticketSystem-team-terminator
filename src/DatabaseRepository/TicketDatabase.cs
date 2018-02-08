@@ -9,9 +9,10 @@ namespace TicketSystem.DatabaseRepository
 {
     public class TicketDatabase : ITicketDatabase
     {
+        private readonly string CONN = @"Server=localhost\SQLEXPRESS;Database=TicketSystem;Trusted_Connection=True;";
         public TicketEvent EventAdd(string name, string description)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
+            string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -23,7 +24,7 @@ namespace TicketSystem.DatabaseRepository
 
         public Venue VenueAdd(string name, string address, string city, string country)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
+            string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -35,7 +36,7 @@ namespace TicketSystem.DatabaseRepository
 
         public List<Venue> VenuesFind(string query)
         {
-            string connectionString = @"Server=localhost\SQLEXPRESS;Database=TicketSystem;Trusted_Connection=True;";    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
