@@ -10,7 +10,7 @@ using TicketSystem.DatabaseRepository.Model;
 namespace TicketApi.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Ticket")]
+    [Route("api/Venue")]
     public class VenuesController : Controller
     {
         // GET: api/Ticket
