@@ -35,7 +35,7 @@ namespace TicketSystem.DatabaseRepository
 
         public List<Venue> VenuesFind(string query)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
+            string connectionString = @"Server=localhost\SQLEXPRESS;Database=TicketSystem;Trusted_Connection=True;";    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
