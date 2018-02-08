@@ -40,9 +40,12 @@ namespace TicketApi.Controllers
         }
         
         // PUT: api/Ticket/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        [HttpPut]
+        public void Put( [FromBody]Venue a)
         {
+            ITicketDatabase test = new TicketDatabase();
+            test.VenueUpdate(a);
+
         }
         
         // DELETE: api/ApiWithActions/5
