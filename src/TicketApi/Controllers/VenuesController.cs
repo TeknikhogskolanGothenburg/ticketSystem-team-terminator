@@ -13,12 +13,13 @@ namespace TicketApi.Controllers
     [Route("api/Venues")]
     public class VenuesController : Controller
     {
+        ITicketDatabase test = new TicketDatabase();
         // GET: api/Ticket
         [HttpGet]
         public IEnumerable<Venue> Get()
         {
             // GET: api/Ticket
-            ITicketDatabase test = new TicketDatabase();
+            
             return test.VenuesAll();
                 
         }
@@ -27,7 +28,7 @@ namespace TicketApi.Controllers
         [HttpGet("{Search}", Name = "Get")]
         public List<Venue> GetVenues(string Search)
         {
-            ITicketDatabase test = new TicketDatabase();
+            
 
 
             return test.VenuesFind(Search);
@@ -38,7 +39,7 @@ namespace TicketApi.Controllers
         [HttpPost]
         public void Post([FromBody]Venue value)
         {
-            ITicketDatabase test = new TicketDatabase();
+           
             test.VenueAdd(value.VenueName, value.Address, value.City, value.Country);
         }
         
@@ -46,7 +47,7 @@ namespace TicketApi.Controllers
         [HttpPut]
         public void Put( [FromBody]Venue a)
         {
-            ITicketDatabase test = new TicketDatabase();
+            
             test.VenueUpdate(a);
 
         }
@@ -55,7 +56,7 @@ namespace TicketApi.Controllers
         [HttpDelete("{id}", Name = "Delete")]
         public void Delete(int id)
         {
-            ITicketDatabase test = new TicketDatabase();
+           
             test.VenueDelete(id);
         }
     }
