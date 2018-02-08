@@ -30,6 +30,11 @@ namespace TicketSystem.DatabaseRepository
         /// <param name="query">A text which is user i looking for in the venues</param>
         /// <returns>A list of venus matching the query</returns>
         List<Venue> VenuesFind(string query);
+
+        List<Venue> VenuesAll();
+
         void VenueUpdate(Venue venue);
+
+        void VenueDelete(int id);
     }
 }

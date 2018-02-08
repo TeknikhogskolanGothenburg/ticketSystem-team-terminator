@@ -53,5 +53,25 @@ namespace TicketSystem.DatabaseRepository
                 return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueName like '%"+query+ "%' OR Address like '%" + query + "%' OR City like '%" + query + "%' OR Country like '%" + query + "%'").ToList();
             }
         }
+
+        public List<Venue> VenuesAll()
+        {
+            string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                return connection.Query<Venue>("SELECT * FROM Venues").ToList();
+            }
+        }
+
+        public void VenueDelete(int id)
+        {
+            string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                connection.Query("DELETE FROM Venues WHERE VenueID = @ID", new { ID = id });
+            }
+        }
     }
 }

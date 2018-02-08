@@ -19,7 +19,7 @@ namespace TicketApi.Controllers
         }
 
         // GET: api/TicketEventDate/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet]
         public string Get(int id)
         {
             return "value";
@@ -32,13 +32,13 @@ namespace TicketApi.Controllers
         }
         
         // PUT: api/TicketEventDate/5
-        [HttpPut("{id}")]
+        [HttpPut]
         public void Put(int id, [FromBody]string value)
         {
         }
         
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public void Delete(int id)
         {
         }

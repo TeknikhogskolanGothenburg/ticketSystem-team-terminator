@@ -18,14 +18,14 @@ namespace TicketApi.Controllers
             }
         }
         // GET api/values //
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return test;
-        }
+        //[HttpGet]
+        //public IEnumerable<string> Get()
+        //{
+        //    return test;
+        //}
 
         // GET api/values/5
-        [HttpGet("{id}")]
+        [HttpGet]
         public string Get(int id)
         {
             try

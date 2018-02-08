@@ -10,18 +10,21 @@ using TicketSystem.DatabaseRepository.Model;
 namespace TicketApi.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Venue")]
+    [Route("api/Venues")]
     public class VenuesController : Controller
     {
         // GET: api/Ticket
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Venue> Get()
         {
-            return new string[] { "value1", "value2" };
+            // GET: api/Ticket
+            ITicketDatabase test = new TicketDatabase();
+            return test.VenuesAll();
+                
         }
 
         // GET: api/Ticket/5
-        [HttpGet("{Search}",Name ="Get")]
+        [HttpGet("{Search}", Name = "Get")]
         public List<Venue> GetVenues(string Search)
         {
             ITicketDatabase test = new TicketDatabase();
@@ -49,9 +52,11 @@ namespace TicketApi.Controllers
         }
         
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}", Name = "Delete")]
         public void Delete(int id)
         {
+            ITicketDatabase test = new TicketDatabase();
+            test.VenueDelete(id);
         }
     }
 }
