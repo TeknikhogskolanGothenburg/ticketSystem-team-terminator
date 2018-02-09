@@ -28,11 +28,7 @@ namespace TicketApi.Controllers
         [HttpGet("{Search}", Name = "Get")]
         public List<Venue> GetVenues(string Search)
         {
-            
-
-
             return test.VenuesFind(Search);
-
         }
         
         // POST: api/Ticket

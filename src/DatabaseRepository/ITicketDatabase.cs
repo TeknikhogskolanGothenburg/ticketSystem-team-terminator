@@ -13,6 +13,11 @@ namespace TicketSystem.DatabaseRepository
         /// <returns>An object representing the newly created TicketEvent</returns>
         TicketEvent EventAdd(string name, string description);
 
+        List<TicketEvent> AllEvents();
+        List<TicketEvent> EventsFind(string query);
+
+
+
         /// <summary>
         /// Add a new venue to the database
         /// </summary>

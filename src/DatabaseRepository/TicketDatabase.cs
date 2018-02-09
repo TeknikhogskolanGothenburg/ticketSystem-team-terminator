@@ -10,6 +10,17 @@ namespace TicketSystem.DatabaseRepository
     public class TicketDatabase : ITicketDatabase
     {
         private readonly string CONN = @"Server=localhost\SQLEXPRESS;Database=TicketSystem;Trusted_Connection=True;";
+
+        public List<TicketEvent> AllEvents()
+        {
+            string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                return connection.Query<TicketEvent>("SELECT * FROM Events").ToList();
+            }
+        }
+
         public TicketEvent EventAdd(string name, string description)
         {
             string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
@@ -21,6 +32,17 @@ namespace TicketSystem.DatabaseRepository
                 return connection.Query<TicketEvent>("SELECT * FROM TicketEvents WHERE TicketEventID=@Id", new { Id = addedEventQuery }).First();
             }
         }
+
+        public List<TicketEvent> EventsFind(string query)
+        {
+            string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                return connection.Query<TicketEvent>("SELECT * FROM TicketEvents WHERE EventName like '%" + query + "%' OR EventHtmlDescription like '%" + query + "%'").ToList();
+            }
+        }
+
 
         public Venue VenueAdd(string name, string address, string city, string country)
         {

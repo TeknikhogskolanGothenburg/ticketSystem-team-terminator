@@ -4,29 +4,31 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TicketSystem.DatabaseRepository;
 using TicketSystem.DatabaseRepository.Model;
 
 namespace TicketApi.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Ticket")]
+    [Route("api/TicketEvent")]
     public class TicketEventController : Controller
     {
+        ITicketDatabase test = new TicketDatabase();
         // GET: api/Ticket
         [HttpGet]
-        //public List<TicketEvent> Get()
-        //{
-        //    return;
-        //}
-       ///
+        public List<TicketEvent> Get()
+        {
+            return test.AllEvents();
+        }
+
 
         // GET: api/Ticket/5
-        [HttpGet]
-        public string Get(int id)
+        [HttpGet("{Search}", Name = "Get")]
+        public List<TicketEvent> GetVenues(string Search)
         {
-            return "value";
+            return test.EventsFind(Search);
         }
-        
+
         // POST: api/Ticket
         [HttpPost]
         public void Post([FromBody]string value)
