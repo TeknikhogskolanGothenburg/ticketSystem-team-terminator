@@ -11,6 +11,7 @@ namespace TicketSystem.DatabaseRepository
     {
         private readonly string CONN = @"Server=localhost\SQLEXPRESS;Database=TicketSystem;Trusted_Connection=True;";
 
+        // Adriana
         public List<TicketEvent> AllEvents()
         {
             string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
@@ -44,6 +45,9 @@ namespace TicketSystem.DatabaseRepository
         }
 
 
+
+
+        //Venue Methods
         public Venue VenueAdd(string name, string address, string city, string country)
         {
             string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/

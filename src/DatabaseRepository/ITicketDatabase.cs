@@ -5,6 +5,7 @@ namespace TicketSystem.DatabaseRepository
 {
     public interface ITicketDatabase
     {
+        // Start Adriana 
         /// <summary>
         /// Add a new Event to the database
         /// </summary>
@@ -15,7 +16,7 @@ namespace TicketSystem.DatabaseRepository
 
         List<TicketEvent> AllEvents();
         List<TicketEvent> EventsFind(string query);
-
+        // Slut Adriana
 
 
         /// <summary>
