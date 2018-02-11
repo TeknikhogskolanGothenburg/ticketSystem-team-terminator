@@ -7,22 +7,24 @@ using TicketSystem.DatabaseRepository.Model;
 
 namespace TicketSystem.DatabaseRepository
 {
-    public class TicketDatabase : ITicketDatabase
+    public class Database : IDatabaseInterface
+
     {
         private readonly string CONN = @"Server=localhost\SQLEXPRESS;Database=TicketSystem;Trusted_Connection=True;";
 
         // Adriana
-        public List<TicketEvent> AllEvents()
+        public List<TicketEvent> FindEvent()
         {
             string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                return connection.Query<TicketEvent>("SELECT * FROM Events").ToList();
+                return connection.Query<TicketEvent>("SELECT * FROM TicketEvents").ToList();
             }
         }
 
-        public TicketEvent EventAdd(string name, string description)
+        // Här Behövs bara en VOid eller Bool 
+        public void EventAdd(string name, string description)
         {
             string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
@@ -30,11 +32,11 @@ namespace TicketSystem.DatabaseRepository
                 connection.Open();
                 connection.Query("insert into TicketEvents(EventName, EventHtmlDescription) values(@Name, @Description)", new { Name = name, Description = description });
                 var addedEventQuery = connection.Query<int>("SELECT IDENT_CURRENT ('TicketEvents') AS Current_Identity").First();
-                return connection.Query<TicketEvent>("SELECT * FROM TicketEvents WHERE TicketEventID=@Id", new { Id = addedEventQuery }).First();
+                //return connection.Query<TicketEvent>("SELECT * FROM TicketEvents WHERE TicketEventID=@Id", new { Id = addedEventQuery }).First();
             }
         }
 
-        public List<TicketEvent> EventsFind(string query)
+        public List<TicketEvent> FindEvent(string query)
         {
             string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
@@ -49,7 +51,7 @@ namespace TicketSystem.DatabaseRepository
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                 connection.Query<TicketEvent>("DELETE TicketEvent WHERE Id =" + id);
+                 connection.Query<TicketEvent>("DELETE * TicketEvents WHERE Id =" + id);
             }
         }
         public void EventUpdate(TicketEvent ticketEvent)
@@ -58,10 +60,10 @@ namespace TicketSystem.DatabaseRepository
             {
                 connection.Open();
                 connection.Execute(@"
-                    UPDATE TicketEvents SET EventName = " + ticketEvent.EventName + ","
-                    + "EventHtmlDescription = " + ticketEvent.EventHtmlDescription + ","
-                    + "EventDelete = " + ticketEvent.EventDelete + ","
-                    + "EventUpdate = " + ticketEvent.EventUpdate + " WHERE Id =" + ticketEvent.TicketEventId);
+                    //UPDATE TicketEvents SET EventName = " + ticketEvent.EventName + ","
+                    //+ "EventHtmlDescription = " + ticketEvent.EventHtmlDescription + ","
+                    //+ "EventDelete = " + ticketEvent.EventDelete + ","
+                    //+ "EventUpdate = " + ticketEvent.EventUpdate + " WHERE Id =" + ticketEvent.TicketEventId);
             }
         }
 
@@ -87,7 +89,7 @@ namespace TicketSystem.DatabaseRepository
 
         }
 
-        public TicketEventDate TicketEventDateAdd(int ticketEventDateID, int ticketEventId, int venueId, int eventStartDateTime)
+        public void TicketEventDateAdd(int ticketEventDateID, int ticketEventId, int venueId, int eventStartDateTime)
         {
             string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
@@ -102,7 +104,8 @@ namespace TicketSystem.DatabaseRepository
        ///
 
         //Venue Methods
-        public Venue VenueAdd(string name, string address, string city, string country)
+        // Här räcker det med en void eller bool 
+        public void VenueAdd(string name, string address, string city, string country)
         {
             string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
@@ -110,7 +113,7 @@ namespace TicketSystem.DatabaseRepository
                 connection.Open();
                 connection.Query("insert into Venues([VenueName],[Address],[City],[Country]) values(@Name,@Address, @City, @Country)", new { Name = name, Address= address, City = city, Country = country });
                 var addedVenueQuery = connection.Query<int>("SELECT IDENT_CURRENT ('Venues') AS Current_Identity").First();
-                return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueID=@Id", new { Id = addedVenueQuery }).First();
+                //return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueID=@Id", new { Id = addedVenueQuery }).First();
             }
         }
         public void VenueUpdate(Venue venue)
@@ -125,7 +128,7 @@ namespace TicketSystem.DatabaseRepository
         }
 
 
-        public List<Venue> VenuesFind(string query)
+        public List<Venue> FindVenue(string query)
         {
             string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
@@ -135,7 +138,7 @@ namespace TicketSystem.DatabaseRepository
             }
         }
 
-        public List<Venue> VenuesAll()
+        public List<Venue> FindVenue()
         {
             string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))

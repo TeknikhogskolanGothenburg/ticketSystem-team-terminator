@@ -13,32 +13,32 @@ namespace TicketApi.Controllers
     [Route("api/TicketEventDate")]
     public class TicketEventDateController : Controller
     {
-        ITicketDatabase test = new TicketDatabase();
+      private  IDatabaseInterface test = new Database();
 
-        // GET: api/TicketEventDate
-        [HttpGet]
-        public IEnumerable<TicketEventDate> Get()
+        //// GET: api/TicketEventDate
+        //[HttpGet]
+        //public IEnumerable<TicketEventDate> Get()
 
-        {
-            return test.TicketEventDateAll();
-        }
+        //{
+        //    return test.TicketEventDateAll();
+        //}
 
-        // GET: api/TicketEventDate/5
+        //// GET: api/TicketEventDate/5
 
-        [HttpGet("{Search}", Name = "Get")]
-        public List<TicketEventDate> GetTicketEventDate(string Search)
-        {
-            return test.TicketEventDateFind(Search);
+        //[HttpGet("{Search}", Name = "Get")]
+        //public List<TicketEventDate> GetTicketEventDate(string Search)
+        //{
+        //    return test.TicketEventDateFind(Search);
 
-        }
+        //}
 
-        // POST: api/TicketEventDate
-        [HttpPost]
-        public void Post([FromBody]TicketEventDate value)
-        {
-            test.TicketEventDateAdd(value.TicketEventDateID, value.TicketEventID, value.VenueId, value.EventStartDateTime);
+        //// POST: api/TicketEventDate
+        //[HttpPost]
+        //public void Post([FromBody]TicketEventDate value)
+        //{
+        //    test.TicketEventDateAdd(value.TicketEventDateID, value.TicketEventID, value.VenueId, value.EventStartDateTime);
                 
-          }
+        //  }
         
         // PUT: api/TicketEventDate/5
         [HttpPut]

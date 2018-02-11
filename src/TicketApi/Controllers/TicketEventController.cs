@@ -1,9 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using TicketSystem.DatabaseRepository;
 using TicketSystem.DatabaseRepository.Model;
 
@@ -13,27 +9,27 @@ namespace TicketApi.Controllers
     [Route("api/TicketEvent")]
     public class TicketEventController : Controller
     {
-        ITicketDatabase test = new TicketDatabase();
+       private IDatabaseInterface Event = new Database();
         // GET: api/Ticket
         [HttpGet]
         public List<TicketEvent> Get()
         {
-            return test.AllEvents();
+            return Event.FindEvent();
         }
 
 
         // GET: api/Ticket/5
-        [HttpGet("{Search}", Name = "Get")]
-        public List<TicketEvent> GetVenues(string Search)
+        [HttpGet("{Search}", Name = "GetEvents")]
+        public List<TicketEvent> GetEvents(string Search)
         {
-            return test.EventsFind(Search);
+            return Event.FindEvent(Search);
         }
 
         // POST: api/Ticket
         [HttpPost]
         public void Post([FromBody]TicketEvent value)
         {
-            test.AllEvents();
+            Event.EventAdd(value.EventName,value.EventHtmlDescription);
 
         }
         
@@ -41,14 +37,14 @@ namespace TicketApi.Controllers
         [HttpPut]
         public void Put(int id, [FromBody]TicketEvent a)
         {
-            test.EventUpdate(a); 
+            Event.EventUpdate(a); 
         }
         
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}", Name = "Delete")]
-        public void Delete(string id)
+        [HttpDelete("{id}", Name = "DeleteEvent")]
+        public void DeleteEvent(string id)
         {
-            test.EventDelete(id);
+            Event.EventDelete(id);
                 
         }
     }
