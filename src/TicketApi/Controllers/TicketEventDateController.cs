@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TicketSystem.DatabaseRepository;
+using TicketSystem.DatabaseRepository.Model;
 
 namespace TicketApi.Controllers
 {
@@ -11,25 +13,32 @@ namespace TicketApi.Controllers
     [Route("api/TicketEventDate")]
     public class TicketEventDateController : Controller
     {
+        ITicketDatabase test = new TicketDatabase();
+
         // GET: api/TicketEventDate
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<TicketEventDate> Get()
+
         {
-            return new string[] { "value1", "value2" };
+            return test.TicketEventDateAll();
         }
 
         // GET: api/TicketEventDate/5
-        [HttpGet]
-        public string Get(int id)
+
+        [HttpGet("{Search}", Name = "Get")]
+        public List<TicketEventDate> GetTicketEventDate(string Search)
         {
-            return "value";
+            return test.TicketEventDateFind(Search);
+
         }
-        
+
         // POST: api/TicketEventDate
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post([FromBody]TicketEventDate value)
         {
-        }
+            test.TicketEventDateAdd(value.TicketEventDateID, value.TicketEventID, value.VenueId, value.EventStartDateTime);
+                
+          }
         
         // PUT: api/TicketEventDate/5
         [HttpPut]

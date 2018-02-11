@@ -75,7 +75,31 @@ namespace TicketSystem.DatabaseRepository
              
              */
 
+        // JOAKIM TESTAR
+        public List<TicketEventDate> TicketEventDateFind(string query)
+        {
+            string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                return connection.Query<TicketEventDate>("SELCT * FROM TicketEventDate").ToList();
+            }
 
+        }
+
+        public TicketEventDate TicketEventDateAdd(int ticketEventDateID, int ticketEventId, int venueId, int eventStartDateTime)
+        {
+            string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+
+                connection.Open();
+                connection.Query("insert into TicketEventDate([TicketEventDateID], [TicketEventID], [VenueID], [EventStartDateTime]) values(@TicketEventDateID, @TicketEventID, @VenueID, @EventStartDateTime)");
+            }
+        }
+
+       /// Slut på Joakim testar
+       ///
 
         //Venue Methods
         public Venue VenueAdd(string name, string address, string city, string country)
@@ -99,6 +123,7 @@ namespace TicketSystem.DatabaseRepository
                
             }
         }
+
 
         public List<Venue> VenuesFind(string query)
         {
@@ -128,6 +153,8 @@ namespace TicketSystem.DatabaseRepository
                 connection.Open();
                 connection.Query("DELETE FROM Venues WHERE VenueID = @ID", new { ID = id });
             }
+
         }
+
     }
 }
