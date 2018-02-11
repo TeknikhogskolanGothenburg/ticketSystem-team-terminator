@@ -43,7 +43,37 @@ namespace TicketSystem.DatabaseRepository
                 return connection.Query<TicketEvent>("SELECT * FROM TicketEvents WHERE EventName like '%" + query + "%' OR EventHtmlDescription like '%" + query + "%'").ToList();
             }
         }
+        public void EventDelete(string id)
+        {
+            string connectionString = CONN;
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                 connection.Query<TicketEvent>("DELETE TicketEvent WHERE Id =" + id);
+            }
+        }
+        public void EventUpdate(TicketEvent ticketEvent)
+        {
+            using (var connection = new SqlConnection(CONN))
+            {
+                connection.Open();
+                connection.Execute(@"
+                    UPDATE TicketEvents SET EventName = " + ticketEvent.EventName + ","
+                    + "EventHtmlDescription = " + ticketEvent.EventHtmlDescription + ","
+                    + "EventDelete = " + ticketEvent.EventDelete + ","
+                    + "EventUpdate = " + ticketEvent.EventUpdate + " WHERE Id =" + ticketEvent.TicketEventId);
+            }
+        }
 
+        /*
+          public int TicketEventId { get; set; }
+        public string EventName { get; set; }
+        public string EventHtmlDescription { get; set; }
+        public int EventDelete { get; set; }
+        public string EventUpdate { get; set; }
+             
+             
+             */
 
 
 

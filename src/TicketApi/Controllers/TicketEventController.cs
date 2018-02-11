@@ -31,20 +31,25 @@ namespace TicketApi.Controllers
 
         // POST: api/Ticket
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post([FromBody]TicketEvent value)
         {
+            test.AllEvents();
+
         }
         
         // PUT: api/Ticket/5
         [HttpPut]
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]TicketEvent a)
         {
+            test.EventUpdate(a); 
         }
         
         // DELETE: api/ApiWithActions/5
-        [HttpDelete]
-        public void Delete(int id)
+        [HttpDelete("{id}", Name = "Delete")]
+        public void Delete(string id)
         {
+            test.EventDelete(id);
+                
         }
     }
 }

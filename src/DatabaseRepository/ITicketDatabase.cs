@@ -10,14 +10,17 @@ namespace TicketSystem.DatabaseRepository
         /// Add a new Event to the database
         /// </summary>
         /// <param name="name">Name of the event</param>
+        /// // <param name="id">Id of the event</param>
         /// <param name="description">A desription of the event, html markup of the event is allowed</param>
         /// <returns>An object representing the newly created TicketEvent</returns>
         TicketEvent EventAdd(string name, string description);
 
         List<TicketEvent> AllEvents();
         List<TicketEvent> EventsFind(string query);
+        void EventDelete(string id);
+        void EventUpdate(TicketEvent ticketevent);
         // Slut Adriana
-
+        
 
         /// <summary>
         /// Add a new venue to the database
