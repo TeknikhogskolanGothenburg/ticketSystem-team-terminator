@@ -58,9 +58,9 @@ namespace TicketSystem.DatabaseRepository
         {
             using (var connection = new SqlConnection(CONN))
             {
-                connection.Open();
-                connection.Execute(@"
-                    //UPDATE TicketEvents SET EventName = " + ticketEvent.EventName + ","
+                //connection.Open();
+                //connection.Execute(@"
+                //    //UPDATE TicketEvents SET EventName = " + ticketEvent.EventName + ","
                     //+ "EventHtmlDescription = " + ticketEvent.EventHtmlDescription + ","
                     //+ "EventDelete = " + ticketEvent.EventDelete + ","
                     //+ "EventUpdate = " + ticketEvent.EventUpdate + " WHERE Id =" + ticketEvent.TicketEventId);
