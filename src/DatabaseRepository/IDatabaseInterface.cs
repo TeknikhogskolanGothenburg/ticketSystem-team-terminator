@@ -27,22 +27,13 @@ namespace TicketSystem.DatabaseRepository
         List<int> FindSeatID(int ticketID); //Retunerar en lista av seats
 
 
-
-
-
-
-        //Sorry måste komentera detta tillfälligt du kan ta tillbaka när du jobbar
-        //List<TicketEventDate> TicketEventDateFind(string query);
-        //List<TicketEventDate> TicketEventDateAll();
-
-
-        // Kommenterar detta tilffäligt 
-        //TicketEventDate TicketEventDateAdd(int ticketEventDateId, int ticketEventId, int venueId, time eventStartDateTime);
-
-
-        //void TicketEventDateUpdate(TicketEventDate ticketEventDate);
-
+        ////Metoder för TicketEventDate
+        //List<TicketEventDate> FindTicketEventDate(string query);
+        //List<TicketEventDate> FindTicketEventDate();
         //void TicketEventDateDelete(int id);
-        // Joakim Testar
+        //void TicketEventDateUpdate(TicketEventDate ticketEventDate);
+        //TicketEventDate TicketEventDateAdd(int ticketEventDateId, int ticketEventId, int venueId, int eventStartDateTime);
+
+
     }
 }
