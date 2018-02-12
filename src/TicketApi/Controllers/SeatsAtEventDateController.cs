@@ -11,36 +11,36 @@ namespace TicketApi.Controllers
     [Route("api/SeatsAtEventDate")]
     public class SeatsAtEventDateController : Controller
     {
-        // GET: api/SeatsAtEventDate
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+        //// GET: api/SeatsAtEventDate
+        //[HttpGet]
+        //public IEnumerable<string> Get()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
 
-        // GET: api/SeatsAtEventDate/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        //// GET: api/SeatsAtEventDate/5
+        //[HttpGet("{id}", Name = "Get")]
+        //public string Get(int id)
+        //{
+        //    return "value";
+        //}
         
-        // POST: api/SeatsAtEventDate
-        [HttpPost]
-        public void Post([FromBody]string value)
-        {
-        }
+        //// POST: api/SeatsAtEventDate
+        //[HttpPost]
+        //public void Post([FromBody]string value)
+        //{
+        //}
         
-        // PUT: api/SeatsAtEventDate/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
+        //// PUT: api/SeatsAtEventDate/5
+        //[HttpPut("{id}")]
+        //public void Put(int id, [FromBody]string value)
+        //{
+        //}
         
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+        //// DELETE: api/ApiWithActions/5
+        //[HttpDelete("{id}")]
+        //public void Delete(int id)
+        //{
+        //}
     }
 }

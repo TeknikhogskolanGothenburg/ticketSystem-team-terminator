@@ -9,11 +9,11 @@ namespace TicketSystem.RestApiClient
     {
         // Implemented using RestSharp: http://restsharp.org/
 
-        public List<Ticket> TicketGet()
+        public List<TicketEvent> TicketEventGet( )
         {
-            var client = new RestClient("http://localhost:18001/");
-            var request = new RestRequest("ticket", Method.GET);
-            var response = client.Execute<List<Ticket>>(request);
+            var client = new RestClient("http://localhost:50867/");
+            var request = new RestRequest("api/TicketEvent", Method.GET);
+            var response = client.Execute<List<TicketEvent>>(request);
             return response.Data;
         }
 
