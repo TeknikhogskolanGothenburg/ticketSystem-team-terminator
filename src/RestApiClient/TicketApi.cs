@@ -11,7 +11,7 @@ namespace TicketSystem.RestApiClient
 
         public List<TicketEvent> TicketEventGet( )
         {
-            var client = new RestClient("http://localhost:50867/");
+            var client = new RestClient("http://ticketshopwebapplication20180213124403.azurewebsites.net/");
             var request = new RestRequest("api/TicketEvent", Method.GET);
             var response = client.Execute<List<TicketEvent>>(request);
             return response.Data;
@@ -19,7 +19,7 @@ namespace TicketSystem.RestApiClient
 
         public Ticket TicketTicketIdGet(int ticketId)
         {
-            var client = new RestClient("http://localhost:18001/");
+            var client = new RestClient("http://ticketshopwebapplication20180213124403.azurewebsites.net/");
             var request = new RestRequest("ticket/{id}", Method.GET);
             request.AddUrlSegment("id", ticketId);
             var response = client.Execute<Ticket>(request);
