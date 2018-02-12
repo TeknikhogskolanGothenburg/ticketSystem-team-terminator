@@ -55,5 +55,5 @@ namespace TicketApi.Controllers
 //        {
 //            TicketEventDate.TicketEventDateDelete(id);
 //        }
-//    }
-//}
+   }
+}
