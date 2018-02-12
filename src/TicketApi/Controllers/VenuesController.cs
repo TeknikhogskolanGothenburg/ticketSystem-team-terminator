@@ -40,11 +40,14 @@ namespace TicketApi.Controllers
         }
         
         // PUT: api/Ticket/5
-        [HttpPut]
-        public void Put( [FromBody]Venue a)
+        [HttpPut("{id}")]
+        public void Put( int id, [FromBody]Venue a)
         {
+
             
-            Venue.VenueUpdate(a);
+            
+                Venue.VenueUpdate(id, a.VenueName, a.Address, a.City, a.Country);
+         
 
         }
         

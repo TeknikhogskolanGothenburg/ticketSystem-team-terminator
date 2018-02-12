@@ -116,14 +116,16 @@ namespace TicketSystem.DatabaseRepository
                 //return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueID=@Id", new { Id = addedVenueQuery }).First();
             }
         }
-        public void VenueUpdate(Venue venue)
+        public void VenueUpdate(int id, string name, string address, string city, string country)
         {
             string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                connection.Query("UPDATE Venues SET [VenueName],[Address],[City],[Country] va (@Name,@Address, @City, @Country) WHERE [VenueID] = @ID ", new { Name = venue.VenueName, Address = venue.Address, City = venue.City, Country = venue.Country, ID = venue.VenueId }).First();
-               
+                connection.Query("UPDATE Venues SET [VenueName] = @VenueName, [Address] = @Address,[City] = @City, [Country] = @Country  WHERE [VenueID] = @VenueID; ", new { VenueName = name, Address = address, City = city, Country=country, VenueID = id });
+                
+                
+
             }
         }
 

@@ -16,7 +16,7 @@ namespace TicketSystem.DatabaseRepository
 
         //Metoder för Venues
         void VenueAdd(string name, string address, string city, string country); // Retunerar Inget 
-        void VenueUpdate(Venue venue);  // Retunerar Inget 
+        void VenueUpdate(int id, string name, string address, string city, string country);  // Retunerar Inget 
         void VenueDelete(int id);  // Retunerar Inget 
         List<Venue> FindVenue(string query); //Retunerar en lista av Venue
         List<Venue> FindVenue(); //Retunerar en lista av Venue
