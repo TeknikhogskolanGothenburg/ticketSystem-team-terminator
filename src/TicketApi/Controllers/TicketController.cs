@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TicketSystem.DatabaseRepository;
 
 namespace TicketApi.Controllers
 {
@@ -11,9 +12,10 @@ namespace TicketApi.Controllers
     [Route("api/Ticket")]
     public class TicketController : Controller
     {
+        IDatabaseInterface tb = new Database();
         // GET: api/Ticket
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Ticket> Get()
         {
             return new string[] { "value1", "value2" };
         }

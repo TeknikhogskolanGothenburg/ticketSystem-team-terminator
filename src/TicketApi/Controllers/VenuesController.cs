@@ -14,44 +14,36 @@ namespace TicketApi.Controllers
     public class VenuesController : Controller
     {
        private IDatabaseInterface Venue = new Database();
-        // GET: api/Ticket
+        // GET: api/Venues
         [HttpGet]
         public IEnumerable<Venue> Get()
         {
-            // GET: api/Ticket
-            
-            return Venue.FindVenue();
-                
+            return Venue.FindVenue();                
         }
 
-        // GET: api/Ticket/5
+        // GET: api/Venues/Search
         [HttpGet("{Search}", Name = "GetVenues")]
         public List<Venue> GetVenues(string Search)
         {
             return Venue.FindVenue(Search);
         }
-        
-        // POST: api/Ticket
+
+        // POST: api/Venues
         [HttpPost]
         public void Post([FromBody]Venue value)
         {
            
             Venue.VenueAdd(value.VenueName, value.Address, value.City, value.Country);
         }
-        
-        // PUT: api/Ticket/5
+
+        // PUT: api/Venues
         [HttpPut("{id}")]
         public void Put( int id, [FromBody]Venue a)
-        {
-
-            
-            
+        { 
                 Venue.VenueUpdate(id, a.VenueName, a.Address, a.City, a.Country);
-         
-
         }
-        
-        // DELETE: api/ApiWithActions/5
+
+        // DELETE: api/Venues/5
         [HttpDelete("{id}", Name = "DeleteVenues")]
         public void DeleteVenues(int id)
         {

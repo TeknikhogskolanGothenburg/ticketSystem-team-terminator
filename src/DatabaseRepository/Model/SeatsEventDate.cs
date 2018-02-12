@@ -10,6 +10,6 @@ namespace TicketSystem.DatabaseRepository.Model
     {
         public int SeatID { get; set; }
         [Required]
-        public int TicketEventDay { get; set; }
+        public int TicketEventDayID { get; set; }
     }
 }

@@ -22,10 +22,14 @@ namespace TicketSystem.DatabaseRepository
         List<Venue> FindVenue(); //Retunerar en lista av Venue
 
 
+        //Metoder för Tickets
+        List<int> AllTickets();
+        List<int> FindSeatID(int ticketID); //Retunerar en lista av seats
 
 
 
-       
+
+
 
         //Sorry måste komentera detta tillfälligt du kan ta tillbaka när du jobbar
         //List<TicketEventDate> TicketEventDateFind(string query);

@@ -7,7 +7,7 @@ namespace TicketSystem.DatabaseRepository.Model
 {
     class Ticket
     {
-        public int TycketID { get; set; }
+        public int TicketID { get; set; }
         [Required]
         public int SeatID { get; set; }
     }

@@ -116,19 +116,16 @@ namespace TicketSystem.DatabaseRepository
                 //return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueID=@Id", new { Id = addedVenueQuery }).First();
             }
         }
+
         public void VenueUpdate(int id, string name, string address, string city, string country)
         {
             string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                connection.Query("UPDATE Venues SET [VenueName] = @VenueName, [Address] = @Address,[City] = @City, [Country] = @Country  WHERE [VenueID] = @VenueID; ", new { VenueName = name, Address = address, City = city, Country=country, VenueID = id });
-                
-                
-
+                connection.Query("UPDATE Venues SET [VenueName] = @VenueName, [Address] = @Address,[City] = @City, [Country] = @Country  WHERE [VenueID] = @VenueID; ", new { VenueName = name, Address = address, City = city, Country=country, VenueID = id });                
             }
         }
-
 
         public List<Venue> FindVenue(string query)
         {
@@ -159,6 +156,27 @@ namespace TicketSystem.DatabaseRepository
                 connection.Query("DELETE FROM Venues WHERE VenueID = @ID", new { ID = id });
             }
 
+        }
+
+        //Tickets
+        public List<int> FindSeatID(int ticketID)
+        {
+            string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                return connection.Query<int>("SELECT * FROM Tickets WHERE TicketID = @TicketID", new { TicketID = ticketID }).ToList();
+            }
+        }
+
+        public List<int> AllTickets()
+        {
+            string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                return connection.Query<int>("SELECT * FROM Tickets").ToList();
+            }
         }
 
     }
