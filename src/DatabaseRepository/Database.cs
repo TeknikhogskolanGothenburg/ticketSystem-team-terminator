@@ -51,19 +51,22 @@ namespace TicketSystem.DatabaseRepository
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                 connection.Query<TicketEvent>("DELETE * TicketEvents WHERE Id =" + id);
+                connection.Query<TicketEvent>("DELETE * TicketEvents WHERE TicketId = @ID", new { ID = id });
             }
         }
         public void EventUpdate(TicketEvent ticketEvent)
         {
             using (var connection = new SqlConnection(CONN))
             {
+                connection.Open();
+                connection.Query<TicketEvent>("UPDATE TicketEvent SET TicketEvent [EventName] = @EventName, [EventHtmlDescription] = @EventHtmlDescription WHERE TicketEventID = @TicketEventID", new {EventName = ticketEvent.EventName, EventHtmlDescription = ticketEvent.EventHtmlDescription, TicketEventID = ticketEvent.TicketEventId});
+
                 //connection.Open();
                 //connection.Execute(@"
                 //    //UPDATE TicketEvents SET EventName = " + ticketEvent.EventName + ","
-                    //+ "EventHtmlDescription = " + ticketEvent.EventHtmlDescription + ","
-                    //+ "EventDelete = " + ticketEvent.EventDelete + ","
-                    //+ "EventUpdate = " + ticketEvent.EventUpdate + " WHERE Id =" + ticketEvent.TicketEventId);
+                //+ "EventHtmlDescription = " + ticketEvent.EventHtmlDescription + ","
+                //+ "EventDelete = " + ticketEvent.EventDelete + ","
+                //+ "EventUpdate = " + ticketEvent.EventUpdate + " WHERE Id =" + ticketEvent.TicketEventId);
             }
         }
 
