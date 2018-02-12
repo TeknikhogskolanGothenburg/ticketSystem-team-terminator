@@ -29,8 +29,9 @@ namespace TicketApi.Controllers
         
         // POST: api/Ticket
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post([FromBody]int seatID)
         {
+            ticket.TicketAdd(seatID);
         }
         
         // PUT: api/Ticket/5
