@@ -12,19 +12,19 @@ namespace TicketApi.Controllers
     [Route("api/Ticket")]
     public class TicketController : Controller
     {
-        IDatabaseInterface tb = new Database();
+        IDatabaseInterface ticket = new Database();
         // GET: api/Ticket
         [HttpGet]
-        public IEnumerable<Ticket> Get()
+        public IEnumerable<int> Get()
         {
-            return new string[] { "value1", "value2" };
+            return ticket.AllTickets();
         }
 
         // GET: api/Ticket/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        [HttpGet("{ticketID}", Name = "Get")]
+        public List<int> Get(int ticketId)
         {
-            return "value";
+            return ticket.FindSeatID(ticketId);
         }
         
         // POST: api/Ticket
