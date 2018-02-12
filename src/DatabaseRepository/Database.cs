@@ -213,5 +213,17 @@ namespace TicketSystem.DatabaseRepository
             }
         }
 
+        public void TicketAdd(int seatID)
+        {
+            string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                connection.Query("Insert into Tickets([[SeatID]) values(@SeatID)", new { SeatID = seatID});
+                var addedVenueQuery = connection.Query<int>("SELECT IDENT_CURRENT ('Venues') AS Current_Identity").First();
+                //return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueID=@Id", new { Id = addedVenueQuery }).First();
+            }
+        }
+
     }
 }
