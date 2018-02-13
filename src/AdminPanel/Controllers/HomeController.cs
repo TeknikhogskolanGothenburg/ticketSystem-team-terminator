@@ -28,6 +28,15 @@ namespace AdminPanel.Controllers
 
             return View(Events);
         }
+       
+        public IActionResult CreteEvent()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+
+
 
         public IActionResult About()
         {

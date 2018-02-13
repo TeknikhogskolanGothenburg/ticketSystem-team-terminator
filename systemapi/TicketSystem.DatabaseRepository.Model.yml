@@ -4,7 +4,6 @@ items:
   commentId: N:TicketSystem.DatabaseRepository.Model
   id: TicketSystem.DatabaseRepository.Model
   children:
-  - TicketSystem.DatabaseRepository.Model.Event
   - TicketSystem.DatabaseRepository.Model.TicketEvent
   - TicketSystem.DatabaseRepository.Model.TicketEventDate
   - TicketSystem.DatabaseRepository.Model.Venue
@@ -18,13 +17,6 @@ items:
   assemblies:
   - DatabaseRepository
 references:
-- uid: TicketSystem.DatabaseRepository.Model.Event
-  commentId: T:TicketSystem.DatabaseRepository.Model.Event
-  parent: TicketSystem.DatabaseRepository.Model
-  isExternal: false
-  name: Event
-  nameWithType: Event
-  fullName: TicketSystem.DatabaseRepository.Model.Event
 - uid: TicketSystem.DatabaseRepository.Model.TicketEvent
   commentId: T:TicketSystem.DatabaseRepository.Model.TicketEvent
   parent: TicketSystem.DatabaseRepository.Model
@@ -34,7 +26,6 @@ references:
   fullName: TicketSystem.DatabaseRepository.Model.TicketEvent
 - uid: TicketSystem.DatabaseRepository.Model.TicketEventDate
   commentId: T:TicketSystem.DatabaseRepository.Model.TicketEventDate
-  parent: TicketSystem.DatabaseRepository.Model
   isExternal: false
   name: TicketEventDate
   nameWithType: TicketEventDate

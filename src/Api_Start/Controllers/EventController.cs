@@ -18,12 +18,14 @@ namespace Api_Start.Controllers
         public EventList Get()
         {
             // Skickar ut alla evet
-            EventList AllEvents = new EventList();
-            AllEvents.TicketEvents = DbHandler.FindEvent();
-            AllEvents.Venues = DbHandler.FindVenue();
-            AllEvents.TicketEventDates = DbHandler.FindTicketEventDate();
-            
-           
+            EventList AllEvents = new EventList()
+            {
+                TicketEvents = DbHandler.FindEvent(),
+                Venues = DbHandler.FindVenue(),
+                TicketEventDates = DbHandler.FindTicketEventDate()
+            };
+
+
             return AllEvents;
         }
 
@@ -32,10 +34,12 @@ namespace Api_Start.Controllers
         public EventList Get(string Search)
         {
             /// bara ett test fungerar ej
-            EventList Events = new EventList();
-            Events.TicketEvents = DbHandler.FindEvent(Search);
-            Events.Venues = DbHandler.FindVenue(Search);
-            Events.TicketEventDates = DbHandler.FindTicketEventDate(Search);
+            EventList Events = new EventList()
+            {
+                TicketEvents = DbHandler.FindEvent(Search),
+                Venues = DbHandler.FindVenue(Search),
+                TicketEventDates = DbHandler.FindTicketEventDate(Search)
+            };
             return Events;
         }
         //
@@ -52,6 +56,7 @@ namespace Api_Start.Controllers
                 {
                     DbHandler.SeatsAtEventDateAdd(TicketeventdateID);
                 }
+
             }
             catch
             {

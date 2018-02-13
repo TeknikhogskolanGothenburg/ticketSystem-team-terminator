@@ -17,9 +17,13 @@ items:
   fullName: TicketSystem.DatabaseRepository.Model.TicketEventDate
   type: Class
   source:
+    remote:
+      path: src/DatabaseRepository/Model/TicketEventDate.cs
+      branch: master
+      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: TicketEventDate
-    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\TicketEventDate.cs
-    startLine: 5
+    path: src/DatabaseRepository/Model/TicketEventDate.cs
+    startLine: 4
   assemblies:
   - DatabaseRepository
   namespace: TicketSystem.DatabaseRepository.Model
@@ -54,9 +58,13 @@ items:
   fullName: TicketSystem.DatabaseRepository.Model.TicketEventDate.TicketEventDateID
   type: Property
   source:
+    remote:
+      path: src/DatabaseRepository/Model/TicketEventDate.cs
+      branch: master
+      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: TicketEventDateID
-    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\TicketEventDate.cs
-    startLine: 7
+    path: src/DatabaseRepository/Model/TicketEventDate.cs
+    startLine: 6
   assemblies:
   - DatabaseRepository
   namespace: TicketSystem.DatabaseRepository.Model
@@ -85,29 +93,23 @@ items:
   fullName: TicketSystem.DatabaseRepository.Model.TicketEventDate.TicketEventID
   type: Property
   source:
+    remote:
+      path: src/DatabaseRepository/Model/TicketEventDate.cs
+      branch: master
+      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: TicketEventID
-    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\TicketEventDate.cs
-    startLine: 8
+    path: src/DatabaseRepository/Model/TicketEventDate.cs
+    startLine: 7
   assemblies:
   - DatabaseRepository
   namespace: TicketSystem.DatabaseRepository.Model
   syntax:
-    content: >-
-      [Required]
-
-      public int TicketEventID { get; set; }
+    content: public int TicketEventID { get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: >-
-      <Required>
-
-      Public Property TicketEventID As Integer
+    content.vb: Public Property TicketEventID As Integer
   overload: TicketSystem.DatabaseRepository.Model.TicketEventDate.TicketEventID*
-  attributes:
-  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
-    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - get
@@ -126,29 +128,23 @@ items:
   fullName: TicketSystem.DatabaseRepository.Model.TicketEventDate.VenueId
   type: Property
   source:
+    remote:
+      path: src/DatabaseRepository/Model/TicketEventDate.cs
+      branch: master
+      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: VenueId
-    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\TicketEventDate.cs
-    startLine: 10
+    path: src/DatabaseRepository/Model/TicketEventDate.cs
+    startLine: 8
   assemblies:
   - DatabaseRepository
   namespace: TicketSystem.DatabaseRepository.Model
   syntax:
-    content: >-
-      [Required]
-
-      public int VenueId { get; set; }
+    content: public int VenueId { get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: >-
-      <Required>
-
-      Public Property VenueId As Integer
+    content.vb: Public Property VenueId As Integer
   overload: TicketSystem.DatabaseRepository.Model.TicketEventDate.VenueId*
-  attributes:
-  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
-    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - get
@@ -167,29 +163,23 @@ items:
   fullName: TicketSystem.DatabaseRepository.Model.TicketEventDate.EventStartDateTime
   type: Property
   source:
+    remote:
+      path: src/DatabaseRepository/Model/TicketEventDate.cs
+      branch: master
+      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: EventStartDateTime
-    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\TicketEventDate.cs
-    startLine: 12
+    path: src/DatabaseRepository/Model/TicketEventDate.cs
+    startLine: 9
   assemblies:
   - DatabaseRepository
   namespace: TicketSystem.DatabaseRepository.Model
   syntax:
-    content: >-
-      [Required]
-
-      public DateTime EventStartDateTime { get; set; }
+    content: public DateTime EventStartDateTime { get; set; }
     parameters: []
     return:
       type: System.DateTime
-    content.vb: >-
-      <Required>
-
-      Public Property EventStartDateTime As Date
+    content.vb: Public Property EventStartDateTime As Date
   overload: TicketSystem.DatabaseRepository.Model.TicketEventDate.EventStartDateTime*
-  attributes:
-  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
-    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - get

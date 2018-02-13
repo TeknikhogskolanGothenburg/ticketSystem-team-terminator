@@ -302,23 +302,5 @@ namespace TicketSystem.DatabaseRepository
             }
         }
 
-        public void SeatsAtEventDateAdd(int ticketEventDateID)
-        {
-            string connectionString = CONN;
-            using (var connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                connection.Query("Insert into SeatsAtEventDate([TicketEventDateID]) values (@TicketEventDateID", new { TicketEventDateID = ticketEventDateID } );
-            }
-        }
-        public void TicketsToTransactionsAdd(int TransactionID )
-        {
-            string connectionString = CONN;
-            using (var connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                connection.Query("Insert into TicketsToTransactions([TransactionID]) values (@TransactionID]", new { TransactionID = TransactionID });
-            }
-        }
     }
 }
