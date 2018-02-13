@@ -1,0 +1,137 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel
+  commentId: T:TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel
+  id: IndexModel.InputModel
+  parent: TicketShopWebApplication.Pages.Account.Manage
+  children:
+  - TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel.Email
+  - TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel.PhoneNumber
+  langs:
+  - csharp
+  - vb
+  name: IndexModel.InputModel
+  nameWithType: IndexModel.InputModel
+  fullName: TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel
+  type: Class
+  source:
+    id: InputModel
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\Manage\Index.cshtml.cs
+    startLine: 40
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account.Manage
+  syntax:
+    content: 'public class InputModel : object'
+    content.vb: >-
+      Public Class InputModel
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel.Email
+  commentId: P:TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel.Email
+  id: Email
+  parent: TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel
+  langs:
+  - csharp
+  - vb
+  name: Email
+  nameWithType: IndexModel.InputModel.Email
+  fullName: TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel.Email
+  type: Property
+  source:
+    id: Email
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\Manage\Index.cshtml.cs
+    startLine: 42
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account.Manage
+  syntax:
+    content: public string Email { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Email As String
+  overload: TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel.Email*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel.PhoneNumber
+  commentId: P:TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel.PhoneNumber
+  id: PhoneNumber
+  parent: TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel
+  langs:
+  - csharp
+  - vb
+  name: PhoneNumber
+  nameWithType: IndexModel.InputModel.PhoneNumber
+  fullName: TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel.PhoneNumber
+  type: Property
+  source:
+    id: PhoneNumber
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\Manage\Index.cshtml.cs
+    startLine: 46
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account.Manage
+  syntax:
+    content: public string PhoneNumber { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PhoneNumber As String
+  overload: TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel.PhoneNumber*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketShopWebApplication.Pages.Account.Manage
+  commentId: N:TicketShopWebApplication.Pages.Account.Manage
+  isExternal: false
+  name: TicketShopWebApplication.Pages.Account.Manage
+  nameWithType: TicketShopWebApplication.Pages.Account.Manage
+  fullName: TicketShopWebApplication.Pages.Account.Manage
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel.Email*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel.Email
+  isExternal: false
+  name: Email
+  nameWithType: IndexModel.InputModel.Email
+  fullName: TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel.Email
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel.PhoneNumber*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel.PhoneNumber
+  isExternal: false
+  name: PhoneNumber
+  nameWithType: IndexModel.InputModel.PhoneNumber
+  fullName: TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel.PhoneNumber

@@ -1,0 +1,500 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel
+  commentId: T:TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel
+  id: LoginWithRecoveryCodeModel
+  parent: TicketShopWebApplication.Pages.Account
+  children:
+  - TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.#ctor(SignInManager{TicketShopWebApplication.Data.ApplicationUser},ILogger{TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel})
+  - TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.Input
+  - TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.OnGetAsync(System.String)
+  - TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.OnPostAsync(System.String)
+  - TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.ReturnUrl
+  langs:
+  - csharp
+  - vb
+  name: LoginWithRecoveryCodeModel
+  nameWithType: LoginWithRecoveryCodeModel
+  fullName: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel
+  type: Class
+  source:
+    id: LoginWithRecoveryCodeModel
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\LoginWithRecoveryCode.cshtml.cs
+    startLine: 13
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account
+  syntax:
+    content: 'public class LoginWithRecoveryCodeModel : PageModel'
+    content.vb: >-
+      Public Class LoginWithRecoveryCodeModel
+          Inherits PageModel
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.#ctor(SignInManager{TicketShopWebApplication.Data.ApplicationUser},ILogger{TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel})
+  commentId: M:TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.#ctor(SignInManager{TicketShopWebApplication.Data.ApplicationUser},ILogger{TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel})
+  id: '#ctor(SignInManager{TicketShopWebApplication.Data.ApplicationUser},ILogger{TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel})'
+  parent: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel
+  langs:
+  - csharp
+  - vb
+  name: LoginWithRecoveryCodeModel(SignInManager<ApplicationUser>, ILogger<LoginWithRecoveryCodeModel>)
+  nameWithType: LoginWithRecoveryCodeModel.LoginWithRecoveryCodeModel(SignInManager<ApplicationUser>, ILogger<LoginWithRecoveryCodeModel>)
+  fullName: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.LoginWithRecoveryCodeModel(SignInManager<TicketShopWebApplication.Data.ApplicationUser>, ILogger<TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel>)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\LoginWithRecoveryCode.cshtml.cs
+    startLine: 18
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account
+  syntax:
+    content: public LoginWithRecoveryCodeModel(SignInManager<ApplicationUser> signInManager, ILogger<LoginWithRecoveryCodeModel> logger)
+    parameters:
+    - id: signInManager
+      type: SignInManager{TicketShopWebApplication.Data.ApplicationUser}
+    - id: logger
+      type: ILogger{TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel}
+    content.vb: Public Sub New(signInManager As SignInManager(Of ApplicationUser), logger As ILogger(Of LoginWithRecoveryCodeModel))
+  overload: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.#ctor*
+  nameWithType.vb: LoginWithRecoveryCodeModel.LoginWithRecoveryCodeModel(SignInManager(Of ApplicationUser), ILogger(Of LoginWithRecoveryCodeModel))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.LoginWithRecoveryCodeModel(SignInManager(Of TicketShopWebApplication.Data.ApplicationUser), ILogger(Of TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel))
+  name.vb: LoginWithRecoveryCodeModel(SignInManager(Of ApplicationUser), ILogger(Of LoginWithRecoveryCodeModel))
+- uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.Input
+  commentId: P:TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.Input
+  id: Input
+  parent: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel
+  langs:
+  - csharp
+  - vb
+  name: Input
+  nameWithType: LoginWithRecoveryCodeModel.Input
+  fullName: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.Input
+  type: Property
+  source:
+    id: Input
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\LoginWithRecoveryCode.cshtml.cs
+    startLine: 24
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account
+  syntax:
+    content: public LoginWithRecoveryCodeModel.InputModel Input { get; set; }
+    parameters: []
+    return:
+      type: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.InputModel
+    content.vb: Public Property Input As LoginWithRecoveryCodeModel.InputModel
+  overload: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.Input*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.ReturnUrl
+  commentId: P:TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.ReturnUrl
+  id: ReturnUrl
+  parent: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel
+  langs:
+  - csharp
+  - vb
+  name: ReturnUrl
+  nameWithType: LoginWithRecoveryCodeModel.ReturnUrl
+  fullName: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.ReturnUrl
+  type: Property
+  source:
+    id: ReturnUrl
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\LoginWithRecoveryCode.cshtml.cs
+    startLine: 27
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account
+  syntax:
+    content: public string ReturnUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ReturnUrl As String
+  overload: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.ReturnUrl*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.OnGetAsync(System.String)
+  commentId: M:TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.OnGetAsync(System.String)
+  id: OnGetAsync(System.String)
+  parent: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel
+  langs:
+  - csharp
+  - vb
+  name: OnGetAsync(String)
+  nameWithType: LoginWithRecoveryCodeModel.OnGetAsync(String)
+  fullName: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.OnGetAsync(System.String)
+  type: Method
+  source:
+    id: OnGetAsync
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\LoginWithRecoveryCode.cshtml.cs
+    startLine: 38
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account
+  syntax:
+    content: public Task<IActionResult> OnGetAsync(string returnUrl = null)
+    parameters:
+    - id: returnUrl
+      type: System.String
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function OnGetAsync(returnUrl As String = Nothing) As Task(Of IActionResult)
+  overload: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.OnGetAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.OnPostAsync(System.String)
+  commentId: M:TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.OnPostAsync(System.String)
+  id: OnPostAsync(System.String)
+  parent: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel
+  langs:
+  - csharp
+  - vb
+  name: OnPostAsync(String)
+  nameWithType: LoginWithRecoveryCodeModel.OnPostAsync(String)
+  fullName: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.OnPostAsync(System.String)
+  type: Method
+  source:
+    id: OnPostAsync
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\LoginWithRecoveryCode.cshtml.cs
+    startLine: 52
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account
+  syntax:
+    content: public Task<IActionResult> OnPostAsync(string returnUrl = null)
+    parameters:
+    - id: returnUrl
+      type: System.String
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function OnPostAsync(returnUrl As String = Nothing) As Task(Of IActionResult)
+  overload: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.OnPostAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketShopWebApplication.Pages.Account
+  commentId: N:TicketShopWebApplication.Pages.Account
+  isExternal: false
+  name: TicketShopWebApplication.Pages.Account
+  nameWithType: TicketShopWebApplication.Pages.Account
+  fullName: TicketShopWebApplication.Pages.Account
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.#ctor*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.#ctor
+  isExternal: false
+  name: LoginWithRecoveryCodeModel
+  nameWithType: LoginWithRecoveryCodeModel.LoginWithRecoveryCodeModel
+  fullName: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.LoginWithRecoveryCodeModel
+- uid: SignInManager{TicketShopWebApplication.Data.ApplicationUser}
+  commentId: '!:SignInManager{TicketShopWebApplication.Data.ApplicationUser}'
+  definition: SignInManager`1
+  name: SignInManager<ApplicationUser>
+  nameWithType: SignInManager<ApplicationUser>
+  fullName: SignInManager<TicketShopWebApplication.Data.ApplicationUser>
+  nameWithType.vb: SignInManager(Of ApplicationUser)
+  fullName.vb: SignInManager(Of TicketShopWebApplication.Data.ApplicationUser)
+  name.vb: SignInManager(Of ApplicationUser)
+  spec.csharp:
+  - uid: SignInManager`1
+    name: SignInManager
+    nameWithType: SignInManager
+    fullName: SignInManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketShopWebApplication.Data.ApplicationUser
+    name: ApplicationUser
+    nameWithType: ApplicationUser
+    fullName: TicketShopWebApplication.Data.ApplicationUser
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: SignInManager`1
+    name: SignInManager
+    nameWithType: SignInManager
+    fullName: SignInManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketShopWebApplication.Data.ApplicationUser
+    name: ApplicationUser
+    nameWithType: ApplicationUser
+    fullName: TicketShopWebApplication.Data.ApplicationUser
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ILogger{TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel}
+  commentId: '!:ILogger{TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel}'
+  definition: ILogger`1
+  name: ILogger<LoginWithRecoveryCodeModel>
+  nameWithType: ILogger<LoginWithRecoveryCodeModel>
+  fullName: ILogger<TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel>
+  nameWithType.vb: ILogger(Of LoginWithRecoveryCodeModel)
+  fullName.vb: ILogger(Of TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel)
+  name.vb: ILogger(Of LoginWithRecoveryCodeModel)
+  spec.csharp:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel
+    name: LoginWithRecoveryCodeModel
+    nameWithType: LoginWithRecoveryCodeModel
+    fullName: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel
+    name: LoginWithRecoveryCodeModel
+    nameWithType: LoginWithRecoveryCodeModel
+    fullName: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SignInManager`1
+  isExternal: true
+  name: SignInManager<>
+  nameWithType: SignInManager<>
+  fullName: SignInManager<>
+  nameWithType.vb: SignInManager(Of )
+  fullName.vb: SignInManager(Of )
+  name.vb: SignInManager(Of )
+  spec.csharp:
+  - uid: SignInManager`1
+    name: SignInManager
+    nameWithType: SignInManager
+    fullName: SignInManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: SignInManager`1
+    name: SignInManager
+    nameWithType: SignInManager
+    fullName: SignInManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ILogger`1
+  isExternal: true
+  name: ILogger<>
+  nameWithType: ILogger<>
+  fullName: ILogger<>
+  nameWithType.vb: ILogger(Of )
+  fullName.vb: ILogger(Of )
+  name.vb: ILogger(Of )
+  spec.csharp:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.Input*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.Input
+  isExternal: false
+  name: Input
+  nameWithType: LoginWithRecoveryCodeModel.Input
+  fullName: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.Input
+- uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.InputModel
+  commentId: T:TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.InputModel
+  parent: TicketShopWebApplication.Pages.Account
+  isExternal: false
+  name: LoginWithRecoveryCodeModel.InputModel
+  nameWithType: LoginWithRecoveryCodeModel.InputModel
+  fullName: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.InputModel
+- uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.ReturnUrl*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.ReturnUrl
+  isExternal: false
+  name: ReturnUrl
+  nameWithType: LoginWithRecoveryCodeModel.ReturnUrl
+  fullName: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.ReturnUrl
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.OnGetAsync*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.OnGetAsync
+  isExternal: false
+  name: OnGetAsync
+  nameWithType: LoginWithRecoveryCodeModel.OnGetAsync
+  fullName: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.OnGetAsync
+- uid: Task{IActionResult}
+  commentId: '!:Task{IActionResult}'
+  definition: Task`1
+  name: Task<IActionResult>
+  nameWithType: Task<IActionResult>
+  fullName: Task<IActionResult>
+  nameWithType.vb: Task(Of IActionResult)
+  fullName.vb: Task(Of IActionResult)
+  name.vb: Task(Of IActionResult)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: IActionResult
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: IActionResult
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.OnPostAsync*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.OnPostAsync
+  isExternal: false
+  name: OnPostAsync
+  nameWithType: LoginWithRecoveryCodeModel.OnPostAsync
+  fullName: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.OnPostAsync

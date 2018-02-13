@@ -1,0 +1,540 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel
+  commentId: T:TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel
+  id: EnableAuthenticatorModel
+  parent: TicketShopWebApplication.Pages.Account.Manage
+  children:
+  - TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.#ctor(UserManager{TicketShopWebApplication.Data.ApplicationUser},ILogger{TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel},UrlEncoder)
+  - TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.AuthenticatorUri
+  - TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.Input
+  - TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.OnGetAsync
+  - TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.OnPostAsync
+  - TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.SharedKey
+  langs:
+  - csharp
+  - vb
+  name: EnableAuthenticatorModel
+  nameWithType: EnableAuthenticatorModel
+  fullName: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel
+  type: Class
+  source:
+    id: EnableAuthenticatorModel
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\Manage\EnableAuthenticator.cshtml.cs
+    startLine: 16
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account.Manage
+  syntax:
+    content: 'public class EnableAuthenticatorModel : PageModel'
+    content.vb: >-
+      Public Class EnableAuthenticatorModel
+          Inherits PageModel
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.#ctor(UserManager{TicketShopWebApplication.Data.ApplicationUser},ILogger{TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel},UrlEncoder)
+  commentId: M:TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.#ctor(UserManager{TicketShopWebApplication.Data.ApplicationUser},ILogger{TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel},UrlEncoder)
+  id: '#ctor(UserManager{TicketShopWebApplication.Data.ApplicationUser},ILogger{TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel},UrlEncoder)'
+  parent: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel
+  langs:
+  - csharp
+  - vb
+  name: EnableAuthenticatorModel(UserManager<ApplicationUser>, ILogger<EnableAuthenticatorModel>, UrlEncoder)
+  nameWithType: EnableAuthenticatorModel.EnableAuthenticatorModel(UserManager<ApplicationUser>, ILogger<EnableAuthenticatorModel>, UrlEncoder)
+  fullName: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.EnableAuthenticatorModel(UserManager<TicketShopWebApplication.Data.ApplicationUser>, ILogger<TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel>, UrlEncoder)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\Manage\EnableAuthenticator.cshtml.cs
+    startLine: 24
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account.Manage
+  syntax:
+    content: public EnableAuthenticatorModel(UserManager<ApplicationUser> userManager, ILogger<EnableAuthenticatorModel> logger, UrlEncoder urlEncoder)
+    parameters:
+    - id: userManager
+      type: UserManager{TicketShopWebApplication.Data.ApplicationUser}
+    - id: logger
+      type: ILogger{TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel}
+    - id: urlEncoder
+      type: UrlEncoder
+    content.vb: Public Sub New(userManager As UserManager(Of ApplicationUser), logger As ILogger(Of EnableAuthenticatorModel), urlEncoder As UrlEncoder)
+  overload: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.#ctor*
+  nameWithType.vb: EnableAuthenticatorModel.EnableAuthenticatorModel(UserManager(Of ApplicationUser), ILogger(Of EnableAuthenticatorModel), UrlEncoder)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.EnableAuthenticatorModel(UserManager(Of TicketShopWebApplication.Data.ApplicationUser), ILogger(Of TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel), UrlEncoder)
+  name.vb: EnableAuthenticatorModel(UserManager(Of ApplicationUser), ILogger(Of EnableAuthenticatorModel), UrlEncoder)
+- uid: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.SharedKey
+  commentId: P:TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.SharedKey
+  id: SharedKey
+  parent: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel
+  langs:
+  - csharp
+  - vb
+  name: SharedKey
+  nameWithType: EnableAuthenticatorModel.SharedKey
+  fullName: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.SharedKey
+  type: Property
+  source:
+    id: SharedKey
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\Manage\EnableAuthenticator.cshtml.cs
+    startLine: 34
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account.Manage
+  syntax:
+    content: public string SharedKey { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SharedKey As String
+  overload: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.SharedKey*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.AuthenticatorUri
+  commentId: P:TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.AuthenticatorUri
+  id: AuthenticatorUri
+  parent: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel
+  langs:
+  - csharp
+  - vb
+  name: AuthenticatorUri
+  nameWithType: EnableAuthenticatorModel.AuthenticatorUri
+  fullName: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.AuthenticatorUri
+  type: Property
+  source:
+    id: AuthenticatorUri
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\Manage\EnableAuthenticator.cshtml.cs
+    startLine: 36
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account.Manage
+  syntax:
+    content: public string AuthenticatorUri { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AuthenticatorUri As String
+  overload: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.AuthenticatorUri*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.Input
+  commentId: P:TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.Input
+  id: Input
+  parent: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel
+  langs:
+  - csharp
+  - vb
+  name: Input
+  nameWithType: EnableAuthenticatorModel.Input
+  fullName: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.Input
+  type: Property
+  source:
+    id: Input
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\Manage\EnableAuthenticator.cshtml.cs
+    startLine: 38
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account.Manage
+  syntax:
+    content: public EnableAuthenticatorModel.InputModel Input { get; set; }
+    parameters: []
+    return:
+      type: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.InputModel
+    content.vb: Public Property Input As EnableAuthenticatorModel.InputModel
+  overload: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.Input*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.OnGetAsync
+  commentId: M:TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.OnGetAsync
+  id: OnGetAsync
+  parent: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel
+  langs:
+  - csharp
+  - vb
+  name: OnGetAsync()
+  nameWithType: EnableAuthenticatorModel.OnGetAsync()
+  fullName: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.OnGetAsync()
+  type: Method
+  source:
+    id: OnGetAsync
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\Manage\EnableAuthenticator.cshtml.cs
+    startLine: 50
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account.Manage
+  syntax:
+    content: public Task<IActionResult> OnGetAsync()
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function OnGetAsync As Task(Of IActionResult)
+  overload: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.OnGetAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.OnPostAsync
+  commentId: M:TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.OnPostAsync
+  id: OnPostAsync
+  parent: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel
+  langs:
+  - csharp
+  - vb
+  name: OnPostAsync()
+  nameWithType: EnableAuthenticatorModel.OnPostAsync()
+  fullName: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.OnPostAsync()
+  type: Method
+  source:
+    id: OnPostAsync
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\Manage\EnableAuthenticator.cshtml.cs
+    startLine: 63
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account.Manage
+  syntax:
+    content: public Task<IActionResult> OnPostAsync()
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function OnPostAsync As Task(Of IActionResult)
+  overload: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.OnPostAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketShopWebApplication.Pages.Account.Manage
+  commentId: N:TicketShopWebApplication.Pages.Account.Manage
+  isExternal: false
+  name: TicketShopWebApplication.Pages.Account.Manage
+  nameWithType: TicketShopWebApplication.Pages.Account.Manage
+  fullName: TicketShopWebApplication.Pages.Account.Manage
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.#ctor*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.#ctor
+  isExternal: false
+  name: EnableAuthenticatorModel
+  nameWithType: EnableAuthenticatorModel.EnableAuthenticatorModel
+  fullName: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.EnableAuthenticatorModel
+- uid: UserManager{TicketShopWebApplication.Data.ApplicationUser}
+  commentId: '!:UserManager{TicketShopWebApplication.Data.ApplicationUser}'
+  definition: UserManager`1
+  name: UserManager<ApplicationUser>
+  nameWithType: UserManager<ApplicationUser>
+  fullName: UserManager<TicketShopWebApplication.Data.ApplicationUser>
+  nameWithType.vb: UserManager(Of ApplicationUser)
+  fullName.vb: UserManager(Of TicketShopWebApplication.Data.ApplicationUser)
+  name.vb: UserManager(Of ApplicationUser)
+  spec.csharp:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketShopWebApplication.Data.ApplicationUser
+    name: ApplicationUser
+    nameWithType: ApplicationUser
+    fullName: TicketShopWebApplication.Data.ApplicationUser
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketShopWebApplication.Data.ApplicationUser
+    name: ApplicationUser
+    nameWithType: ApplicationUser
+    fullName: TicketShopWebApplication.Data.ApplicationUser
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ILogger{TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel}
+  commentId: '!:ILogger{TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel}'
+  definition: ILogger`1
+  name: ILogger<EnableAuthenticatorModel>
+  nameWithType: ILogger<EnableAuthenticatorModel>
+  fullName: ILogger<TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel>
+  nameWithType.vb: ILogger(Of EnableAuthenticatorModel)
+  fullName.vb: ILogger(Of TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel)
+  name.vb: ILogger(Of EnableAuthenticatorModel)
+  spec.csharp:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel
+    name: EnableAuthenticatorModel
+    nameWithType: EnableAuthenticatorModel
+    fullName: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel
+    name: EnableAuthenticatorModel
+    nameWithType: EnableAuthenticatorModel
+    fullName: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: UrlEncoder
+  commentId: '!:UrlEncoder'
+  isExternal: true
+  name: UrlEncoder
+  nameWithType: UrlEncoder
+  fullName: UrlEncoder
+- uid: UserManager`1
+  isExternal: true
+  name: UserManager<>
+  nameWithType: UserManager<>
+  fullName: UserManager<>
+  nameWithType.vb: UserManager(Of )
+  fullName.vb: UserManager(Of )
+  name.vb: UserManager(Of )
+  spec.csharp:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ILogger`1
+  isExternal: true
+  name: ILogger<>
+  nameWithType: ILogger<>
+  fullName: ILogger<>
+  nameWithType.vb: ILogger(Of )
+  fullName.vb: ILogger(Of )
+  name.vb: ILogger(Of )
+  spec.csharp:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.SharedKey*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.SharedKey
+  isExternal: false
+  name: SharedKey
+  nameWithType: EnableAuthenticatorModel.SharedKey
+  fullName: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.SharedKey
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.AuthenticatorUri*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.AuthenticatorUri
+  isExternal: false
+  name: AuthenticatorUri
+  nameWithType: EnableAuthenticatorModel.AuthenticatorUri
+  fullName: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.AuthenticatorUri
+- uid: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.Input*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.Input
+  isExternal: false
+  name: Input
+  nameWithType: EnableAuthenticatorModel.Input
+  fullName: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.Input
+- uid: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.InputModel
+  commentId: T:TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.InputModel
+  parent: TicketShopWebApplication.Pages.Account.Manage
+  isExternal: false
+  name: EnableAuthenticatorModel.InputModel
+  nameWithType: EnableAuthenticatorModel.InputModel
+  fullName: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.InputModel
+- uid: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.OnGetAsync*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.OnGetAsync
+  isExternal: false
+  name: OnGetAsync
+  nameWithType: EnableAuthenticatorModel.OnGetAsync
+  fullName: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.OnGetAsync
+- uid: Task{IActionResult}
+  commentId: '!:Task{IActionResult}'
+  definition: Task`1
+  name: Task<IActionResult>
+  nameWithType: Task<IActionResult>
+  fullName: Task<IActionResult>
+  nameWithType.vb: Task(Of IActionResult)
+  fullName.vb: Task(Of IActionResult)
+  name.vb: Task(Of IActionResult)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: IActionResult
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: IActionResult
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.OnPostAsync*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.OnPostAsync
+  isExternal: false
+  name: OnPostAsync
+  nameWithType: EnableAuthenticatorModel.OnPostAsync
+  fullName: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.OnPostAsync

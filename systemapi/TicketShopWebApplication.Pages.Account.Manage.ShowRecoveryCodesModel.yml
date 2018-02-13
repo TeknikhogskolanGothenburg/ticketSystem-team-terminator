@@ -1,0 +1,157 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel
+  commentId: T:TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel
+  id: ShowRecoveryCodesModel
+  parent: TicketShopWebApplication.Pages.Account.Manage
+  children:
+  - TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel.OnGet
+  - TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel.RecoveryCodes
+  langs:
+  - csharp
+  - vb
+  name: ShowRecoveryCodesModel
+  nameWithType: ShowRecoveryCodesModel
+  fullName: TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel
+  type: Class
+  source:
+    id: ShowRecoveryCodesModel
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\Manage\ShowRecoveryCodes.cshtml.cs
+    startLine: 9
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account.Manage
+  syntax:
+    content: 'public class ShowRecoveryCodesModel : PageModel'
+    content.vb: >-
+      Public Class ShowRecoveryCodesModel
+          Inherits PageModel
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel.RecoveryCodes
+  commentId: P:TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel.RecoveryCodes
+  id: RecoveryCodes
+  parent: TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel
+  langs:
+  - csharp
+  - vb
+  name: RecoveryCodes
+  nameWithType: ShowRecoveryCodesModel.RecoveryCodes
+  fullName: TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel.RecoveryCodes
+  type: Property
+  source:
+    id: RecoveryCodes
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\Manage\ShowRecoveryCodes.cshtml.cs
+    startLine: 11
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account.Manage
+  syntax:
+    content: public string[] RecoveryCodes { get; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: Public ReadOnly Property RecoveryCodes As String()
+  overload: TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel.RecoveryCodes*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel.OnGet
+  commentId: M:TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel.OnGet
+  id: OnGet
+  parent: TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel
+  langs:
+  - csharp
+  - vb
+  name: OnGet()
+  nameWithType: ShowRecoveryCodesModel.OnGet()
+  fullName: TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel.OnGet()
+  type: Method
+  source:
+    id: OnGet
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\Manage\ShowRecoveryCodes.cshtml.cs
+    startLine: 13
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account.Manage
+  syntax:
+    content: public IActionResult OnGet()
+    return:
+      type: IActionResult
+    content.vb: Public Function OnGet As IActionResult
+  overload: TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel.OnGet*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketShopWebApplication.Pages.Account.Manage
+  commentId: N:TicketShopWebApplication.Pages.Account.Manage
+  isExternal: false
+  name: TicketShopWebApplication.Pages.Account.Manage
+  nameWithType: TicketShopWebApplication.Pages.Account.Manage
+  fullName: TicketShopWebApplication.Pages.Account.Manage
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel.RecoveryCodes*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel.RecoveryCodes
+  isExternal: false
+  name: RecoveryCodes
+  nameWithType: ShowRecoveryCodesModel.RecoveryCodes
+  fullName: TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel.RecoveryCodes
+- uid: System.String[]
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel.OnGet*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel.OnGet
+  isExternal: false
+  name: OnGet
+  nameWithType: ShowRecoveryCodesModel.OnGet
+  fullName: TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel.OnGet
+- uid: IActionResult
+  isExternal: true
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: IActionResult

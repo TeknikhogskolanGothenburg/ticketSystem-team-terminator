@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShopWebApplication.Data.ApplicationUser
+  commentId: T:TicketShopWebApplication.Data.ApplicationUser
+  id: ApplicationUser
+  parent: TicketShopWebApplication.Data
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ApplicationUser
+  nameWithType: ApplicationUser
+  fullName: TicketShopWebApplication.Data.ApplicationUser
+  type: Class
+  source:
+    id: ApplicationUser
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Data\ApplicationUser.cs
+    startLine: 9
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Data
+  syntax:
+    content: 'public class ApplicationUser : IdentityUser'
+    content.vb: >-
+      Public Class ApplicationUser
+          Inherits IdentityUser
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: TicketShopWebApplication.Data
+  commentId: N:TicketShopWebApplication.Data
+  isExternal: false
+  name: TicketShopWebApplication.Data
+  nameWithType: TicketShopWebApplication.Data
+  fullName: TicketShopWebApplication.Data
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System

@@ -1,0 +1,300 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShopWebApplication.Pages.Account.ConfirmEmailModel
+  commentId: T:TicketShopWebApplication.Pages.Account.ConfirmEmailModel
+  id: ConfirmEmailModel
+  parent: TicketShopWebApplication.Pages.Account
+  children:
+  - TicketShopWebApplication.Pages.Account.ConfirmEmailModel.#ctor(UserManager{TicketShopWebApplication.Data.ApplicationUser})
+  - TicketShopWebApplication.Pages.Account.ConfirmEmailModel.OnGetAsync(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: ConfirmEmailModel
+  nameWithType: ConfirmEmailModel
+  fullName: TicketShopWebApplication.Pages.Account.ConfirmEmailModel
+  type: Class
+  source:
+    id: ConfirmEmailModel
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\ConfirmEmail.cshtml.cs
+    startLine: 11
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account
+  syntax:
+    content: 'public class ConfirmEmailModel : PageModel'
+    content.vb: >-
+      Public Class ConfirmEmailModel
+          Inherits PageModel
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketShopWebApplication.Pages.Account.ConfirmEmailModel.#ctor(UserManager{TicketShopWebApplication.Data.ApplicationUser})
+  commentId: M:TicketShopWebApplication.Pages.Account.ConfirmEmailModel.#ctor(UserManager{TicketShopWebApplication.Data.ApplicationUser})
+  id: '#ctor(UserManager{TicketShopWebApplication.Data.ApplicationUser})'
+  parent: TicketShopWebApplication.Pages.Account.ConfirmEmailModel
+  langs:
+  - csharp
+  - vb
+  name: ConfirmEmailModel(UserManager<ApplicationUser>)
+  nameWithType: ConfirmEmailModel.ConfirmEmailModel(UserManager<ApplicationUser>)
+  fullName: TicketShopWebApplication.Pages.Account.ConfirmEmailModel.ConfirmEmailModel(UserManager<TicketShopWebApplication.Data.ApplicationUser>)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\ConfirmEmail.cshtml.cs
+    startLine: 15
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account
+  syntax:
+    content: public ConfirmEmailModel(UserManager<ApplicationUser> userManager)
+    parameters:
+    - id: userManager
+      type: UserManager{TicketShopWebApplication.Data.ApplicationUser}
+    content.vb: Public Sub New(userManager As UserManager(Of ApplicationUser))
+  overload: TicketShopWebApplication.Pages.Account.ConfirmEmailModel.#ctor*
+  nameWithType.vb: ConfirmEmailModel.ConfirmEmailModel(UserManager(Of ApplicationUser))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TicketShopWebApplication.Pages.Account.ConfirmEmailModel.ConfirmEmailModel(UserManager(Of TicketShopWebApplication.Data.ApplicationUser))
+  name.vb: ConfirmEmailModel(UserManager(Of ApplicationUser))
+- uid: TicketShopWebApplication.Pages.Account.ConfirmEmailModel.OnGetAsync(System.String,System.String)
+  commentId: M:TicketShopWebApplication.Pages.Account.ConfirmEmailModel.OnGetAsync(System.String,System.String)
+  id: OnGetAsync(System.String,System.String)
+  parent: TicketShopWebApplication.Pages.Account.ConfirmEmailModel
+  langs:
+  - csharp
+  - vb
+  name: OnGetAsync(String, String)
+  nameWithType: ConfirmEmailModel.OnGetAsync(String, String)
+  fullName: TicketShopWebApplication.Pages.Account.ConfirmEmailModel.OnGetAsync(System.String, System.String)
+  type: Method
+  source:
+    id: OnGetAsync
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\ConfirmEmail.cshtml.cs
+    startLine: 20
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account
+  syntax:
+    content: public Task<IActionResult> OnGetAsync(string userId, string code)
+    parameters:
+    - id: userId
+      type: System.String
+    - id: code
+      type: System.String
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function OnGetAsync(userId As String, code As String) As Task(Of IActionResult)
+  overload: TicketShopWebApplication.Pages.Account.ConfirmEmailModel.OnGetAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketShopWebApplication.Pages.Account
+  commentId: N:TicketShopWebApplication.Pages.Account
+  isExternal: false
+  name: TicketShopWebApplication.Pages.Account
+  nameWithType: TicketShopWebApplication.Pages.Account
+  fullName: TicketShopWebApplication.Pages.Account
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketShopWebApplication.Pages.Account.ConfirmEmailModel.#ctor*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.ConfirmEmailModel.#ctor
+  isExternal: false
+  name: ConfirmEmailModel
+  nameWithType: ConfirmEmailModel.ConfirmEmailModel
+  fullName: TicketShopWebApplication.Pages.Account.ConfirmEmailModel.ConfirmEmailModel
+- uid: UserManager{TicketShopWebApplication.Data.ApplicationUser}
+  commentId: '!:UserManager{TicketShopWebApplication.Data.ApplicationUser}'
+  definition: UserManager`1
+  name: UserManager<ApplicationUser>
+  nameWithType: UserManager<ApplicationUser>
+  fullName: UserManager<TicketShopWebApplication.Data.ApplicationUser>
+  nameWithType.vb: UserManager(Of ApplicationUser)
+  fullName.vb: UserManager(Of TicketShopWebApplication.Data.ApplicationUser)
+  name.vb: UserManager(Of ApplicationUser)
+  spec.csharp:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketShopWebApplication.Data.ApplicationUser
+    name: ApplicationUser
+    nameWithType: ApplicationUser
+    fullName: TicketShopWebApplication.Data.ApplicationUser
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketShopWebApplication.Data.ApplicationUser
+    name: ApplicationUser
+    nameWithType: ApplicationUser
+    fullName: TicketShopWebApplication.Data.ApplicationUser
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: UserManager`1
+  isExternal: true
+  name: UserManager<>
+  nameWithType: UserManager<>
+  fullName: UserManager<>
+  nameWithType.vb: UserManager(Of )
+  fullName.vb: UserManager(Of )
+  name.vb: UserManager(Of )
+  spec.csharp:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShopWebApplication.Pages.Account.ConfirmEmailModel.OnGetAsync*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.ConfirmEmailModel.OnGetAsync
+  isExternal: false
+  name: OnGetAsync
+  nameWithType: ConfirmEmailModel.OnGetAsync
+  fullName: TicketShopWebApplication.Pages.Account.ConfirmEmailModel.OnGetAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Task{IActionResult}
+  commentId: '!:Task{IActionResult}'
+  definition: Task`1
+  name: Task<IActionResult>
+  nameWithType: Task<IActionResult>
+  fullName: Task<IActionResult>
+  nameWithType.vb: Task(Of IActionResult)
+  fullName.vb: Task(Of IActionResult)
+  name.vb: Task(Of IActionResult)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: IActionResult
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: IActionResult
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

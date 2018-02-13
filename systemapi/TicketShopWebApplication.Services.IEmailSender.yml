@@ -1,0 +1,349 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShopWebApplication.Services.IEmailSender
+  commentId: T:TicketShopWebApplication.Services.IEmailSender
+  id: IEmailSender
+  parent: TicketShopWebApplication.Services
+  children:
+  - TicketShopWebApplication.Services.IEmailSender.SendEmailAsync(System.String,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: IEmailSender
+  nameWithType: IEmailSender
+  fullName: TicketShopWebApplication.Services.IEmailSender
+  type: Interface
+  source:
+    id: IEmailSender
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Services\IEmailSender.cs
+    startLine: 7
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Services
+  syntax:
+    content: public interface IEmailSender
+    content.vb: Public Interface IEmailSender
+  extensionMethods:
+  - TicketShopWebApplication.Services.IEmailSender.TicketShopWebApplication.Services.EmailSenderExtensions.SendEmailConfirmationAsync(System.String,System.String)
+  - TicketShopWebApplication.Services.IEmailSender.TicketShopWebApplication.Services.EmailSenderExtensions.SendResetPasswordAsync(System.String,System.String)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: TicketShopWebApplication.Services.IEmailSender.SendEmailAsync(System.String,System.String,System.String)
+  commentId: M:TicketShopWebApplication.Services.IEmailSender.SendEmailAsync(System.String,System.String,System.String)
+  id: SendEmailAsync(System.String,System.String,System.String)
+  parent: TicketShopWebApplication.Services.IEmailSender
+  langs:
+  - csharp
+  - vb
+  name: SendEmailAsync(String, String, String)
+  nameWithType: IEmailSender.SendEmailAsync(String, String, String)
+  fullName: TicketShopWebApplication.Services.IEmailSender.SendEmailAsync(System.String, System.String, System.String)
+  type: Method
+  source:
+    id: SendEmailAsync
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Services\IEmailSender.cs
+    startLine: 9
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Services
+  syntax:
+    content: Task SendEmailAsync(string email, string subject, string message)
+    parameters:
+    - id: email
+      type: System.String
+    - id: subject
+      type: System.String
+    - id: message
+      type: System.String
+    return:
+      type: Task
+    content.vb: Function SendEmailAsync(email As String, subject As String, message As String) As Task
+  overload: TicketShopWebApplication.Services.IEmailSender.SendEmailAsync*
+references:
+- uid: TicketShopWebApplication.Services
+  commentId: N:TicketShopWebApplication.Services
+  isExternal: false
+  name: TicketShopWebApplication.Services
+  nameWithType: TicketShopWebApplication.Services
+  fullName: TicketShopWebApplication.Services
+- uid: TicketShopWebApplication.Services.IEmailSender.TicketShopWebApplication.Services.EmailSenderExtensions.SendEmailConfirmationAsync(System.String,System.String)
+  commentId: M:TicketShopWebApplication.Services.EmailSenderExtensions.SendEmailConfirmationAsync(TicketShopWebApplication.Services.IEmailSender,System.String,System.String)
+  parent: TicketShopWebApplication.Services.EmailSenderExtensions
+  definition: TicketShopWebApplication.Services.EmailSenderExtensions.SendEmailConfirmationAsync(TicketShopWebApplication.Services.IEmailSender,System.String,System.String)
+  name: SendEmailConfirmationAsync(String, String)
+  nameWithType: EmailSenderExtensions.SendEmailConfirmationAsync(String, String)
+  fullName: TicketShopWebApplication.Services.EmailSenderExtensions.SendEmailConfirmationAsync(System.String, System.String)
+  spec.csharp:
+  - uid: TicketShopWebApplication.Services.EmailSenderExtensions.SendEmailConfirmationAsync(System.String,System.String)
+    name: SendEmailConfirmationAsync
+    nameWithType: EmailSenderExtensions.SendEmailConfirmationAsync
+    fullName: TicketShopWebApplication.Services.EmailSenderExtensions.SendEmailConfirmationAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShopWebApplication.Services.EmailSenderExtensions.SendEmailConfirmationAsync(System.String,System.String)
+    name: SendEmailConfirmationAsync
+    nameWithType: EmailSenderExtensions.SendEmailConfirmationAsync
+    fullName: TicketShopWebApplication.Services.EmailSenderExtensions.SendEmailConfirmationAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShopWebApplication.Services.IEmailSender.TicketShopWebApplication.Services.EmailSenderExtensions.SendResetPasswordAsync(System.String,System.String)
+  commentId: M:TicketShopWebApplication.Services.EmailSenderExtensions.SendResetPasswordAsync(TicketShopWebApplication.Services.IEmailSender,System.String,System.String)
+  parent: TicketShopWebApplication.Services.EmailSenderExtensions
+  definition: TicketShopWebApplication.Services.EmailSenderExtensions.SendResetPasswordAsync(TicketShopWebApplication.Services.IEmailSender,System.String,System.String)
+  name: SendResetPasswordAsync(String, String)
+  nameWithType: EmailSenderExtensions.SendResetPasswordAsync(String, String)
+  fullName: TicketShopWebApplication.Services.EmailSenderExtensions.SendResetPasswordAsync(System.String, System.String)
+  spec.csharp:
+  - uid: TicketShopWebApplication.Services.EmailSenderExtensions.SendResetPasswordAsync(System.String,System.String)
+    name: SendResetPasswordAsync
+    nameWithType: EmailSenderExtensions.SendResetPasswordAsync
+    fullName: TicketShopWebApplication.Services.EmailSenderExtensions.SendResetPasswordAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShopWebApplication.Services.EmailSenderExtensions.SendResetPasswordAsync(System.String,System.String)
+    name: SendResetPasswordAsync
+    nameWithType: EmailSenderExtensions.SendResetPasswordAsync
+    fullName: TicketShopWebApplication.Services.EmailSenderExtensions.SendResetPasswordAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShopWebApplication.Services.EmailSenderExtensions.SendEmailConfirmationAsync(TicketShopWebApplication.Services.IEmailSender,System.String,System.String)
+  commentId: M:TicketShopWebApplication.Services.EmailSenderExtensions.SendEmailConfirmationAsync(TicketShopWebApplication.Services.IEmailSender,System.String,System.String)
+  isExternal: true
+  name: SendEmailConfirmationAsync(IEmailSender, String, String)
+  nameWithType: EmailSenderExtensions.SendEmailConfirmationAsync(IEmailSender, String, String)
+  fullName: TicketShopWebApplication.Services.EmailSenderExtensions.SendEmailConfirmationAsync(TicketShopWebApplication.Services.IEmailSender, System.String, System.String)
+  spec.csharp:
+  - uid: TicketShopWebApplication.Services.EmailSenderExtensions.SendEmailConfirmationAsync(TicketShopWebApplication.Services.IEmailSender,System.String,System.String)
+    name: SendEmailConfirmationAsync
+    nameWithType: EmailSenderExtensions.SendEmailConfirmationAsync
+    fullName: TicketShopWebApplication.Services.EmailSenderExtensions.SendEmailConfirmationAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketShopWebApplication.Services.IEmailSender
+    name: IEmailSender
+    nameWithType: IEmailSender
+    fullName: TicketShopWebApplication.Services.IEmailSender
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShopWebApplication.Services.EmailSenderExtensions.SendEmailConfirmationAsync(TicketShopWebApplication.Services.IEmailSender,System.String,System.String)
+    name: SendEmailConfirmationAsync
+    nameWithType: EmailSenderExtensions.SendEmailConfirmationAsync
+    fullName: TicketShopWebApplication.Services.EmailSenderExtensions.SendEmailConfirmationAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketShopWebApplication.Services.IEmailSender
+    name: IEmailSender
+    nameWithType: IEmailSender
+    fullName: TicketShopWebApplication.Services.IEmailSender
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShopWebApplication.Services.EmailSenderExtensions
+  commentId: T:TicketShopWebApplication.Services.EmailSenderExtensions
+  parent: TicketShopWebApplication.Services
+  isExternal: false
+  name: EmailSenderExtensions
+  nameWithType: EmailSenderExtensions
+  fullName: TicketShopWebApplication.Services.EmailSenderExtensions
+- uid: TicketShopWebApplication.Services.EmailSenderExtensions.SendResetPasswordAsync(TicketShopWebApplication.Services.IEmailSender,System.String,System.String)
+  commentId: M:TicketShopWebApplication.Services.EmailSenderExtensions.SendResetPasswordAsync(TicketShopWebApplication.Services.IEmailSender,System.String,System.String)
+  isExternal: true
+  name: SendResetPasswordAsync(IEmailSender, String, String)
+  nameWithType: EmailSenderExtensions.SendResetPasswordAsync(IEmailSender, String, String)
+  fullName: TicketShopWebApplication.Services.EmailSenderExtensions.SendResetPasswordAsync(TicketShopWebApplication.Services.IEmailSender, System.String, System.String)
+  spec.csharp:
+  - uid: TicketShopWebApplication.Services.EmailSenderExtensions.SendResetPasswordAsync(TicketShopWebApplication.Services.IEmailSender,System.String,System.String)
+    name: SendResetPasswordAsync
+    nameWithType: EmailSenderExtensions.SendResetPasswordAsync
+    fullName: TicketShopWebApplication.Services.EmailSenderExtensions.SendResetPasswordAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketShopWebApplication.Services.IEmailSender
+    name: IEmailSender
+    nameWithType: IEmailSender
+    fullName: TicketShopWebApplication.Services.IEmailSender
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShopWebApplication.Services.EmailSenderExtensions.SendResetPasswordAsync(TicketShopWebApplication.Services.IEmailSender,System.String,System.String)
+    name: SendResetPasswordAsync
+    nameWithType: EmailSenderExtensions.SendResetPasswordAsync
+    fullName: TicketShopWebApplication.Services.EmailSenderExtensions.SendResetPasswordAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketShopWebApplication.Services.IEmailSender
+    name: IEmailSender
+    nameWithType: IEmailSender
+    fullName: TicketShopWebApplication.Services.IEmailSender
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShopWebApplication.Services.IEmailSender.SendEmailAsync*
+  commentId: Overload:TicketShopWebApplication.Services.IEmailSender.SendEmailAsync
+  isExternal: false
+  name: SendEmailAsync
+  nameWithType: IEmailSender.SendEmailAsync
+  fullName: TicketShopWebApplication.Services.IEmailSender.SendEmailAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System

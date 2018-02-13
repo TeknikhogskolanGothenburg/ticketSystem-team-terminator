@@ -18,13 +18,9 @@ items:
   fullName: TicketSystem.DatabaseRepository.Model.Venue
   type: Class
   source:
-    remote:
-      path: src/DatabaseRepository/Model/Venue.cs
-      branch: master
-      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: Venue
-    path: src/DatabaseRepository/Model/Venue.cs
-    startLine: 2
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\Venue.cs
+    startLine: 4
   assemblies:
   - DatabaseRepository
   namespace: TicketSystem.DatabaseRepository.Model
@@ -59,13 +55,9 @@ items:
   fullName: TicketSystem.DatabaseRepository.Model.Venue.VenueId
   type: Property
   source:
-    remote:
-      path: src/DatabaseRepository/Model/Venue.cs
-      branch: master
-      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: VenueId
-    path: src/DatabaseRepository/Model/Venue.cs
-    startLine: 4
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\Venue.cs
+    startLine: 6
   assemblies:
   - DatabaseRepository
   namespace: TicketSystem.DatabaseRepository.Model
@@ -94,23 +86,29 @@ items:
   fullName: TicketSystem.DatabaseRepository.Model.Venue.VenueName
   type: Property
   source:
-    remote:
-      path: src/DatabaseRepository/Model/Venue.cs
-      branch: master
-      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: VenueName
-    path: src/DatabaseRepository/Model/Venue.cs
-    startLine: 5
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\Venue.cs
+    startLine: 7
   assemblies:
   - DatabaseRepository
   namespace: TicketSystem.DatabaseRepository.Model
   syntax:
-    content: public string VenueName { get; set; }
+    content: >-
+      [Required]
+
+      public string VenueName { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property VenueName As String
+    content.vb: >-
+      <Required>
+
+      Public Property VenueName As String
   overload: TicketSystem.DatabaseRepository.Model.Venue.VenueName*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - get
@@ -129,23 +127,29 @@ items:
   fullName: TicketSystem.DatabaseRepository.Model.Venue.Address
   type: Property
   source:
-    remote:
-      path: src/DatabaseRepository/Model/Venue.cs
-      branch: master
-      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: Address
-    path: src/DatabaseRepository/Model/Venue.cs
-    startLine: 6
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\Venue.cs
+    startLine: 9
   assemblies:
   - DatabaseRepository
   namespace: TicketSystem.DatabaseRepository.Model
   syntax:
-    content: public string Address { get; set; }
+    content: >-
+      [Required]
+
+      public string Address { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Address As String
+    content.vb: >-
+      <Required>
+
+      Public Property Address As String
   overload: TicketSystem.DatabaseRepository.Model.Venue.Address*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - get
@@ -164,23 +168,29 @@ items:
   fullName: TicketSystem.DatabaseRepository.Model.Venue.City
   type: Property
   source:
-    remote:
-      path: src/DatabaseRepository/Model/Venue.cs
-      branch: master
-      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: City
-    path: src/DatabaseRepository/Model/Venue.cs
-    startLine: 7
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\Venue.cs
+    startLine: 11
   assemblies:
   - DatabaseRepository
   namespace: TicketSystem.DatabaseRepository.Model
   syntax:
-    content: public string City { get; set; }
+    content: >-
+      [Required]
+
+      public string City { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property City As String
+    content.vb: >-
+      <Required>
+
+      Public Property City As String
   overload: TicketSystem.DatabaseRepository.Model.Venue.City*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - get
@@ -199,23 +209,29 @@ items:
   fullName: TicketSystem.DatabaseRepository.Model.Venue.Country
   type: Property
   source:
-    remote:
-      path: src/DatabaseRepository/Model/Venue.cs
-      branch: master
-      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: Country
-    path: src/DatabaseRepository/Model/Venue.cs
-    startLine: 8
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\Venue.cs
+    startLine: 13
   assemblies:
   - DatabaseRepository
   namespace: TicketSystem.DatabaseRepository.Model
   syntax:
-    content: public string Country { get; set; }
+    content: >-
+      [Required]
+
+      public string Country { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Country As String
+    content.vb: >-
+      <Required>
+
+      Public Property Country As String
   overload: TicketSystem.DatabaseRepository.Model.Venue.Country*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - get

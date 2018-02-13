@@ -1,0 +1,404 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel
+  commentId: T:TicketShopWebApplication.Pages.Account.Manage.Disable2faModel
+  id: Disable2faModel
+  parent: TicketShopWebApplication.Pages.Account.Manage
+  children:
+  - TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.#ctor(UserManager{TicketShopWebApplication.Data.ApplicationUser},ILogger{TicketShopWebApplication.Pages.Account.Manage.Disable2faModel})
+  - TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.OnGet
+  - TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.OnPostAsync
+  langs:
+  - csharp
+  - vb
+  name: Disable2faModel
+  nameWithType: Disable2faModel
+  fullName: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel
+  type: Class
+  source:
+    id: Disable2faModel
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\Manage\Disable2fa.cshtml.cs
+    startLine: 12
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account.Manage
+  syntax:
+    content: 'public class Disable2faModel : PageModel'
+    content.vb: >-
+      Public Class Disable2faModel
+          Inherits PageModel
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.#ctor(UserManager{TicketShopWebApplication.Data.ApplicationUser},ILogger{TicketShopWebApplication.Pages.Account.Manage.Disable2faModel})
+  commentId: M:TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.#ctor(UserManager{TicketShopWebApplication.Data.ApplicationUser},ILogger{TicketShopWebApplication.Pages.Account.Manage.Disable2faModel})
+  id: '#ctor(UserManager{TicketShopWebApplication.Data.ApplicationUser},ILogger{TicketShopWebApplication.Pages.Account.Manage.Disable2faModel})'
+  parent: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel
+  langs:
+  - csharp
+  - vb
+  name: Disable2faModel(UserManager<ApplicationUser>, ILogger<Disable2faModel>)
+  nameWithType: Disable2faModel.Disable2faModel(UserManager<ApplicationUser>, ILogger<Disable2faModel>)
+  fullName: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.Disable2faModel(UserManager<TicketShopWebApplication.Data.ApplicationUser>, ILogger<TicketShopWebApplication.Pages.Account.Manage.Disable2faModel>)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\Manage\Disable2fa.cshtml.cs
+    startLine: 17
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account.Manage
+  syntax:
+    content: public Disable2faModel(UserManager<ApplicationUser> userManager, ILogger<Disable2faModel> logger)
+    parameters:
+    - id: userManager
+      type: UserManager{TicketShopWebApplication.Data.ApplicationUser}
+    - id: logger
+      type: ILogger{TicketShopWebApplication.Pages.Account.Manage.Disable2faModel}
+    content.vb: Public Sub New(userManager As UserManager(Of ApplicationUser), logger As ILogger(Of Disable2faModel))
+  overload: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.#ctor*
+  nameWithType.vb: Disable2faModel.Disable2faModel(UserManager(Of ApplicationUser), ILogger(Of Disable2faModel))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.Disable2faModel(UserManager(Of TicketShopWebApplication.Data.ApplicationUser), ILogger(Of TicketShopWebApplication.Pages.Account.Manage.Disable2faModel))
+  name.vb: Disable2faModel(UserManager(Of ApplicationUser), ILogger(Of Disable2faModel))
+- uid: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.OnGet
+  commentId: M:TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.OnGet
+  id: OnGet
+  parent: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel
+  langs:
+  - csharp
+  - vb
+  name: OnGet()
+  nameWithType: Disable2faModel.OnGet()
+  fullName: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.OnGet()
+  type: Method
+  source:
+    id: OnGet
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\Manage\Disable2fa.cshtml.cs
+    startLine: 25
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account.Manage
+  syntax:
+    content: public Task<IActionResult> OnGet()
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function OnGet As Task(Of IActionResult)
+  overload: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.OnGet*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.OnPostAsync
+  commentId: M:TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.OnPostAsync
+  id: OnPostAsync
+  parent: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel
+  langs:
+  - csharp
+  - vb
+  name: OnPostAsync()
+  nameWithType: Disable2faModel.OnPostAsync()
+  fullName: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.OnPostAsync()
+  type: Method
+  source:
+    id: OnPostAsync
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\Manage\Disable2fa.cshtml.cs
+    startLine: 41
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account.Manage
+  syntax:
+    content: public Task<IActionResult> OnPostAsync()
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function OnPostAsync As Task(Of IActionResult)
+  overload: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.OnPostAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketShopWebApplication.Pages.Account.Manage
+  commentId: N:TicketShopWebApplication.Pages.Account.Manage
+  isExternal: false
+  name: TicketShopWebApplication.Pages.Account.Manage
+  nameWithType: TicketShopWebApplication.Pages.Account.Manage
+  fullName: TicketShopWebApplication.Pages.Account.Manage
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.#ctor*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.#ctor
+  isExternal: false
+  name: Disable2faModel
+  nameWithType: Disable2faModel.Disable2faModel
+  fullName: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.Disable2faModel
+- uid: UserManager{TicketShopWebApplication.Data.ApplicationUser}
+  commentId: '!:UserManager{TicketShopWebApplication.Data.ApplicationUser}'
+  definition: UserManager`1
+  name: UserManager<ApplicationUser>
+  nameWithType: UserManager<ApplicationUser>
+  fullName: UserManager<TicketShopWebApplication.Data.ApplicationUser>
+  nameWithType.vb: UserManager(Of ApplicationUser)
+  fullName.vb: UserManager(Of TicketShopWebApplication.Data.ApplicationUser)
+  name.vb: UserManager(Of ApplicationUser)
+  spec.csharp:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketShopWebApplication.Data.ApplicationUser
+    name: ApplicationUser
+    nameWithType: ApplicationUser
+    fullName: TicketShopWebApplication.Data.ApplicationUser
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketShopWebApplication.Data.ApplicationUser
+    name: ApplicationUser
+    nameWithType: ApplicationUser
+    fullName: TicketShopWebApplication.Data.ApplicationUser
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ILogger{TicketShopWebApplication.Pages.Account.Manage.Disable2faModel}
+  commentId: '!:ILogger{TicketShopWebApplication.Pages.Account.Manage.Disable2faModel}'
+  definition: ILogger`1
+  name: ILogger<Disable2faModel>
+  nameWithType: ILogger<Disable2faModel>
+  fullName: ILogger<TicketShopWebApplication.Pages.Account.Manage.Disable2faModel>
+  nameWithType.vb: ILogger(Of Disable2faModel)
+  fullName.vb: ILogger(Of TicketShopWebApplication.Pages.Account.Manage.Disable2faModel)
+  name.vb: ILogger(Of Disable2faModel)
+  spec.csharp:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel
+    name: Disable2faModel
+    nameWithType: Disable2faModel
+    fullName: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel
+    name: Disable2faModel
+    nameWithType: Disable2faModel
+    fullName: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: UserManager`1
+  isExternal: true
+  name: UserManager<>
+  nameWithType: UserManager<>
+  fullName: UserManager<>
+  nameWithType.vb: UserManager(Of )
+  fullName.vb: UserManager(Of )
+  name.vb: UserManager(Of )
+  spec.csharp:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ILogger`1
+  isExternal: true
+  name: ILogger<>
+  nameWithType: ILogger<>
+  fullName: ILogger<>
+  nameWithType.vb: ILogger(Of )
+  fullName.vb: ILogger(Of )
+  name.vb: ILogger(Of )
+  spec.csharp:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.OnGet*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.OnGet
+  isExternal: false
+  name: OnGet
+  nameWithType: Disable2faModel.OnGet
+  fullName: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.OnGet
+- uid: Task{IActionResult}
+  commentId: '!:Task{IActionResult}'
+  definition: Task`1
+  name: Task<IActionResult>
+  nameWithType: Task<IActionResult>
+  fullName: Task<IActionResult>
+  nameWithType.vb: Task(Of IActionResult)
+  fullName.vb: Task(Of IActionResult)
+  name.vb: Task(Of IActionResult)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: IActionResult
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: IActionResult
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.OnPostAsync*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.OnPostAsync
+  isExternal: false
+  name: OnPostAsync
+  nameWithType: Disable2faModel.OnPostAsync
+  fullName: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel.OnPostAsync

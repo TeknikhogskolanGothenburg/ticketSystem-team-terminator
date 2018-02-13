@@ -1,0 +1,132 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShopWebApplication.Pages.ContactModel
+  commentId: T:TicketShopWebApplication.Pages.ContactModel
+  id: ContactModel
+  parent: TicketShopWebApplication.Pages
+  children:
+  - TicketShopWebApplication.Pages.ContactModel.Message
+  - TicketShopWebApplication.Pages.ContactModel.OnGet
+  langs:
+  - csharp
+  - vb
+  name: ContactModel
+  nameWithType: ContactModel
+  fullName: TicketShopWebApplication.Pages.ContactModel
+  type: Class
+  source:
+    id: ContactModel
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Contact.cshtml.cs
+    startLine: 8
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages
+  syntax:
+    content: 'public class ContactModel : PageModel'
+    content.vb: >-
+      Public Class ContactModel
+          Inherits PageModel
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketShopWebApplication.Pages.ContactModel.Message
+  commentId: P:TicketShopWebApplication.Pages.ContactModel.Message
+  id: Message
+  parent: TicketShopWebApplication.Pages.ContactModel
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: ContactModel.Message
+  fullName: TicketShopWebApplication.Pages.ContactModel.Message
+  type: Property
+  source:
+    id: Message
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Contact.cshtml.cs
+    startLine: 10
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages
+  syntax:
+    content: public string Message { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Message As String
+  overload: TicketShopWebApplication.Pages.ContactModel.Message*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShopWebApplication.Pages.ContactModel.OnGet
+  commentId: M:TicketShopWebApplication.Pages.ContactModel.OnGet
+  id: OnGet
+  parent: TicketShopWebApplication.Pages.ContactModel
+  langs:
+  - csharp
+  - vb
+  name: OnGet()
+  nameWithType: ContactModel.OnGet()
+  fullName: TicketShopWebApplication.Pages.ContactModel.OnGet()
+  type: Method
+  source:
+    id: OnGet
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Contact.cshtml.cs
+    startLine: 12
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages
+  syntax:
+    content: public void OnGet()
+    content.vb: Public Sub OnGet
+  overload: TicketShopWebApplication.Pages.ContactModel.OnGet*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketShopWebApplication.Pages
+  commentId: N:TicketShopWebApplication.Pages
+  isExternal: false
+  name: TicketShopWebApplication.Pages
+  nameWithType: TicketShopWebApplication.Pages
+  fullName: TicketShopWebApplication.Pages
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketShopWebApplication.Pages.ContactModel.Message*
+  commentId: Overload:TicketShopWebApplication.Pages.ContactModel.Message
+  isExternal: false
+  name: Message
+  nameWithType: ContactModel.Message
+  fullName: TicketShopWebApplication.Pages.ContactModel.Message
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketShopWebApplication.Pages.ContactModel.OnGet*
+  commentId: Overload:TicketShopWebApplication.Pages.ContactModel.OnGet
+  isExternal: false
+  name: OnGet
+  nameWithType: ContactModel.OnGet
+  fullName: TicketShopWebApplication.Pages.ContactModel.OnGet

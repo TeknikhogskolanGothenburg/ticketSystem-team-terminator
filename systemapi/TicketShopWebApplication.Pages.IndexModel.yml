@@ -1,0 +1,87 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShopWebApplication.Pages.IndexModel
+  commentId: T:TicketShopWebApplication.Pages.IndexModel
+  id: IndexModel
+  parent: TicketShopWebApplication.Pages
+  children:
+  - TicketShopWebApplication.Pages.IndexModel.OnGet
+  langs:
+  - csharp
+  - vb
+  name: IndexModel
+  nameWithType: IndexModel
+  fullName: TicketShopWebApplication.Pages.IndexModel
+  type: Class
+  source:
+    id: IndexModel
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Index.cshtml.cs
+    startLine: 9
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages
+  syntax:
+    content: 'public class IndexModel : PageModel'
+    content.vb: >-
+      Public Class IndexModel
+          Inherits PageModel
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketShopWebApplication.Pages.IndexModel.OnGet
+  commentId: M:TicketShopWebApplication.Pages.IndexModel.OnGet
+  id: OnGet
+  parent: TicketShopWebApplication.Pages.IndexModel
+  langs:
+  - csharp
+  - vb
+  name: OnGet()
+  nameWithType: IndexModel.OnGet()
+  fullName: TicketShopWebApplication.Pages.IndexModel.OnGet()
+  type: Method
+  source:
+    id: OnGet
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Index.cshtml.cs
+    startLine: 11
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages
+  syntax:
+    content: public void OnGet()
+    content.vb: Public Sub OnGet
+  overload: TicketShopWebApplication.Pages.IndexModel.OnGet*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketShopWebApplication.Pages
+  commentId: N:TicketShopWebApplication.Pages
+  isExternal: false
+  name: TicketShopWebApplication.Pages
+  nameWithType: TicketShopWebApplication.Pages
+  fullName: TicketShopWebApplication.Pages
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketShopWebApplication.Pages.IndexModel.OnGet*
+  commentId: Overload:TicketShopWebApplication.Pages.IndexModel.OnGet
+  isExternal: false
+  name: OnGet
+  nameWithType: IndexModel.OnGet
+  fullName: TicketShopWebApplication.Pages.IndexModel.OnGet

@@ -1,0 +1,99 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.InputModel
+  commentId: T:TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.InputModel
+  id: LoginWithRecoveryCodeModel.InputModel
+  parent: TicketShopWebApplication.Pages.Account
+  children:
+  - TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.InputModel.RecoveryCode
+  langs:
+  - csharp
+  - vb
+  name: LoginWithRecoveryCodeModel.InputModel
+  nameWithType: LoginWithRecoveryCodeModel.InputModel
+  fullName: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.InputModel
+  type: Class
+  source:
+    id: InputModel
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\LoginWithRecoveryCode.cshtml.cs
+    startLine: 29
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account
+  syntax:
+    content: 'public class InputModel : object'
+    content.vb: >-
+      Public Class InputModel
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.InputModel.RecoveryCode
+  commentId: P:TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.InputModel.RecoveryCode
+  id: RecoveryCode
+  parent: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.InputModel
+  langs:
+  - csharp
+  - vb
+  name: RecoveryCode
+  nameWithType: LoginWithRecoveryCodeModel.InputModel.RecoveryCode
+  fullName: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.InputModel.RecoveryCode
+  type: Property
+  source:
+    id: RecoveryCode
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\TicketShopWebApplication\Pages\Account\LoginWithRecoveryCode.cshtml.cs
+    startLine: 31
+  assemblies:
+  - TicketShopWebApplication
+  namespace: TicketShopWebApplication.Pages.Account
+  syntax:
+    content: public string RecoveryCode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RecoveryCode As String
+  overload: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.InputModel.RecoveryCode*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketShopWebApplication.Pages.Account
+  commentId: N:TicketShopWebApplication.Pages.Account
+  isExternal: false
+  name: TicketShopWebApplication.Pages.Account
+  nameWithType: TicketShopWebApplication.Pages.Account
+  fullName: TicketShopWebApplication.Pages.Account
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.InputModel.RecoveryCode*
+  commentId: Overload:TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.InputModel.RecoveryCode
+  isExternal: false
+  name: RecoveryCode
+  nameWithType: LoginWithRecoveryCodeModel.InputModel.RecoveryCode
+  fullName: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.InputModel.RecoveryCode
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
