@@ -270,35 +270,36 @@ namespace TicketSystem.DatabaseRepository
         }
 
         //Tickets
-        public List<int> FindSeatID(int ticketID)
+        public List<Ticket> FindSeatID(int ticketID)
         {
             string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                return connection.Query<int>("SELECT * FROM Tickets WHERE TicketID = @TicketID", new { TicketID = ticketID }).ToList();
+                return connection.Query<Ticket>("SELECT * FROM Tickets WHERE TicketID = @TicketID", new { TicketID = ticketID }).ToList();
             }
         }
 
-        public List<int> AllTickets()
+        public List<Ticket> AllTickets()
         {
             string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                return connection.Query<int>("SELECT * FROM Tickets").ToList();
+                return connection.Query<Ticket>("SELECT * FROM Tickets").ToList();
             }
         }
 
-        public void TicketAdd(int seatID)
+        public int TicketAdd(int seatID)
         {
             string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 connection.Query("Insert into Tickets([[SeatID]) values(@SeatID)", new { SeatID = seatID});
-                var addedVenueQuery = connection.Query<int>("SELECT IDENT_CURRENT ('Venues') AS Current_Identity").First();
+                var addedTicketQuery = connection.Query<int>("SELECT IDENT_CURRENT ('Venues') AS Current_Identity").First();
                 //return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueID=@Id", new { Id = addedVenueQuery }).First();
+                return addedTicketQuery;
             }
         }
 

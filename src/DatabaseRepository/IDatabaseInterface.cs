@@ -21,9 +21,9 @@ namespace TicketSystem.DatabaseRepository
 
 
         //Metoder för Tickets
-        List<int> AllTickets();
-        List<int> FindSeatID(int ticketID); //Retunerar en lista av seats
-        void TicketAdd(int seatID);
+        List<Ticket> AllTickets();
+        List<Ticket> FindSeatID(int ticketID); //Retunerar en lista av seats
+        int TicketAdd(int seatID);
 
 
         ////Metoder för TicketEventDate
