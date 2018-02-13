@@ -33,7 +33,7 @@ namespace TicketApi.Controllers
         public void Post([FromBody]Event value)
         {
             DbHandler.TicketEventDate(DbHandler.EventAdd(value.TicketEvents.EventName, value.TicketEvents.EventHtmlDescription), DbHandler.VenueAdd(value.Venues.VenueName, value.Venues.Address, value.Venues.City, value.Venues.Country), value.TicketEventDates.EventStartDateTime);
-            
+            DbHandler.
            
 
         }
