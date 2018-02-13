@@ -82,64 +82,65 @@ namespace TicketSystem.DatabaseRepository
              
              */
 
-        ////Joakim Testar
+ 
 
-        //public List<TicketEventDate> FindTicketEventDate(string query)
-        //{
-        //    string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
-        //    using (var connection = new SqlConnection(connectionString))
-        //    {
-        //        connection.Open();
-        //        return connection.Query<TicketEventDate>("SELCT * FROM TicketEventDates").ToList();
-        //    }
+        public List<TicketEventDate> FindTicketEventDate(string query)
+        {
+            string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                return connection.Query<TicketEventDate>("SELECT * FROM TicketEventDates WHERE EventStartDateTime like '%" + query + "%'").ToList();
+            }
 
-        //}
+        }
 
-        //public List<TicketEventDate> FindTicketEventDate()
-        //{
-        //    string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
-        //    using (var connection = new SqlConnection(connectionString))
-        //    {
-        //        connection.Open();
-        //        return connection.Query<TicketEventDate>("SELECT * FROM TicketEventDates").ToList();
-        //    }
-        //}
+        public List<TicketEventDate> FindTicketEventDate()
+        {
+            string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                return connection.Query<TicketEventDate>("SELECT * FROM TicketEventDates").ToList();
+            }
+        }
 
 
 
-        //public void TicketEventDateAdd(int ticketEventDateID, int ticketEventId, int venueId, int eventStartDateTime)
-        //{
-        //    string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
-        //    using (var connection = new SqlConnection(connectionString))
-        //    {
+        public void TicketEventDateAdd(int ticketEventDateID, int ticketEventId, int venueId, DateTime eventStartDateTime)
+        {
+            string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
 
-        //        connection.Open();
-        //        connection.Query("insert into TicketEventDates([TicketEventDateID], [TicketEventID], [VenueID], [EventStartDateTime]) values(@TicketEventDateID, @TicketEventID, @VenueID, @EventStartDateTime)");
-        //    }
-        //}
+                connection.Open();
+                connection.Query("insert into TicketEventDates([TicketEventDateID], [TicketEventID], [VenueID], [EventStartDateTime]) values(@TicketEventDateID, @TicketEventID, @VenueID, @EventStartDateTime)");
+                
+            }
+        }
 
-       
-        //public void TicketEventDateUpdate(int id, string name, string address, string city, string country)
-        //{
-        //    string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
-        //    using (var connection = new SqlConnection(connectionString))
-        //    {
-        //        connection.Open();
-        //        connection.Query("UPDATE TickeEventDates SET [VenueName] = @VenueName, [Address] = @Address,[City] = @City, [Country] = @Country  WHERE [VenueID] = @VenueID; ", new { VenueName = name, Address = address, City = city, Country = country, VenueID = id });
-        //    }
-        //}
+        
+        public void TicketEventDateUpdate(int TicketEventDateID, int TicketEventID, int VenueId, DateTime EventStartDateTime)
+        {
+            string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                connection.Query("UPDATE TicketEventDates SET [TicketEventID] = @ticketEventID, [VenueId] = @venueId, [EventStartDateTime] = @eventStartDateTime  WHERE[TicketEventDateID] = @ticketEventDateID; ", new { ticketEventID = TicketEventID, venueId = VenueId, eventStartDateTime = EventStartDateTime, ticketEventDateID = TicketEventDateID });                
+            }
+        }
 
-        //public void TicketEventDateDelete(int id)
-        //{
-        //    string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
-        //    using (var connection = new SqlConnection(connectionString))
-        //    {
-        //        connection.Open();
-        //        connection.Query("DELETE FROM TicketEventDates WHERE TicketEventDateID = @ID", new { ID = id });
-        //    }
+        public void TicketEventDateDelete(int id)
+        {
+            string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                connection.Query("DELETE FROM TicketEventDates WHERE TicketEventDateID = @ID", new { ID = id });
+            }
 
-        //}
-         
+        }
+
 
 
         //Venue Methods

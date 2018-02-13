@@ -31,13 +31,13 @@ namespace TicketSystem.DatabaseRepository
 
         ////Metoder för TicketEventDate
         void TicketEventDate(int TicketEventID, int VenueID, DateTime EventStarDate ); // Retunerar Inget
-        
 
-        //List<TicketEventDate> FindTicketEventDate(string query);
-        //List<TicketEventDate> FindTicketEventDate();
-        //void TicketEventDateDelete(int id);
-        //void TicketEventDateUpdate(TicketEventDate ticketEventDate);
-        //TicketEventDate TicketEventDateAdd(int ticketEventDateId, int ticketEventId, int venueId, int eventStartDateTime);
+
+        List<TicketEventDate> FindTicketEventDate(string query);
+        List<TicketEventDate> FindTicketEventDate();
+        void TicketEventDateDelete(int id);
+        void TicketEventDateUpdate(int TicketEventDateID, int TicketEventID, int VenueId, DateTime EventStartDateTime);
+        void TicketEventDateAdd(int ticketEventDateId, int ticketEventId, int venueId, DateTime eventStartDateTime);
 
 
     }

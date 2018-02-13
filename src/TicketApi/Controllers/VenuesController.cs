@@ -28,6 +28,7 @@ namespace TicketApi.Controllers
             return Venue.FindVenue(Search);
         }
 
+
         // POST: api/Venues
         [HttpPost]
         public void Post([FromBody]Venue value)
@@ -50,5 +51,13 @@ namespace TicketApi.Controllers
            
             Venue.VenueDelete(id);
         }
+
+        ///// FRÅN MATHIAS, FÖR ATT FÅ IHOP TVÅ TABELLER EJ KLART KANSKE ANVÄNDS
+        //[HttpDelete("{id}/TicketEventDates")]
+        //public List<TicketEventDate> GetAllTicketEventDate()
+        //{
+
+        //    return
+        //}
     }
 }
