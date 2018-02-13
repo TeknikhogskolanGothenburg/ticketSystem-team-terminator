@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using Dapper;
 using TicketSystem.DatabaseRepository.Model;
+using System;
 
 namespace TicketSystem.DatabaseRepository
 {
@@ -24,7 +25,7 @@ namespace TicketSystem.DatabaseRepository
         }
 
         // Här Behövs bara en VOid eller Bool 
-        public void EventAdd(string name, string description)
+        public int EventAdd(string name, string description)
         {
             string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
@@ -32,6 +33,7 @@ namespace TicketSystem.DatabaseRepository
                 connection.Open();
                 connection.Query("insert into TicketEvents(EventName, EventHtmlDescription) values(@Name, @Description)", new { Name = name, Description = description });
                 var addedEventQuery = connection.Query<int>("SELECT IDENT_CURRENT ('TicketEvents') AS Current_Identity").First();
+                return addedEventQuery;
                 //return connection.Query<TicketEvent>("SELECT * FROM TicketEvents WHERE TicketEventID=@Id", new { Id = addedEventQuery }).First();
             }
         }
@@ -80,35 +82,69 @@ namespace TicketSystem.DatabaseRepository
              
              */
 
-        // JOAKIM TESTAR
-        public List<TicketEventDate> TicketEventDateFind(string query)
-        {
-            string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
-            using (var connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                return connection.Query<TicketEventDate>("SELCT * FROM TicketEventDate").ToList();
-            }
+        ////Joakim Testar
 
-        }
+        //public List<TicketEventDate> FindTicketEventDate(string query)
+        //{
+        //    string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+        //    using (var connection = new SqlConnection(connectionString))
+        //    {
+        //        connection.Open();
+        //        return connection.Query<TicketEventDate>("SELCT * FROM TicketEventDates").ToList();
+        //    }
 
-        public void TicketEventDateAdd(int ticketEventDateID, int ticketEventId, int venueId, int eventStartDateTime)
-        {
-            string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
-            using (var connection = new SqlConnection(connectionString))
-            {
+        //}
 
-                connection.Open();
-                connection.Query("insert into TicketEventDate([TicketEventDateID], [TicketEventID], [VenueID], [EventStartDateTime]) values(@TicketEventDateID, @TicketEventID, @VenueID, @EventStartDateTime)");
-            }
-        }
+        //public List<TicketEventDate> FindTicketEventDate()
+        //{
+        //    string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+        //    using (var connection = new SqlConnection(connectionString))
+        //    {
+        //        connection.Open();
+        //        return connection.Query<TicketEventDate>("SELECT * FROM TicketEventDates").ToList();
+        //    }
+        //}
 
-       /// Slut på Joakim testar
-       ///
+
+
+        //public void TicketEventDateAdd(int ticketEventDateID, int ticketEventId, int venueId, int eventStartDateTime)
+        //{
+        //    string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+        //    using (var connection = new SqlConnection(connectionString))
+        //    {
+
+        //        connection.Open();
+        //        connection.Query("insert into TicketEventDates([TicketEventDateID], [TicketEventID], [VenueID], [EventStartDateTime]) values(@TicketEventDateID, @TicketEventID, @VenueID, @EventStartDateTime)");
+        //    }
+        //}
+
+       
+        //public void TicketEventDateUpdate(int id, string name, string address, string city, string country)
+        //{
+        //    string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+        //    using (var connection = new SqlConnection(connectionString))
+        //    {
+        //        connection.Open();
+        //        connection.Query("UPDATE TickeEventDates SET [VenueName] = @VenueName, [Address] = @Address,[City] = @City, [Country] = @Country  WHERE [VenueID] = @VenueID; ", new { VenueName = name, Address = address, City = city, Country = country, VenueID = id });
+        //    }
+        //}
+
+        //public void TicketEventDateDelete(int id)
+        //{
+        //    string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+        //    using (var connection = new SqlConnection(connectionString))
+        //    {
+        //        connection.Open();
+        //        connection.Query("DELETE FROM TicketEventDates WHERE TicketEventDateID = @ID", new { ID = id });
+        //    }
+
+        //}
+         
+
 
         //Venue Methods
         // Här räcker det med en void eller bool 
-        public void VenueAdd(string name, string address, string city, string country)
+        public int VenueAdd(string name, string address, string city, string country)
         {
             string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
@@ -116,6 +152,7 @@ namespace TicketSystem.DatabaseRepository
                 connection.Open();
                 connection.Query("insert into Venues([VenueName],[Address],[City],[Country]) values(@Name,@Address, @City, @Country)", new { Name = name, Address= address, City = city, Country = country });
                 var addedVenueQuery = connection.Query<int>("SELECT IDENT_CURRENT ('Venues') AS Current_Identity").First();
+                return addedVenueQuery;
                 //return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueID=@Id", new { Id = addedVenueQuery }).First();
             }
         }
@@ -159,6 +196,19 @@ namespace TicketSystem.DatabaseRepository
                 connection.Query("DELETE FROM Venues WHERE VenueID = @ID", new { ID = id });
             }
 
+        }
+        // Eventdate 
+        public void TicketEventDate(int TicketEventID, int VenueID, DateTime EventStartDate)
+        {
+            string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                connection.Query("insert into TicketEventDates([TicketEventID],[Venueid],[EventStartDateTime]) values(@TicketEventID,@Venueid,@EventStartDateTime)", new { TicketEventID = TicketEventID, Venueid = VenueID, EventStartDateTime = EventStartDate});
+                var addedVenueQuery = connection.Query<int>("SELECT IDENT_CURRENT ('Venues') AS Current_Identity").First();
+               
+                //return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueID=@Id", new { Id = addedVenueQuery }).First();
+            }
         }
 
         //Tickets

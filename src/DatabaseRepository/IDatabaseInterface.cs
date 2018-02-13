@@ -1,5 +1,6 @@
 ﻿using TicketSystem.DatabaseRepository.Model;
 using System.Collections.Generic;
+using System;
 
 namespace TicketSystem.DatabaseRepository
 {
@@ -10,12 +11,12 @@ namespace TicketSystem.DatabaseRepository
        //Metoder för Events
         void EventUpdate(TicketEvent ticketevent); // Retunerar Inget 
         void EventDelete(string id);// Retunerar Inget 
-        void EventAdd(string name, string description); // Retunerar Inget 
+        int EventAdd(string name, string description); // Retunerar en siffra
         List<TicketEvent> FindEvent(string query); // Retunerar en lista av TicketEvent
         List<TicketEvent> FindEvent(); // Retunerar en lista av TicketEvent
 
         //Metoder för Venues
-        void VenueAdd(string name, string address, string city, string country); // Retunerar Inget 
+        int VenueAdd(string name, string address, string city, string country); // Retunerar en siffra
         void VenueUpdate(int id, string name, string address, string city, string country);  // Retunerar Inget 
         void VenueDelete(int id);  // Retunerar Inget 
         List<Venue> FindVenue(string query); //Retunerar en lista av Venue
@@ -28,22 +29,16 @@ namespace TicketSystem.DatabaseRepository
         void TicketAdd(int seatID);
 
 
+        ////Metoder för TicketEventDate
+        void TicketEventDate(int TicketEventID, int VenueID, DateTime EventStarDate ); // Retunerar Inget
+        
 
-
-
-
-        //Sorry måste komentera detta tillfälligt du kan ta tillbaka när du jobbar
-        //List<TicketEventDate> TicketEventDateFind(string query);
-        //List<TicketEventDate> TicketEventDateAll();
-
-
-        // Kommenterar detta tilffäligt 
-        //TicketEventDate TicketEventDateAdd(int ticketEventDateId, int ticketEventId, int venueId, time eventStartDateTime);
-
-
-        //void TicketEventDateUpdate(TicketEventDate ticketEventDate);
-
+        //List<TicketEventDate> FindTicketEventDate(string query);
+        //List<TicketEventDate> FindTicketEventDate();
         //void TicketEventDateDelete(int id);
-        // Joakim Testar
+        //void TicketEventDateUpdate(TicketEventDate ticketEventDate);
+        //TicketEventDate TicketEventDateAdd(int ticketEventDateId, int ticketEventId, int venueId, int eventStartDateTime);
+
+
     }
 }
