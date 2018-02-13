@@ -56,36 +56,61 @@
                 alert(i);
         // declare the object
                 var Event = {
-                    Seats: $('#seats').val(),
-                    Venues:{
-                        VenueName: $('#VenueName').val(),
-                        Address: $('#VenueAddres').val(),
-                        City:$('#Venuecity').val(),
-                        country: $('#Venuecountry').val()
+
+                    Venues: {
+                        VenueName: "Opera",
+                        address: "Lönngränden 3",
+                        city: "Göteborg",
+                        country: "Sverige"
                     },
                     TicketEvents: {
-                        EventName : $('#EventName').val(),
-                        EventHtmlDescription: $('#EventDescription').val(),
-                       
+                        eventName: "Party Night",
+                        eventHtmlDescription: "<h1> vi ska festa massa<h1>"
+
+
                     },
-                    TicketEventDates:{
-                        EventStartDateTime: $('#EventDate').val()
+                    TicketEventDates: {
+                        EventStartDateTime: "2011-07-14 19:43:37"
+
                     }
+                    //Seats: $('#seats').val(),
+                    //Venues:{
+                    //    VenueName: $('#VenueName').val(),
+                    //    Address: $('#VenueAddres').val(),
+                    //    City:$('#Venuecity').val(),
+                    //    country: $('#Venuecountry').val()
+                    //},
+                    //TicketEvents: {
+                    //    EventName : $('#EventName').val(),
+                    //    EventHtmlDescription: $('#EventDescription').val(),
+                       
+                    //},
+                    //TicketEventDates:{
+                    //    EventStartDateTime: $('#EventDate').val()
+                    //}
         };
 
        
        
 
         // convert the object into a json string
-        var data_json = JSON.stringify(Event);
+       
 
         // simple ajax call to post your json data
-        jQuery.ajax('http://localhost:55792/api/Event',{
-            type:'POST',
-            data: data_json,
-            contentType: 'application/json'
-        }).done(function (data, status, jqr) {
-            alert(status);
+            $.ajax({
+                url: "http://192.168.1.73/api/Event",
+            type: "POST",
+            dataType: "json",
+            data: '='+JSON.stringify(Event),
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+
+                alert("good");
+            },
+            error: function (result) {
+                alert(JSON.stringify(Event));
+
+            }
         })
    
 
