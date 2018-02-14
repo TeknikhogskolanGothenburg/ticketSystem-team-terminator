@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace TicketSystem.DatabaseRepository.Model
 {
-    public class Ticket
+    public class TicketsToTransaction
     {
         public int TicketID { get; set; }
-        [Required]
-        public int SeatID { get; set; }
+        public int TransactionID { get; set; }
     }
 }

@@ -5,10 +5,11 @@ using System.Text;
 
 namespace TicketSystem.DatabaseRepository.Model
 {
-    public class Ticket
+    //Join Tabell
+    class SeatsEventDate
     {
-        public int TicketID { get; set; }
-        [Required]
         public int SeatID { get; set; }
+        [Required]
+        public int TicketEventDayID { get; set; }
     }
 }

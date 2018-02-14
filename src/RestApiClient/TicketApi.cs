@@ -1,7 +1,8 @@
 ﻿using RestSharp;
 using System;
 using System.Collections.Generic;
-using TicketSystem.RestApiClient.Model;
+using TicketSystem.DatabaseRepository.Model;
+
 
 namespace TicketSystem.RestApiClient
 {
@@ -9,11 +10,12 @@ namespace TicketSystem.RestApiClient
     {
         // Implemented using RestSharp: http://restsharp.org/
 
-        public List<TicketEvent> TicketEventGet( )
+        public EventList GetEvents( )
         {
-            var client = new RestClient("https://localhost:44363/");
-            var request = new RestRequest("api/TicketEvent", Method.GET);
-            var response = client.Execute<List<TicketEvent>>(request);
+
+            var client = new RestClient("http://localhost:55792/");
+            var request = new RestRequest("api/Event", Method.GET);
+            var response = client.Execute<EventList>(request);
             return response.Data;
         }
 

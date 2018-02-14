@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace TicketSystem.RestApiClient.Model
+namespace TicketSystem.DatabaseRepository.Model
 {
- public   class TicketEvent
+    public class TicketEvent
     {
-        public int TicketEventID { get; set; }
+        public int TicketEventId { get; set; }
         [Required]
         public string EventName { get; set; }
         [Required]
         public string EventHtmlDescription { get; set; }
+       
     }
 }

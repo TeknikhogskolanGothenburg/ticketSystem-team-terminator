@@ -1,0 +1,116 @@
+﻿
+@{
+    ViewData["Title"] = "CreteEvent";
+}
+
+<h2>CreteEvent</h2>
+
+<div class="form-group">
+    <label for="exampleInputEmail1">Event Name</label>
+    <input type="text" class="form-control" id="EventName" placeholder="Enter Event Name">
+    <small id="Info" class="form-text text-muted">Please enter a name for your Event </small>
+</div>
+<div class="form-group">
+    <label for="DescriptionLabel">Event Description</label>
+    <textarea rows="4" cols="50" class="form-control" id="EventDescription" placeholder="Enter Event Description" >
+</textarea>
+
+</div>
+<div class="form-group">
+    <label for="DescriptionLabel">Venue Name</label>
+    <input type="text" class="form-control" id="VenueName" placeholder="Enter Venue Name">
+
+</div>
+<div class="form-group">
+    <label for="DescriptionLabel">Number Of Seats</label>
+    <input type="number" class="form-control" id="seats" placeholder="Enter seats">
+
+</div>
+
+
+
+<div class="form-group">
+    <label for="DescriptionLabel">Venue Addres</label>
+    <input type="text" class="form-control" id="VenueAddres" placeholder=" type Venue Addres ">
+</div>
+<div class="form-group">
+    <label for="DescriptionLabel">Venue city</label>
+    <input type="text" class="form-control" id="Venuecity" placeholder="Venue city">
+</div>
+<div class="form-group">
+    <label for="DescriptionLabel">Type venue Contry</label>
+    <input type="text" class="form-control" id="Venuecountry" placeholder="Type venue Contry">
+</div>
+<div class="form-group">
+    <label for="DescriptionLabel">Event Date</label>
+    <input type="text" class="form-control" id="EventDate" placeholder="Enter Event Date">
+
+</div>
+<button type="submit" id="buttonsaw123" class="btn btn-primary"> Enter</button>
+
+@section scripts
+    {
+    <script>
+        $("#buttonsaw123").click(function () {
+           
+            var i = $('#Venuecity').val()
+            alert(i);
+            // declare the object
+            var venues = {
+                venueName: $('#VenueName').val(),
+                address: $('#VenueAddres').val(),
+                city: $('#Venuecity').val(),
+                country: $('#Venuecountry').val()
+
+            };
+            var ticketEvents = {
+                eventName: $('#EventName').val(),
+                eventHtmlDescription: $('#EventDescription').val(),
+
+            };
+            var ticketEventDates = {
+                eventStartDateTime: $('#EventDate').val()
+            };
+            var event = {
+                seats: $('#seats').val(),
+                venues, ticketEvents, ticketEventDates
+
+            };
+
+
+
+
+            // convert the object into a json string
+
+
+            // simple ajax call to post your json data
+            $.ajax({
+                url: "https://localhost:44358/api/Event",
+                type: "POST",
+                dataType: "json",
+                data: JSON.stringify(event),
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+
+                    alert("good");
+                },
+                error: function (result) {
+                    alert(JSON.stringify(Event));
+
+                }
+            })
+
+
+        })
+
+    </script>
+}
+
+
+
+
+
+
+
+
+
