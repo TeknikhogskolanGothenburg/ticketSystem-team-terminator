@@ -30,18 +30,15 @@ namespace TicketSystem.DatabaseRepository
         int TicketEventDate(int TicketEventID, int VenueID, DateTime EventStarDate ); // Retunerar Inget
         List<TicketEventDate> FindTicketEventDate();
         List<TicketEventDate> FindTicketEventDate(string query);
+        
+
+
         // SetEventCreaTOR
 
 
         void SeatsAtEventDateAdd(int ticketEventDateID);
-      
 
-        //List<TicketEventDate> FindTicketEventDate(string query);
-        //List<TicketEventDate> FindTicketEventDate();
-        //void TicketEventDateDelete(int id);
-        //void TicketEventDateUpdate(TicketEventDate ticketEventDate);
-        //TicketEventDate TicketEventDateAdd(int ticketEventDateId, int ticketEventId, int venueId, int eventStartDateTime);
-
+   
 
     }
 }
