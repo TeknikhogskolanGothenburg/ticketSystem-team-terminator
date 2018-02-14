@@ -177,7 +177,7 @@ namespace TicketSystem.DatabaseRepository
             }
         }
 
-        public List<Venue> FindVenue()
+        public List<Venue> AllVenues()
         {
             string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))

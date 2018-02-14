@@ -17,7 +17,7 @@ namespace TicketSystem.DatabaseRepository
         //Metoder för Venues
         int VenueAdd(string name, string address, string city, string country); // Retunerar en siffra
         List<Venue> FindVenue(string query); //Retunerar en lista av Venue
-        List<Venue> FindVenue(); //Retunerar en lista av Venue
+        List<Venue> AllVenues(); //Retunerar en lista av Venue
 
 
         //Metoder för Tickets

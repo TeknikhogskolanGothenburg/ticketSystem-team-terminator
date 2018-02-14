@@ -21,7 +21,7 @@ namespace Api_Start.Controllers
             EventList AllEvents = new EventList()
             {
                 TicketEvents = DbHandler.FindEvent(),
-                Venues = DbHandler.FindVenue(),
+                Venues = DbHandler.AllVenues(),
                 TicketEventDates = DbHandler.FindTicketEventDate()
             };
 
