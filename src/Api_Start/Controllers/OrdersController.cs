@@ -16,22 +16,28 @@ namespace Api_Start.Controllers
         IDatabaseInterface db = new Database();
         // GET: api/Order
         [HttpGet]
-        public OrderList Get()
-        {
-            OrderList allOrderList = new OrderList()
-            {
-                Tickets = db.AllTickets(),
-
-            }
-            return allOrderList;
-        }
+        //public OrderList Get()
+        //{
+        //    OrderList allOrders = new OrderList()
+        //    //{
+        //    //    Tickets =
+        //    //    TicketsToTransactions = 
+        //    //    TicketTransactions = 
+        //    //}
+        //    return allOrders;
+        //}
 
         // GET: api/Order/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        [HttpGet("{id}", Name = "GetTickets")]
+        //public string GetTickets(int id)
+        //{
+        //    OrderList orders = new OrderList()
+        //    {
+        //        Tickets =
+        //        TicketsToTransactions =
+        //        TicketTransactions =
+        //    }
+        //}
         
         // POST: api/Order
         [HttpPost]
