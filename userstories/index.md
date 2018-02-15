@@ -20,6 +20,9 @@ There is in the system (at least) three kind of users:
 * As a buyer i want to be able to change the number of tickets in the shop
 
 * As a buyer i want to recive a mail when my tickets are booked. (edited)
+* As a admin i want to be able to create a event and see that it is saved in the database
+* As a admin i want to click the eventlist so that i can see all the events in the database
+
 
 
 
