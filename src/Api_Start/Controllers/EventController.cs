@@ -39,7 +39,7 @@ namespace Api_Start.Controllers
         //
         // POST: api/CreateEvent
         [HttpPost]
-        public void Post([FromBody]Event value)
+        public IActionResult Post([FromBody]Event value)
         {
             try
             {
@@ -54,8 +54,9 @@ namespace Api_Start.Controllers
             }
             catch
             {
-               
+                return StatusCode(500);
             }
+            return Ok();
         }
         
         // PUT: api/CreateEvent/5

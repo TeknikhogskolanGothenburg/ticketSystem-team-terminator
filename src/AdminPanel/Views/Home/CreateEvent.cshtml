@@ -52,9 +52,9 @@
     {
     <script>
         $("#buttonsaw123").click(function () {
-           
-           
-           
+
+
+
             // declare the object
             var venues = {
                 venueName: $('#VenueName').val(),
@@ -95,10 +95,14 @@
                     alert("good");
                 },
                 error: function (result) {
-                    alert(JSON.stringify(Event));
+                    alert(result);
+                    alert(JSON.stringify(event));
 
                 }
-            })
+            }).done(function (data){
+                alert("Done");
+
+            });
 
 
         })
