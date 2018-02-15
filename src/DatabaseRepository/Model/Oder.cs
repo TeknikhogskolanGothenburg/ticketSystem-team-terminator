@@ -4,7 +4,13 @@ using System.Text;
 
 namespace TicketSystem.DatabaseRepository.Model
 {
-    class Oder
+  public  class Order
     {
+        public int TicketID { get; set; }
+        public string BuyerLastName { get; set; }
+        public string BuyerFirstName { get; set; }
+        public string BuyerAddress{ get; set; }
+        public string BuyerCity { get; set; }
+
     }
 }

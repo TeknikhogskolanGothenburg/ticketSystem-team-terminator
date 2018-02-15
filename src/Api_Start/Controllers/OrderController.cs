@@ -15,34 +15,40 @@ namespace Api_Start.Controllers
     {
         IDatabaseInterface db = new Database();
         // GET: api/Order
-        [HttpGet]
-        //public OrderList Get()
-        //{//
-        //    OrderList allOrders = new OrderList()
-        //    //{
-        //    //    Tickets =
-        //    //    TicketsToTransactions = 
-        //    //    TicketTransactions = 
-        //    //}
-        //    return allOrders;
-        //}
+        //[HttpGet]
+        ////public OrderList Get()
+        ////{//
+        ////    OrderList allOrders = new OrderList()
+        ////    //{
+        ////    //    Tickets =
+        ////    //    TicketsToTransactions = 
+        ////    //    TicketTransactions = 
+        ////    //}
+        ////    return allOrders;
+        ////}
 
-        // GET: api/Order/5
-        [HttpGet("{id}", Name = "GetTickets")]
-        //public string GetTickets(int id)
-        //{
-        //    OrderList orders = new OrderList()
-        //    {
-        //        Tickets =
-        //        TicketsToTransactions =
-        //        TicketTransactions =
-        //    }
-        //}
+        //// GET: api/Order/5
+        //[HttpGet("{id}", Name = "GetTickets")]
+        ////public string GetTickets(int id)
+        ////{
+        ////    OrderList orders = new OrderList()
+        ////    {
+        ////        Tickets =
+        ////        TicketsToTransactions =
+        ////        TicketTransactions =
+        ////    }
+        ////}
         
         // POST: api/Order
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Post([FromBody] Order value)
         {
+            try {
+
+
+            }
+            catch { }
+
         }
         
         // PUT: api/Order/5
