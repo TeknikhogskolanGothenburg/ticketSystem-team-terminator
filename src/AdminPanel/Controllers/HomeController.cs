@@ -23,9 +23,10 @@ namespace AdminPanel.Controllers
         {
             List<EventTest> Test = new List<EventTest>();
             ITicketApi Getter = new TicketApi();
+            Test = Getter.GetEvents();
                
 
-            return View(Getter);
+            return View(Test);
         }
        
         public IActionResult CreateEvent()

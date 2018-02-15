@@ -17,8 +17,10 @@ namespace Api_Start.Controllers
         [HttpGet]
         public List<EventTest> Get()
         {
-            
-            return DbHandler.GetallEventsAvadible();
+
+                return DbHandler.GetallEventsAvadible();
+           
+           
         }
 
         // GET: api/CreateEvent/5

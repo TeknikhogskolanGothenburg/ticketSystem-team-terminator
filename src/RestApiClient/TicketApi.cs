@@ -10,7 +10,7 @@ namespace TicketSystem.RestApiClient
     {
         // Implemented using RestSharp: http://restsharp.org/
 
-        public List<EventTest> GetEvents( )
+        public List<EventTest> GetEvents()
         {
 
             var client = new RestClient("http://localhost:55792/");
