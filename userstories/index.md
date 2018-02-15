@@ -21,8 +21,10 @@ There is in the system (at least) three kind of users:
 
 * As a buyer i want to recive a mail when my tickets are booked. (edited)
 * As a admin i want to be able to create a event and see that it is saved in the database
-* As a admin i want to click the eventlist so that i can see all the events in the database
-
+* As a admin i want to click the eventlist so that i can see all the events in the database 
+* As a admin i want to input validation and all input backend
+* As a admin i want Backoffice och TicketShop to be on Swedish and English
+* As a admin i want to logg in with .Net Core logging and SEQ
 
 
 
