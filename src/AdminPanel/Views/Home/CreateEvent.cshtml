@@ -53,8 +53,8 @@
     <script>
         $("#buttonsaw123").click(function () {
            
-            var i = $('#Venuecity').val()
-            alert(i);
+           
+           
             // declare the object
             var venues = {
                 venueName: $('#VenueName').val(),
@@ -85,7 +85,7 @@
 
             // simple ajax call to post your json data
             $.ajax({
-                url: "https://localhost:44358/api/Event",
+                url: "http://localhost:55792/api/Event",
                 type: "POST",
                 dataType: "json",
                 data: JSON.stringify(event),

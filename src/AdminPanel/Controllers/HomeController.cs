@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AdminPanel.Models;
 using Microsoft.AspNetCore.Authorization;
+using TicketSystem.RestApiClient.Model;
 using TicketSystem.RestApiClient;
-using TicketSystem.DatabaseRepository.Model;
 
 namespace AdminPanel.Controllers
 {
@@ -21,12 +21,11 @@ namespace AdminPanel.Controllers
         }
         public IActionResult GetEvents()
         {
-            EventList eventList = new EventList();
-            ITicketApi Db = new TicketApi();
-           eventList = Db.GetEvents();
+            List<EventTest> Test = new List<EventTest>();
+            ITicketApi Getter = new TicketApi();
+               
 
-
-            return View(eventList);
+            return View(Getter);
         }
        
         public IActionResult CreateEvent()

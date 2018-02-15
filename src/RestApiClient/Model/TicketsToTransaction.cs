@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TicketSystem.DatabaseRepository.Model
+namespace TicketSystem.RestApiClient.Model
 {
     public class TicketsToTransaction
     {

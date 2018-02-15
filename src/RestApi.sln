@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseRepository", "Datab
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentProvider", "PaymentProvider\PaymentProvider.csproj", "{57C5E6A3-A743-48A6-BE15-A581F201A15C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api_Start", "Api_Start\Api_Start.csproj", "{31F3E8C5-0584-4915-9C85-40F401CCC754}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api_Start", "Api_Start\Api_Start.csproj", "{31F3E8C5-0584-4915-9C85-40F401CCC754}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

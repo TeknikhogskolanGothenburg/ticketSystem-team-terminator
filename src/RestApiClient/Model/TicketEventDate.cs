@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace TicketSystem.DatabaseRepository.Model
+namespace TicketSystem.RestApiClient.Model
 {
     public class TicketEventDate
     {

@@ -1,4 +1,5 @@
-﻿@model TicketSystem.DatabaseRepository.Model.EventList
+﻿@using TicketSystem.RestApiClient.Model;
+@model List<EventTest>
 @{
     ViewData["Title"] = "GetEvents";
 }
@@ -8,35 +9,35 @@
 
 
         <div class="container">
-       @{for (var i = 0; i < Model.TicketEventDates.Count; i++)
+       @{foreach (var i in Model)
         {
 
 
         <div class="row">
             <div class="col-sm">
-                <h1> @Model.TicketEventDates[i].TicketEventID;</h1>
-                <h1> @Model.TicketEventDates[i].EventStartDateTime;</h1>
+                <h1> @i.EventStartDateTime;</h1>
+                <h1> @i.TicketEventDateID;</h1>
             </div>
           
         </div>
         <div class="row">
             <div class="col-sm">
-                <h1> @Model.TicketEvents[i].TicketEventId;</h1>
-                <h1> @Model.TicketEvents[i].EventName;</h1>
+                <h1> @i.EventName;</h1>
+                <h1> @i.EventHtmlDescription;</h1>
             </div>
 
         </div>
         <div class="row">
             <div class="col-sm">
-                <h1> @Model.TicketEvents[i].EventHtmlDescription;</h1>
+                <h1> @i.VenueName;</h1>
             </div>
 
         </div>
 
         <div class="row">
             <div class="col-sm">
-                <h1> @Model.Venues[i].VenueId;</h1>
-                <h1> @Model.Venues[i].VenueName;</h1>
+                <h1> @i.Address;</h1>
+                <h1> @i.City;</h1>
             </div>
 
         </div>

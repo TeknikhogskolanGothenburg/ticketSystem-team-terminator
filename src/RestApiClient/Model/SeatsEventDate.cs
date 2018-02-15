@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace TicketSystem.DatabaseRepository.Model
+namespace TicketSystem.RestApiClient.Model
 {
     //Join Tabell
     class SeatsEventDate
