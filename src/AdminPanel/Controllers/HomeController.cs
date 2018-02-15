@@ -21,15 +21,15 @@ namespace AdminPanel.Controllers
         }
         public IActionResult GetEvents()
         {
-            List<TicketEvent> Events = new List<TicketEvent>();
-            ITicketApi Db = new TicketApi();
-           Events = Db.TicketEventGet();
+            List<EventTest> Test = new List<EventTest>();
+            ITicketApi Getter = new TicketApi();
+            Test = Getter.GetEvents();
+               
 
-
-            return View(Events);
+            return View(Test);
         }
        
-        public IActionResult CreteEvent()
+        public IActionResult CreateEvent()
         {
             ViewData["Message"] = "Your application description page.";
 

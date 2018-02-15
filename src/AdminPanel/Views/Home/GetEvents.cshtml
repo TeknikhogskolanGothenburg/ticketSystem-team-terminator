@@ -1,26 +1,49 @@
-﻿@model List<TicketSystem.RestApiClient.Model.TicketEvent>
+﻿
+@model List< TicketSystem.RestApiClient.Model.EventTest>
 @{
     ViewData["Title"] = "GetEvents";
 }
 
 <h2>GetEvents</h2>
 
-@{
-    
-    foreach(var i in Model)
-    {
-      
-        <div style="background-color:aquamarine; border-radius:unset">
-            <h1 style="background-color:rebeccapurple">@i.EventName </h1>
-            
-            <h1> @i.EventHtmlDescription</h1>
-            <button  value="@i.TicketEventID"style="width:50px; height:20px;" > Update</button>
-            <button value="@i.TicketEventID"  style="width:50px; height:20px;"> Delete</button>
+
+
+        <div class="container">
+       @{foreach (var i in Model)
+        {
+
+
+        <div class="row">
+            <div class="col-sm">
+                <h1> @i.EventStartDateTime;</h1>
+                <h1> @i.TicketEventDateID;</h1>
+            </div>
+          
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <h1> @i.EventName;</h1>
+                <h1> @i.EventHtmlDescription;</h1>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <h1> @i.VenueName;</h1>
+            </div>
+
         </div>
 
+        <div class="row">
+            <div class="col-sm">
+                <h1> @i.Address;</h1>
+                <h1> @i.City;</h1>
+            </div>
 
-
+        </div>
+        
     }
 
 
 }
+</div>

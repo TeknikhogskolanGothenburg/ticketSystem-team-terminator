@@ -15,33 +15,27 @@ namespace Api_Start.Controllers
         IDatabaseInterface DbHandler = new Database();
         // GET: api/CEvent
         [HttpGet]
-        public EventList Get()
+        public List<EventTest> Get()
         {
-            // Skickar ut alla evet
-            EventList AllEvents = new EventList()
-            {
-                TicketEvents = DbHandler.FindEvent(),
-                Venues = DbHandler.AllVenues(),
-                TicketEventDates = DbHandler.FindTicketEventDate()
-            };
 
-
-            return AllEvents;
+                return DbHandler.GetallEventsAvadible();
+           
+           
         }
 
         // GET: api/CreateEvent/5
-        [HttpGet("{Search}", Name = "SearchEVent")]
-        public EventList Get(string Search)
-        {
-            /// bara ett test fungerar ej
-            EventList Events = new EventList()
-            {
-                TicketEvents = DbHandler.FindEvent(Search),
-                Venues = DbHandler.FindVenue(Search),
-                TicketEventDates = DbHandler.FindTicketEventDate(Search)
-            };
-            return Events;
-        }
+        //[HttpGet("{Search}", Name = "SearchEVent")]
+        //public EventList Get(string Search)
+        //{
+        //    /// bara ett test fungerar ej
+        //    EventList Events = new EventList()
+        //    {
+        //        TicketEvents = DbHandler.FindEvent(Search),
+        //        Venues = DbHandler.FindVenue(Search),
+        //        TicketEventDates = DbHandler.FindTicketEventDate(Search)
+        //    };
+        //    return Events;
+        //}
         //
         // POST: api/CreateEvent
         [HttpPost]

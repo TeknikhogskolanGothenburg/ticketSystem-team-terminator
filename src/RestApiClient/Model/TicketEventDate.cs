@@ -1,16 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace TicketSystem.RestApiClient.Model
 {
- public   class TicketEvent
+    public class TicketEventDate
     {
+        public int TicketEventDateID { get; set; }
+        [Required]
         public int TicketEventID { get; set; }
         [Required]
-        public string EventName { get; set; }
+        public int VenueId{get;set; }
         [Required]
-        public string EventHtmlDescription { get; set; }
+        public DateTime EventStartDateTime { get; set; }
     }
 }

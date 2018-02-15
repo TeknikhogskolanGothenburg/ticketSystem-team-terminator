@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TicketSystem.DatabaseRepository.Model
+namespace TicketSystem.RestApiClient.Model
 {
-    public class Ticket
+    public class TicketsToTransaction
     {
         public int TicketID { get; set; }
-        public int SeatID { get; set; }
+        public int TransactionID { get; set; }
     }
 }

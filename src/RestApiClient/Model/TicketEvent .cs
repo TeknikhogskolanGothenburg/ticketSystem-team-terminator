@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TicketSystem.DatabaseRepository.Model
+namespace TicketSystem.RestApiClient.Model
 {
    public class TicketEvent
     {
         public int TicketEventID { get; set; }
         public string EventName { get; set; }
         public string EventHtmlDescription { get; set; }
+
+
     }
 }

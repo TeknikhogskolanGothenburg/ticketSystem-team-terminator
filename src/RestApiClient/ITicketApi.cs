@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+
 using TicketSystem.RestApiClient.Model;
 
 namespace TicketSystem.RestApiClient
@@ -14,7 +14,7 @@ namespace TicketSystem.RestApiClient
         /// </summary>
         /// <param name="ticketId">ID of the ticket</param>
         /// <returns></returns>
-        Ticket TicketTicketIdGet(int ticketId);
-        List<TicketEvent>TicketEventGet();
+        
+        List<EventTest> GetEvents();
     }
 }
