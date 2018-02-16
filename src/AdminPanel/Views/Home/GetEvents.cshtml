@@ -14,17 +14,40 @@
         {
 
 
-            <div class="col-sm-6" style="background-color:lightgray;"><b>Eventstart: @i.EventStartDateTime</b></div>
-            <div class="col-sm-6" style="background-color:lightgray;"><b>Ticketid: @i.TicketEventDateID</b></div>
-            <div class="col-sm-6" style="background-color:lightgray;"><b>Eventname: @i.EventName</b></div>
-            <div class="col-sm-6" style="background-color:lightgray;"><b>Eventdescription: @i.EventHtmlDescription</b></div>
-            <div class="col-sm-6" style="background-color:lightgray;"><b>Venuename: @i.VenueName</b></div>
-            <div class="col-sm-6" style="background-color:lightgray;"><b>Address: @i.Address</b></div>
-            <div class="col-sm-6" style="background-color:lightgray;"><b>City: @i.City</b></div>
+            @*<div class=".col-lg" style="background-color:lightgray;"><b>Eventstart: @i.EventStartDateTime</b></div>
+            <div class=".col-lg" style="background-color:lightgray;"><b>Ticketid: @i.TicketEventDateID</b></div>
+            <div class=".col-lg" style="background-color:lightgray;"><b>Eventname: @i.EventName</b></div>
+            <div class=".col-lg" style="background-color:lightgray;"><b>Eventdescription: @i.EventHtmlDescription</b></div>
+            <div class=".col-lg" style="background-color:lightgray;"><b>Venuename: @i.VenueName</b></div>
+            <div class=".col-lg" style="background-color:lightgray;"><b>Address: @i.Address</b></div>
+            <div class=".col-lg" style="background-color:lightgray;"><b>City: @i.City</b></div>
+            <h1>Click Here To Book</h1>
+            <button type="button" class="btn btn-outline-success">Book event</button>*@
+
+            <div class="alert alert-dismissible alert-warning">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <b>Eventstart</b> <br/>
+                <p class="mb-0">@i.EventStartDateTime </p>    
+                <b>TicketID</b> <br/>
+                <p class="mb-0">  @i.TicketEventDateID <br/>
+                <b>EventName</b> <br/>
+                <p class="mb-0">  @i.EventName <br/>
+                <b>EventDescription</b> <br/>
+                <p class="mb-0">@i.EventHtmlDescription <br/>
+                <b>VenueName</b> <br />
+                <p class="mb-0"> @i.VenueName <br/>
+                <b>Address</b> <br />
+                <p class="mb-0">  @i.Address <br/>
+                <b>City</b> <br />
+                <p class="mb-0"> @i.City <br/>
+
+                <p1><b>Click here to buy ticket</b></p1> <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> <button type="button" class="btn btn-outline-success">Buy ticket</button>
+
+</div>
 
 
-            @*@i.EventStartDateTime , @i.TicketEventDateID, @i.EventName, @i.EventHtmlDescription,  @i.VenueName, @i.Address, @i.City*@
 
+            @*@i.EventStartDateTime , @i.TicketEventDateID , @i.EventName, @i.EventHtmlDescription,  @i.VenueName, @i.Address, @i.City*@ 
 
 
 
@@ -32,8 +55,9 @@
 
 
         }
- 
+
 
     }
 
-    </div>
+</div>
+
