@@ -40,16 +40,16 @@ namespace Api_Start.Controllers
         ////}
         
         // POST: api/Order
-        [HttpPost]
-        public IActionResult Post([FromBody] Order value)
-        {
-            try {
+        //[HttpPost]
+        //public IActionResult Post([FromBody] Order value)
+        //{
+        //    try {
 
 
-            }
-            catch { }
+        //    }
+        //    catch { }
 
-        }
+        //}
         
         // PUT: api/Order/5
         [HttpPut("{id}")]
