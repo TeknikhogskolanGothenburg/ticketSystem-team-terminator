@@ -14,18 +14,13 @@ namespace Api_Start.Controllers
     public class OrdersController : Controller
     {
         IDatabaseInterface db = new Database();
-        // GET: api/Order
-        //[HttpGet]
-        ////public OrderList Get()
-        ////{//
-        ////    OrderList allOrders = new OrderList()
-        ////    //{
-        ////    //    Tickets =
-        ////    //    TicketsToTransactions = 
-        ////    //    TicketTransactions = 
-        ////    //}
-        ////    return allOrders;
-        ////}
+        //GET: api/Order
+       [HttpGet]
+       public List<Order> Get()
+        {
+           
+            return db.GetAllOrders();
+        }
 
         //// GET: api/Order/5
         //[HttpGet("{id}", Name = "GetTickets")]
@@ -38,7 +33,7 @@ namespace Api_Start.Controllers
         ////        TicketTransactions =
         ////    }
         ////}
-        
+
         // POST: api/Order
         //[HttpPost]
         //public IActionResult Post([FromBody] Order value)
@@ -50,7 +45,7 @@ namespace Api_Start.Controllers
         //    catch { }
 
         //}
-        
+
         // PUT: api/Order/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
