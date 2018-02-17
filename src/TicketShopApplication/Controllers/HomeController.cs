@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TicketShopApplication.Models;
+using TicketSystem.RestApiClient;
+using TicketSystem.RestApiClient.Model;
 
 namespace TicketShopApplication.Controllers
 {
