@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdminPanel.Views.Manage
+  commentId: N:AdminPanel.Views.Manage
+  id: AdminPanel.Views.Manage
+  children:
+  - AdminPanel.Views.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: AdminPanel.Views.Manage
+  nameWithType: AdminPanel.Views.Manage
+  fullName: AdminPanel.Views.Manage
+  type: Namespace
+  assemblies:
+  - AdminPanel
+references:
+- uid: AdminPanel.Views.Manage.ManageNavPages
+  commentId: T:AdminPanel.Views.Manage.ManageNavPages
+  isExternal: false
+  name: ManageNavPages
+  nameWithType: ManageNavPages
+  fullName: AdminPanel.Views.Manage.ManageNavPages

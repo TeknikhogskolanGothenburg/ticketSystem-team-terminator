@@ -16,13 +16,9 @@ items:
   fullName: TicketSystem.DatabaseRepository.Model.TicketEvent
   type: Class
   source:
-    remote:
-      path: src/DatabaseRepository/Model/TicketEvent.cs
-      branch: master
-      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: TicketEvent
-    path: src/DatabaseRepository/Model/TicketEvent.cs
-    startLine: 2
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\TicketEvent.cs
+    startLine: 4
   assemblies:
   - DatabaseRepository
   namespace: TicketSystem.DatabaseRepository.Model
@@ -57,13 +53,9 @@ items:
   fullName: TicketSystem.DatabaseRepository.Model.TicketEvent.TicketEventId
   type: Property
   source:
-    remote:
-      path: src/DatabaseRepository/Model/TicketEvent.cs
-      branch: master
-      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: TicketEventId
-    path: src/DatabaseRepository/Model/TicketEvent.cs
-    startLine: 4
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\TicketEvent.cs
+    startLine: 6
   assemblies:
   - DatabaseRepository
   namespace: TicketSystem.DatabaseRepository.Model
@@ -92,23 +84,29 @@ items:
   fullName: TicketSystem.DatabaseRepository.Model.TicketEvent.EventName
   type: Property
   source:
-    remote:
-      path: src/DatabaseRepository/Model/TicketEvent.cs
-      branch: master
-      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: EventName
-    path: src/DatabaseRepository/Model/TicketEvent.cs
-    startLine: 5
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\TicketEvent.cs
+    startLine: 7
   assemblies:
   - DatabaseRepository
   namespace: TicketSystem.DatabaseRepository.Model
   syntax:
-    content: public string EventName { get; set; }
+    content: >-
+      [Required]
+
+      public string EventName { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property EventName As String
+    content.vb: >-
+      <Required>
+
+      Public Property EventName As String
   overload: TicketSystem.DatabaseRepository.Model.TicketEvent.EventName*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - get
@@ -127,23 +125,29 @@ items:
   fullName: TicketSystem.DatabaseRepository.Model.TicketEvent.EventHtmlDescription
   type: Property
   source:
-    remote:
-      path: src/DatabaseRepository/Model/TicketEvent.cs
-      branch: master
-      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: EventHtmlDescription
-    path: src/DatabaseRepository/Model/TicketEvent.cs
-    startLine: 6
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\TicketEvent.cs
+    startLine: 9
   assemblies:
   - DatabaseRepository
   namespace: TicketSystem.DatabaseRepository.Model
   syntax:
-    content: public string EventHtmlDescription { get; set; }
+    content: >-
+      [Required]
+
+      public string EventHtmlDescription { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property EventHtmlDescription As String
+    content.vb: >-
+      <Required>
+
+      Public Property EventHtmlDescription As String
   overload: TicketSystem.DatabaseRepository.Model.TicketEvent.EventHtmlDescription*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - get

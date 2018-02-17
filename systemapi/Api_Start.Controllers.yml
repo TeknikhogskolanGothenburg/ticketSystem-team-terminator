@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Api_Start.Controllers
+  commentId: N:Api_Start.Controllers
+  id: Api_Start.Controllers
+  children:
+  - Api_Start.Controllers.EventController
+  - Api_Start.Controllers.OrdersController
+  - Api_Start.Controllers.ValuesController
+  langs:
+  - csharp
+  - vb
+  name: Api_Start.Controllers
+  nameWithType: Api_Start.Controllers
+  fullName: Api_Start.Controllers
+  type: Namespace
+  assemblies:
+  - Api_Start
+references:
+- uid: Api_Start.Controllers.EventController
+  commentId: T:Api_Start.Controllers.EventController
+  isExternal: false
+  name: EventController
+  nameWithType: EventController
+  fullName: Api_Start.Controllers.EventController
+- uid: Api_Start.Controllers.OrdersController
+  commentId: T:Api_Start.Controllers.OrdersController
+  isExternal: false
+  name: OrdersController
+  nameWithType: OrdersController
+  fullName: Api_Start.Controllers.OrdersController
+- uid: Api_Start.Controllers.ValuesController
+  commentId: T:Api_Start.Controllers.ValuesController
+  isExternal: false
+  name: ValuesController
+  nameWithType: ValuesController
+  fullName: Api_Start.Controllers.ValuesController
