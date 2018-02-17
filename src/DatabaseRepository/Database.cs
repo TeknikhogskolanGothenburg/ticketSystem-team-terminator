@@ -285,5 +285,15 @@ namespace TicketSystem.DatabaseRepository
             }
         }
 
+        public List<Order> GetAllOrders()
+        {
+            string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                return connection.Query<Order>("SELECT TTT.TicketID, TT.BuyerLastName,TT.BuyerFirstName,TT.BuyerAddress,TT.BuyerCity FROM TicketsToTransactions AS TTT INNER JOIN TicketTransactions AS TT ON TTT.TransactionID = TT.TransactionID ").ToList();
+            }
+        }
+
     }
 }

@@ -16,5 +16,8 @@ namespace TicketSystem.RestApiClient
         /// <returns></returns>
         
         List<EventTest> GetEvents();
+
+        //Get all orders
+        List<Order> GetOrders();
     }
 }

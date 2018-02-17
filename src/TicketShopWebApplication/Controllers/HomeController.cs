@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using TicketSystem.DatabaseRepository.Model;
+
 
 namespace TicketShopWebApplication.Controllers
 {
@@ -22,11 +22,11 @@ namespace TicketShopWebApplication.Controllers
             return View();
         }
 
-        IEnumerable<EventList> GetAllEvents()
-        {
-            List<EventList> eventList = new List<EventList>();
-            return eventList;
-        }
+        //IEnumerable<EventList> GetAllEvents()
+        //{
+        //    List<EventList> eventList = new List<EventList>();
+        //    return eventList;
+        //}
 
         // GET: Home/Details/5
         public ActionResult Details(int id)
