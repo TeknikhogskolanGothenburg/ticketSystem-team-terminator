@@ -42,7 +42,7 @@ namespace Api_Start.Controllers
         ////    }
         ////}
 
-       // POST: api/Order
+       // POST: api/Order Bokar in sig på en event 
        [HttpPost]
         public IActionResult Post([FromBody] Order value)
         {

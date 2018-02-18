@@ -24,7 +24,10 @@ namespace TicketSystem.DatabaseRepository.Model
         [Required]
         public string Country { get; set; }
         [Required]
-        public string TicketPrice { get; set; }
+        public int PeopleCount { get; set; }
+
+
+
     }
 }
 

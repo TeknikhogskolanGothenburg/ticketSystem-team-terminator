@@ -42,41 +42,41 @@ namespace TicketSystem.DatabaseRepository
                 catch
                 {
                     throw new Exception();
-                    
+
                 }
 
             }
 
         }
-       
+
         public void EventUpdate(TicketEvent ticketEvent)
         {
             using (var connection = new SqlConnection(CONN))
             {
                 connection.Open();
-                connection.Query<TicketEvent>("UPDATE TicketEvent SET TicketEvent [EventName] = @EventName, [EventHtmlDescription] = @EventHtmlDescription WHERE TicketEventID = @TicketEventID", new {EventName = ticketEvent.EventName, EventHtmlDescription = ticketEvent.EventHtmlDescription, TicketEventID = ticketEvent.TicketEventID});
-                
+                connection.Query<TicketEvent>("UPDATE TicketEvent SET TicketEvent [EventName] = @EventName, [EventHtmlDescription] = @EventHtmlDescription WHERE TicketEventID = @TicketEventID", new { EventName = ticketEvent.EventName, EventHtmlDescription = ticketEvent.EventHtmlDescription, TicketEventID = ticketEvent.TicketEventID });
+
             }
         }
 
-     
-         public void TicketEventDateUpdate(int TicketEventDateID, int TicketEventID, int VenueId, DateTime EventStartDateTime)
-         {
-             string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
-             using (var connection = new SqlConnection(connectionString))
-             {
-                 connection.Open();
-                 connection.Query("UPDATE TicketEventDates SET [TicketEventID] = @ticketEventID, [VenueId] = @venueId, [EventStartDateTime] = @eventStartDateTime  WHERE[TicketEventDateID] = @ticketEventDateID; ", new { ticketEventID = TicketEventID, venueId = VenueId, eventStartDateTime = EventStartDateTime, ticketEventDateID = TicketEventDateID });                
-            }
-        }
 
-        public bool CheckTicket( int TickedID)
+        public void TicketEventDateUpdate(int TicketEventDateID, int TicketEventID, int VenueId, DateTime EventStartDateTime)
         {
             string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                var Status =  connection.Query<int>("SELECT IsTaken FROM Tickets WHERE TicketID = @TicketID", new { TicketID = TickedID }).First();
+                connection.Query("UPDATE TicketEventDates SET [TicketEventID] = @ticketEventID, [VenueId] = @venueId, [EventStartDateTime] = @eventStartDateTime  WHERE[TicketEventDateID] = @ticketEventDateID; ", new { ticketEventID = TicketEventID, venueId = VenueId, eventStartDateTime = EventStartDateTime, ticketEventDateID = TicketEventDateID });
+            }
+        }
+
+        public bool CheckTicket(int TickedID)
+        {
+            string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                var Status = connection.Query<int>("SELECT IsTaken FROM Tickets WHERE TicketID = @TicketID", new { TicketID = TickedID }).First();
                 if (Status == 1)
                 {
                     return true;
@@ -88,7 +88,7 @@ namespace TicketSystem.DatabaseRepository
             }
 
         }
- 
+
         public void CreateOrder(Order value, Payment e)
         {
             string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
@@ -97,8 +97,8 @@ namespace TicketSystem.DatabaseRepository
                 connection.Open();
                 connection.Query("insert into TicketTransactions ([BuyerLastName],[BuyerFirstName],[BuyerAddress],[BuyerCity],[PaymentStatus],[PaymentReferenceId]) values(@BuyerLastName,@BuyerFirstName,@BuyerAddress,@BuyerCity,@PaymentStatus,@PaymentReferenceId)", new { BuyerLastName = value.BuyerLastName, BuyerFirstName = value.BuyerFirstName, BuyerAddress = value.BuyerAddress, BuyerCity = value.BuyerCity, PaymentStatus = e.PaymentStatus, PaymentReferenceId = e.PaymentReference });
                 var transactionID = connection.Query<int>("SELECT IDENT_CURRENT ('TicketTransactions') AS Current_Identity").First();
-                connection.Query("insert into TicketsToTransactions ([TransactionID],[TicketID]) values(@TransactionID,@TicketID)", new { TransactionID = transactionID, TicketID = value.TicketID});
-                  connection.Query<int>("UPDATE Tickets SET [IsTaken] = @IsTaken WHERE TicketID = @TicketID", new { IsTaken = 1, TicketID = value.TicketID });
+                connection.Query("insert into TicketsToTransactions ([TransactionID],[TicketID]) values(@TransactionID,@TicketID)", new { TransactionID = transactionID, TicketID = value.TicketID });
+                connection.Query<int>("UPDATE Tickets SET [IsTaken] = @IsTaken WHERE TicketID = @TicketID", new { IsTaken = 1, TicketID = value.TicketID });
             }
         }
         public void VenueDelete(int id)
@@ -110,6 +110,32 @@ namespace TicketSystem.DatabaseRepository
                 connection.Query("DELETE FROM Venues WHERE VenueID = @ID", new { ID = id });
             }
 
+        }
+
+        public List<EventTest> GetallEvents()
+        {
+            string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                try
+                {
+                    List<EventTest> e = new List<EventTest>();
+                   
+                   e = connection.Query<EventTest>("SELECT TE.EventName,TE.EventHtmlDescription,TED.TicketEventDateID, TED.EventStartDateTime,V.VenueName, V.Address, V.City, V.Country FROM TicketEvents AS TE INNER JOIN TicketEventDates AS TED ON TE.TicketEventID = TED.TicketEventID INNER JOIN Venues AS V ON TED.VenueId = V.VenueID" ).ToList();
+                foreach(var item in e)
+                    {
+                       e[e.IndexOf(item)].PeopleCount = connection.Query<int>("SELECT COUNT(TI.IsTaken ) FROM TicketEvents AS TE INNER JOIN TicketEventDates AS TED ON TE.TicketEventID = TED.TicketEventID INNER JOIN Venues AS V ON TED.VenueId = V.VenueID INNER JOIN SeatsAtEventDate AS S ON S.TicketEventDateID = TED.TicketEventDateID INNER JOIN Tickets AS TI ON TI.SeatID = S.SeatID Where TI.IsTaken = '1' AND TED.TicketEventDateID = '" + item.TicketEventDateID +"'").First();
+                    }
+
+                    return e;
+
+                }
+                catch
+                {
+                    throw new Exception();
+                }
+            }
         }
 
         

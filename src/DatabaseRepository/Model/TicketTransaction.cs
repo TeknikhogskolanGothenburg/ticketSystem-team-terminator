@@ -9,7 +9,7 @@ namespace TicketSystem.DatabaseRepository.Model
     {
         //public int TransactionID { get; set; }
         //[Required]
-        //[RegularExpression(@"^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$")]
+        //
         //public string LastName { get; set; }
         //[Required]
         //[RegularExpression(@"^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$")]
