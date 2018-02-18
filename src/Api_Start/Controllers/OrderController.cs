@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TicketSystem.DatabaseRepository;
 using TicketSystem.DatabaseRepository.Model;
+using System.Linq;
 
 namespace Api_Start.Controllers
 {
@@ -14,13 +15,19 @@ namespace Api_Start.Controllers
     public class OrdersController : Controller
     {
         IDatabaseInterface db = new Database();
-        //visar en lista av event som går att boka 
+        //visar en lista av event som går att boka , visar ej gamla event
         //GET: api/Order
        [HttpGet]
        public List<EventTest> Get()
         {
-           
-            return db.GetallEventsAvadible();
+            List<EventTest> e = new List<EventTest>();
+            e.Add(new EventTest()
+            {
+                EventStartDateTime = DateTime.Now,
+            });
+              
+       
+            return db.GetallEventsAvadible().Where( x => x.EventStartDateTime >= e[0].EventStartDateTime).ToList();
         }
 
         //// GET: api/Order/5
