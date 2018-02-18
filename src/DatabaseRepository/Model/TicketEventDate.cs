@@ -11,6 +11,6 @@ namespace TicketSystem.DatabaseRepository.Model
         [Required]
         public int VenueId{get;set; }
         [Required]
-        public DateTime EventStartDateTime { get; set; }
+        public string EventStartDateTime { get; set; }
     }
 }

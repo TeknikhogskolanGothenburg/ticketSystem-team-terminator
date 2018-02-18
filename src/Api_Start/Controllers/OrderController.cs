@@ -34,18 +34,23 @@ namespace Api_Start.Controllers
         ////    }
         ////}
 
-        // POST: api/Order
-        //[HttpPost]
-        //public IActionResult Post([FromBody] Order value)
-        //{
-        //    try {
+       // POST: api/Order
+       [HttpPost]
+        public IActionResult Post([FromBody] Order value)
+        {
+            try
+            {
+              
 
+            }
+            catch {
+                return StatusCode(500);
 
-        //    }
-        //    catch { }
-
+            }
+            return Ok();
         }
-        
+
+
         // PUT: api/Order/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)

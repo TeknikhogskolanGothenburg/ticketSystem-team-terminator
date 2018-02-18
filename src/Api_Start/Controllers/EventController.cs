@@ -23,34 +23,22 @@ namespace Api_Start.Controllers
            
         }
 
-        // GET: api/CreateEvent/5
-        //[HttpGet("{Search}", Name = "SearchEVent")]
-        //public EventList Get(string Search)
-        //{
-        //    /// bara ett test fungerar ej
-        //    EventList Events = new EventList()
-        //    {
-        //        TicketEvents = DbHandler.FindEvent(Search),
-        //        Venues = DbHandler.FindVenue(Search),
-        //        TicketEventDates = DbHandler.FindTicketEventDate(Search)
-        //    };
-        //    return Events;
-        //}
-        //
+        //GET: api/CreateEvent/5
+        [HttpGet("{Search}", Name = "SearchEVent")]
+        public List<EventTest> Get(string Search)
+        {
+           
+            return ;
+        }
+
         // POST: api/CreateEvent
         [HttpPost]
         public IActionResult Post([FromBody]Event value)
         {
             try
             {
-                int VenueId = DbHandler.VenueAdd(value.Venues.VenueName, value.Venues.Address, value.Venues.City, value.Venues.Country);
-                int eventID = DbHandler.EventAdd(value.TicketEvents.EventName, value.TicketEvents.EventHtmlDescription);
-                int TicketeventdateID = DbHandler.TicketEventDate(eventID, VenueId, value.TicketEventDates.EventStartDateTime);
-                for (int i = 0; i < value.Seats; i++)
-                {
-                    DbHandler.SeatsAtEventDateAdd(TicketeventdateID);
-                }
-
+                DbHandler.CreateEvent(value);
+                
             }
             catch
             {
