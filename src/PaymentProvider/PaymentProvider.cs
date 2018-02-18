@@ -13,7 +13,7 @@ namespace TicketSystem.PaymentProvider
         /// <param name="valuta">A three letter code (following ISO 4217) represending the valuta of the amount</param>
         /// <param name="orderReference">A Guid which is the internal reference of the payment system</param>
         /// <returns>A payment object, containging the status of the order</returns>
-        public Payment Pay(decimal amountToPay, string valuta, string orderReference)
+        public Payment Pay(decimal amountToPay, string valuta, string TransaktionID)
         {
             if (valuta.Length != 3)
             {
@@ -37,7 +37,7 @@ namespace TicketSystem.PaymentProvider
             {
                 Valuta = valuta,
                 PaymentStatus = status,
-                OrderReference = orderReference,
+                OrderReference = TransaktionID,
                 TotalAmount = amountToPay,
                 PaymentReference = Guid.NewGuid().ToString()
             };

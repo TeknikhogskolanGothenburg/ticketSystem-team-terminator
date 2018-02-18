@@ -15,7 +15,7 @@ namespace Api_Start.Controllers
         IDatabaseInterface DbHandler = new Database();
         // GET: api/Event
         [HttpGet]
-        public List<EventTest> Get()
+        public List<EventForbooking> Get()
         {
 
                 return DbHandler.GetallEventsAvadible();

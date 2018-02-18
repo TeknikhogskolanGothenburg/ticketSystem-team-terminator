@@ -1,6 +1,7 @@
 ﻿using TicketSystem.DatabaseRepository.Model;
 using System.Collections.Generic;
 using System;
+using TicketSystem.PaymentProvider;
 
 namespace TicketSystem.DatabaseRepository
 {
@@ -11,9 +12,11 @@ namespace TicketSystem.DatabaseRepository
         //Metoder för Events
 
         bool CreateEvent(Event value);
-  
-        List<EventTest> GetallEventsAvadible();
+
+         List<EventForbooking> GetallEventsAvadible();
         List<EventTest> SearchEvent(string value);
+        void CreateOrder(Order value, Payment e);
+        bool CheckTicket(int TickedID);
 
         //Get all orders
         List<Order> GetAllOrders();

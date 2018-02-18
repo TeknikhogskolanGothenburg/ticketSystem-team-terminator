@@ -5,8 +5,9 @@ using System.Text;
 
 namespace TicketSystem.DatabaseRepository.Model
 {
-  public  class EventTest
+    public class EventForbooking
     {
+
         [Required]
         public int TicketEventDateID { get; set; }
         [Required]
@@ -25,8 +26,10 @@ namespace TicketSystem.DatabaseRepository.Model
         public string Country { get; set; }
         [Required]
         public int TicketID { get; set; }
+        [Required]
+        public int Status { get; set; }
+
 
 
     }
 }
-

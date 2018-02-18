@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TicketSystem.DatabaseRepository;
 using TicketSystem.DatabaseRepository.Model;
-using System.Linq;
+using TicketSystem.PaymentProvider;
 
 namespace Api_Start.Controllers
 {
@@ -18,16 +18,16 @@ namespace Api_Start.Controllers
         //visar en lista av event som går att boka , visar ej gamla event
         //GET: api/Order
        [HttpGet]
-       public List<EventTest> Get()
+       public List<EventForbooking> Get()
         {
-            List<EventTest> e = new List<EventTest>();
-            e.Add(new EventTest()
+            List<EventForbooking> e = new List<EventForbooking>();
+            e.Add(new EventForbooking()
             {
                 EventStartDateTime = DateTime.Now,
             });
               
        
-            return db.GetallEventsAvadible().Where( x => x.EventStartDateTime >= e[0].EventStartDateTime).ToList();
+            return db.GetallEventsAvadible().Where( x => x.EventStartDateTime >= e[0].EventStartDateTime && x.Status == 0).ToList();
         }
 
         //// GET: api/Order/5
@@ -48,7 +48,22 @@ namespace Api_Start.Controllers
         {
             try
             {
-              
+                if (db.CheckTicket(value.TicketID))
+                {
+                    return StatusCode(500);
+                }
+                IPaymentProvider payment = new PaymentProvider();
+               Payment e = payment.Pay(value.amountToPay,value.valuta,value.TicketID.ToString());
+                if(e.PaymentStatus == PaymentStatus.PaymentApproved)
+                {
+
+                    db.CreateOrder(value, e);
+
+                }
+                else
+                {
+                    return StatusCode(500);
+                }
 
             }
             catch {
