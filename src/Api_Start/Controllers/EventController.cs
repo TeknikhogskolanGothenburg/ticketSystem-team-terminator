@@ -17,25 +17,20 @@ namespace Api_Start.Controllers
         [HttpGet]
         public List<EventTest> Get()
         {
+            var result = DbHandler.GetallEventsAvadible();
 
-                return DbHandler.GetallEventsAvadible();
+            return result;
            
            
         }
 
-        // GET: api/CreateEvent/5
-        //[HttpGet("{Search}", Name = "SearchEVent")]
-        //public EventList Get(string Search)
-        //{
-        //    /// bara ett test fungerar ej
-        //    EventList Events = new EventList()
-        //    {
-        //        TicketEvents = DbHandler.FindEvent(Search),
-        //        Venues = DbHandler.FindVenue(Search),
-        //        TicketEventDates = DbHandler.FindTicketEventDate(Search)
-        //    };
-        //    return Events;
-        //}
+       // GET: api/CreateEvent/search
+       [HttpGet("{Search}", Name = "SearchEVent")]
+        public List<EventTest> Get(string Search)
+        {
+            return DbHandler.SearchEvents(Search);
+        }
+
         //
         // POST: api/CreateEvent
         [HttpPost]

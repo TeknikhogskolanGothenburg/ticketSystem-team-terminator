@@ -1,0 +1,22 @@
+﻿@model IEnumerable<TicketSystem.RestApiClient.Model.EventTest>
+
+@using TicketSystem.RestApiClient.Model;
+
+@{
+    ViewBag.Title = "ViewAll";
+}
+
+<h2>AllEvents</h2>
+
+<ul>
+    @foreach (EventTest eventTest in @Model)
+    {
+        <li>
+            @Html.ActionLink(eventTest.EventName, "Details", new { id = eventTest.TicketEventDateID })
+
+        </li>
+
+    }
+
+
+</ul>

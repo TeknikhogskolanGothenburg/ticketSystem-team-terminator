@@ -1,10 +1,6 @@
-﻿@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
+﻿@{
+    ViewData["Title"] = "Home Page";
 }
-
-
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
@@ -18,9 +14,9 @@
             <img src="~/images/Melodifestivalen2018.svg" alt="ASP.NET" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
-
+                    
                     <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        More Infomation
+                        Learn More
                     </a>
                 </p>
             </div>
@@ -29,9 +25,9 @@
             <img src="~/images/EdSheeran.svg" alt="Visual Studio" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
-
+                    
                     <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        More Infomation
+                        Learn More
                     </a>
                 </p>
             </div>
@@ -40,9 +36,9 @@
             <img src="~/images/Eminem.svg" alt="Package Management" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
-
+                    
                     <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
-                        More Infomation
+                        Learn More
                     </a>
                 </p>
             </div>
@@ -51,9 +47,9 @@
             <img src="~/images/Summerburst.svg" alt="Microsoft Azure" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
-
+                   
                     <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        More Infomation
+                        Learn More
                     </a>
                 </p>
             </div>
@@ -76,7 +72,7 @@
 <div class="tab-content">
     <div id="firstTab" class="tab-pane fade in active">
         <ul>
-           @Html.ActionLink("ViewAllEvents", "ViewAll", null);
+            @Html.ActionLink("ViewAllEvents", "ViewAll", "Home")
 
         </ul>
 
@@ -84,6 +80,9 @@
     </div>
     <div id="secondTab" class="tab-pane fade in">
         <input type="text" id="SearchEvent">
-        <button type="submit" id="SearchButton1"> Search </button>
+        <button type="submit" name="SearchButton1" value="Search"> Search </button>
+            
     </div>
 </div>
+
+

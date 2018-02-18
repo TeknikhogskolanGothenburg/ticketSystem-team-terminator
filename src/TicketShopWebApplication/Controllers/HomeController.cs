@@ -32,6 +32,22 @@ namespace TicketShopWebApplication.Controllers
             return View(allOrders);
         }
 
+        public IActionResult ViewAll()
+        {
+            List<EventTest> allEvents = new List<EventTest>();
+            ITicketApi getEvents = new TicketApi();
+            allEvents = getEvents.GetEvents();
+            return View(allEvents);
+        }
+
+        //public List<EventTest> AllEvents()
+        //{
+        //    List<EventTest> allEvents = new List<EventTest>();
+        //    ITicketApi getEvents = new TicketApi();
+        //    allEvents = getEvents.GetEvents();
+        //    return allEvents.ToList<EventTest>();
+        //}
+
         //IEnumerable<EventList> GetAllEvents()
         //{
         //    List<EventList> eventList = new List<EventList>();

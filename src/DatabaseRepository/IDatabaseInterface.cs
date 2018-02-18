@@ -17,6 +17,8 @@ namespace TicketSystem.DatabaseRepository
         List<Venue> FindVenue(string query); //Retunerar en lista av Venue
         List<Venue> AllVenues(); //Retunerar en lista av Venue
 
+        
+
 
         //Metoder för Tickets
         //List<Ticket> AllTickets();
@@ -30,6 +32,7 @@ namespace TicketSystem.DatabaseRepository
         List<TicketEventDate> FindTicketEventDate(string query);
 
         List<EventTest> GetallEventsAvadible();
+        List<EventTest> SearchEvents(string query);
 
         // SetEventCreaTOR
 

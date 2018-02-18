@@ -23,6 +23,8 @@ namespace TicketSystem.DatabaseRepository.Model
         public string City { get; set; }
         [Required]
         public string Country { get; set; }
+        [Required]
+        public string TicketPrice { get; set; }
     }
 }
 

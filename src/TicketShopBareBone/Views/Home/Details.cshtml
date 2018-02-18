@@ -1,0 +1,67 @@
+﻿@model TicketSystem.RestApiClient.Model.EventTest
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Event</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+              
+                <th>
+                    @Html.DisplayNameFor(model => model.EventName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EventHtmlDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EventStartDateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VenueName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Country)
+                </th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                @Model.EventName
+        </td>
+            <td>
+                @Model.EventHtmlDescription
+            </td>
+            <td>
+                @Model.EventStartDateTime
+            </td>
+            <td>
+                @Model.VenueName
+            </td>
+            <td>
+                @Model.Address
+            </td>
+            <td>
+                @Model.City
+            </td>
+            <td>
+                @Model.Country
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+</table>
+
+<label> Price: </label>
+<label>@Model.TicketPrice</label><label>kr</label><br>
+<input type="submit" name="submitbutton1" value="Buy" />
+
