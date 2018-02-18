@@ -36,7 +36,11 @@ namespace TicketSystem.DatabaseRepository
 
         void SeatsAtEventDateAdd(int ticketEventDateID);
 
-   
+        //Get all orders
+        List<Order> GetAllOrders();
+
+
+
 
     }
 }

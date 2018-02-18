@@ -1,0 +1,624 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketSystem.DatabaseRepository.Model.OrderList
+  commentId: T:TicketSystem.DatabaseRepository.Model.OrderList
+  id: OrderList
+  parent: TicketSystem.DatabaseRepository.Model
+  children:
+  - TicketSystem.DatabaseRepository.Model.OrderList.Tickets
+  - TicketSystem.DatabaseRepository.Model.OrderList.TicketsToTransactions
+  - TicketSystem.DatabaseRepository.Model.OrderList.TicketTransactions
+  langs:
+  - csharp
+  - vb
+  name: OrderList
+  nameWithType: OrderList
+  fullName: TicketSystem.DatabaseRepository.Model.OrderList
+  type: Class
+  source:
+    id: OrderList
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\OrderList.cs
+    startLine: 7
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository.Model
+  syntax:
+    content: public class OrderList
+    content.vb: Public Class OrderList
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketSystem.DatabaseRepository.Model.OrderList.Tickets
+  commentId: F:TicketSystem.DatabaseRepository.Model.OrderList.Tickets
+  id: Tickets
+  parent: TicketSystem.DatabaseRepository.Model.OrderList
+  langs:
+  - csharp
+  - vb
+  name: Tickets
+  nameWithType: OrderList.Tickets
+  fullName: TicketSystem.DatabaseRepository.Model.OrderList.Tickets
+  type: Field
+  source:
+    id: Tickets
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\OrderList.cs
+    startLine: 10
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository.Model
+  syntax:
+    content: >-
+      [Required]
+
+      public List<Ticket> Tickets
+    return:
+      type: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Ticket}
+    content.vb: >-
+      <Required>
+
+      Public Tickets As List(Of Ticket)
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Model.OrderList.TicketsToTransactions
+  commentId: F:TicketSystem.DatabaseRepository.Model.OrderList.TicketsToTransactions
+  id: TicketsToTransactions
+  parent: TicketSystem.DatabaseRepository.Model.OrderList
+  langs:
+  - csharp
+  - vb
+  name: TicketsToTransactions
+  nameWithType: OrderList.TicketsToTransactions
+  fullName: TicketSystem.DatabaseRepository.Model.OrderList.TicketsToTransactions
+  type: Field
+  source:
+    id: TicketsToTransactions
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\OrderList.cs
+    startLine: 12
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository.Model
+  syntax:
+    content: >-
+      [Required]
+
+      public List<TicketsToTransaction> TicketsToTransactions
+    return:
+      type: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.TicketsToTransaction}
+    content.vb: >-
+      <Required>
+
+      Public TicketsToTransactions As List(Of TicketsToTransaction)
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Model.OrderList.TicketTransactions
+  commentId: F:TicketSystem.DatabaseRepository.Model.OrderList.TicketTransactions
+  id: TicketTransactions
+  parent: TicketSystem.DatabaseRepository.Model.OrderList
+  langs:
+  - csharp
+  - vb
+  name: TicketTransactions
+  nameWithType: OrderList.TicketTransactions
+  fullName: TicketSystem.DatabaseRepository.Model.OrderList.TicketTransactions
+  type: Field
+  source:
+    id: TicketTransactions
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Model\OrderList.cs
+    startLine: 14
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository.Model
+  syntax:
+    content: >-
+      [Required]
+
+      public List<TicketTransaction> TicketTransactions
+    return:
+      type: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.TicketTransaction}
+    content.vb: >-
+      <Required>
+
+      Public TicketTransactions As List(Of TicketTransaction)
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketSystem.DatabaseRepository.Model
+  commentId: N:TicketSystem.DatabaseRepository.Model
+  isExternal: false
+  name: TicketSystem.DatabaseRepository.Model
+  nameWithType: TicketSystem.DatabaseRepository.Model
+  fullName: TicketSystem.DatabaseRepository.Model
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Ticket}
+  commentId: T:System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Ticket}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Ticket>
+  nameWithType: List<Ticket>
+  fullName: System.Collections.Generic.List<TicketSystem.DatabaseRepository.Model.Ticket>
+  nameWithType.vb: List(Of Ticket)
+  fullName.vb: System.Collections.Generic.List(Of TicketSystem.DatabaseRepository.Model.Ticket)
+  name.vb: List(Of Ticket)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketSystem.DatabaseRepository.Model.Ticket
+    name: Ticket
+    nameWithType: Ticket
+    fullName: TicketSystem.DatabaseRepository.Model.Ticket
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketSystem.DatabaseRepository.Model.Ticket
+    name: Ticket
+    nameWithType: Ticket
+    fullName: TicketSystem.DatabaseRepository.Model.Ticket
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.TicketsToTransaction}
+  commentId: T:System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.TicketsToTransaction}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<TicketsToTransaction>
+  nameWithType: List<TicketsToTransaction>
+  fullName: System.Collections.Generic.List<TicketSystem.DatabaseRepository.Model.TicketsToTransaction>
+  nameWithType.vb: List(Of TicketsToTransaction)
+  fullName.vb: System.Collections.Generic.List(Of TicketSystem.DatabaseRepository.Model.TicketsToTransaction)
+  name.vb: List(Of TicketsToTransaction)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketSystem.DatabaseRepository.Model.TicketsToTransaction
+    name: TicketsToTransaction
+    nameWithType: TicketsToTransaction
+    fullName: TicketSystem.DatabaseRepository.Model.TicketsToTransaction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketSystem.DatabaseRepository.Model.TicketsToTransaction
+    name: TicketsToTransaction
+    nameWithType: TicketsToTransaction
+    fullName: TicketSystem.DatabaseRepository.Model.TicketsToTransaction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.TicketTransaction}
+  commentId: T:System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.TicketTransaction}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<TicketTransaction>
+  nameWithType: List<TicketTransaction>
+  fullName: System.Collections.Generic.List<TicketSystem.DatabaseRepository.Model.TicketTransaction>
+  nameWithType.vb: List(Of TicketTransaction)
+  fullName.vb: System.Collections.Generic.List(Of TicketSystem.DatabaseRepository.Model.TicketTransaction)
+  name.vb: List(Of TicketTransaction)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketSystem.DatabaseRepository.Model.TicketTransaction
+    name: TicketTransaction
+    nameWithType: TicketTransaction
+    fullName: TicketSystem.DatabaseRepository.Model.TicketTransaction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketSystem.DatabaseRepository.Model.TicketTransaction
+    name: TicketTransaction
+    nameWithType: TicketTransaction
+    fullName: TicketSystem.DatabaseRepository.Model.TicketTransaction
+  - name: )
+    nameWithType: )
+    fullName: )

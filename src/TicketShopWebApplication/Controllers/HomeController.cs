@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using TicketSystem.DatabaseRepository.Model;
+using TicketShopWebApplication.Models;
+using TicketSystem.RestApiClient;
+using TicketSystem.RestApiClient.Model;
+
+
 
 namespace TicketShopWebApplication.Controllers
 {
@@ -17,16 +22,21 @@ namespace TicketShopWebApplication.Controllers
             return View();
         }
 
-        public ActionResult ViewAll()
+        public IActionResult Order()
         {
-            return View();
+            List<Order> allOrders = new List<Order>();
+            ITicketApi getOrders = new TicketApi();
+            allOrders = getOrders.GetOrders();
+
+
+            return View(allOrders);
         }
 
-        IEnumerable<EventList> GetAllEvents()
-        {
-            List<EventList> eventList = new List<EventList>();
-            return eventList;
-        }
+        //IEnumerable<EventList> GetAllEvents()
+        //{
+        //    List<EventList> eventList = new List<EventList>();
+        //    return eventList;
+        //}
 
         // GET: Home/Details/5
         public ActionResult Details(int id)
@@ -101,6 +111,11 @@ namespace TicketShopWebApplication.Controllers
             {
                 return View();
             }
+        }
+
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

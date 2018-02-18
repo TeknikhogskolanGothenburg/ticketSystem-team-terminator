@@ -5,7 +5,7 @@ items:
   id: TicketApi
   parent: TicketSystem.RestApiClient
   children:
-  - TicketSystem.RestApiClient.TicketApi.TicketGet
+  - TicketSystem.RestApiClient.TicketApi.TicketEventGet
   - TicketSystem.RestApiClient.TicketApi.TicketTicketIdGet(System.Int32)
   langs:
   - csharp
@@ -15,12 +15,8 @@ items:
   fullName: TicketSystem.RestApiClient.TicketApi
   type: Class
   source:
-    remote:
-      path: src/RestApiClient/TicketApi.cs
-      branch: master
-      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: TicketApi
-    path: src/RestApiClient/TicketApi.cs
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\RestApiClient\TicketApi.cs
     startLine: 7
   assemblies:
   - RestApiClient
@@ -29,7 +25,6 @@ items:
     content: 'public class TicketApi : ITicketApi'
     content.vb: >-
       Public Class TicketApi
-
           Implements ITicketApi
   inheritance:
   - System.Object
@@ -49,36 +44,32 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TicketSystem.RestApiClient.TicketApi.TicketGet
-  commentId: M:TicketSystem.RestApiClient.TicketApi.TicketGet
-  id: TicketGet
+- uid: TicketSystem.RestApiClient.TicketApi.TicketEventGet
+  commentId: M:TicketSystem.RestApiClient.TicketApi.TicketEventGet
+  id: TicketEventGet
   parent: TicketSystem.RestApiClient.TicketApi
   langs:
   - csharp
   - vb
-  name: TicketGet()
-  nameWithType: TicketApi.TicketGet()
-  fullName: TicketSystem.RestApiClient.TicketApi.TicketGet()
+  name: TicketEventGet()
+  nameWithType: TicketApi.TicketEventGet()
+  fullName: TicketSystem.RestApiClient.TicketApi.TicketEventGet()
   type: Method
   source:
-    remote:
-      path: src/RestApiClient/TicketApi.cs
-      branch: master
-      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
-    id: TicketGet
-    path: src/RestApiClient/TicketApi.cs
+    id: TicketEventGet
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\RestApiClient\TicketApi.cs
     startLine: 11
   assemblies:
   - RestApiClient
   namespace: TicketSystem.RestApiClient
   syntax:
-    content: public List<Ticket> TicketGet()
+    content: public List<TicketEvent> TicketEventGet()
     return:
-      type: System.Collections.Generic.List{TicketSystem.RestApiClient.Model.Ticket}
-    content.vb: Public Function TicketGet As List(Of Ticket)
-  overload: TicketSystem.RestApiClient.TicketApi.TicketGet*
+      type: System.Collections.Generic.List{TicketSystem.RestApiClient.Model.TicketEvent}
+    content.vb: Public Function TicketEventGet As List(Of TicketEvent)
+  overload: TicketSystem.RestApiClient.TicketApi.TicketEventGet*
   implements:
-  - TicketSystem.RestApiClient.ITicketApi.TicketGet
+  - TicketSystem.RestApiClient.ITicketApi.TicketEventGet
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -95,12 +86,8 @@ items:
   fullName: TicketSystem.RestApiClient.TicketApi.TicketTicketIdGet(System.Int32)
   type: Method
   source:
-    remote:
-      path: src/RestApiClient/TicketApi.cs
-      branch: master
-      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: TicketTicketIdGet
-    path: src/RestApiClient/TicketApi.cs
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\RestApiClient\TicketApi.cs
     startLine: 19
   assemblies:
   - RestApiClient
@@ -426,24 +413,24 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: TicketSystem.RestApiClient.TicketApi.TicketGet*
-  commentId: Overload:TicketSystem.RestApiClient.TicketApi.TicketGet
+- uid: TicketSystem.RestApiClient.TicketApi.TicketEventGet*
+  commentId: Overload:TicketSystem.RestApiClient.TicketApi.TicketEventGet
   isExternal: false
-  name: TicketGet
-  nameWithType: TicketApi.TicketGet
-  fullName: TicketSystem.RestApiClient.TicketApi.TicketGet
-- uid: TicketSystem.RestApiClient.ITicketApi.TicketGet
-  commentId: M:TicketSystem.RestApiClient.ITicketApi.TicketGet
+  name: TicketEventGet
+  nameWithType: TicketApi.TicketEventGet
+  fullName: TicketSystem.RestApiClient.TicketApi.TicketEventGet
+- uid: TicketSystem.RestApiClient.ITicketApi.TicketEventGet
+  commentId: M:TicketSystem.RestApiClient.ITicketApi.TicketEventGet
   parent: TicketSystem.RestApiClient.ITicketApi
   isExternal: false
-  name: TicketGet()
-  nameWithType: ITicketApi.TicketGet()
-  fullName: TicketSystem.RestApiClient.ITicketApi.TicketGet()
+  name: TicketEventGet()
+  nameWithType: ITicketApi.TicketEventGet()
+  fullName: TicketSystem.RestApiClient.ITicketApi.TicketEventGet()
   spec.csharp:
-  - uid: TicketSystem.RestApiClient.ITicketApi.TicketGet
-    name: TicketGet
-    nameWithType: ITicketApi.TicketGet
-    fullName: TicketSystem.RestApiClient.ITicketApi.TicketGet
+  - uid: TicketSystem.RestApiClient.ITicketApi.TicketEventGet
+    name: TicketEventGet
+    nameWithType: ITicketApi.TicketEventGet
+    fullName: TicketSystem.RestApiClient.ITicketApi.TicketEventGet
   - name: (
     nameWithType: (
     fullName: (
@@ -451,26 +438,26 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: TicketSystem.RestApiClient.ITicketApi.TicketGet
-    name: TicketGet
-    nameWithType: ITicketApi.TicketGet
-    fullName: TicketSystem.RestApiClient.ITicketApi.TicketGet
+  - uid: TicketSystem.RestApiClient.ITicketApi.TicketEventGet
+    name: TicketEventGet
+    nameWithType: ITicketApi.TicketEventGet
+    fullName: TicketSystem.RestApiClient.ITicketApi.TicketEventGet
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.List{TicketSystem.RestApiClient.Model.Ticket}
-  commentId: T:System.Collections.Generic.List{TicketSystem.RestApiClient.Model.Ticket}
+- uid: System.Collections.Generic.List{TicketSystem.RestApiClient.Model.TicketEvent}
+  commentId: T:System.Collections.Generic.List{TicketSystem.RestApiClient.Model.TicketEvent}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
-  name: List<Ticket>
-  nameWithType: List<Ticket>
-  fullName: System.Collections.Generic.List<TicketSystem.RestApiClient.Model.Ticket>
-  nameWithType.vb: List(Of Ticket)
-  fullName.vb: System.Collections.Generic.List(Of TicketSystem.RestApiClient.Model.Ticket)
-  name.vb: List(Of Ticket)
+  name: List<TicketEvent>
+  nameWithType: List<TicketEvent>
+  fullName: System.Collections.Generic.List<TicketSystem.RestApiClient.Model.TicketEvent>
+  nameWithType.vb: List(Of TicketEvent)
+  fullName.vb: System.Collections.Generic.List(Of TicketSystem.RestApiClient.Model.TicketEvent)
+  name.vb: List(Of TicketEvent)
   spec.csharp:
   - uid: System.Collections.Generic.List`1
     name: List
@@ -480,10 +467,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: TicketSystem.RestApiClient.Model.Ticket
-    name: Ticket
-    nameWithType: Ticket
-    fullName: TicketSystem.RestApiClient.Model.Ticket
+  - uid: TicketSystem.RestApiClient.Model.TicketEvent
+    name: TicketEvent
+    nameWithType: TicketEvent
+    fullName: TicketSystem.RestApiClient.Model.TicketEvent
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -496,10 +483,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: TicketSystem.RestApiClient.Model.Ticket
-    name: Ticket
-    nameWithType: Ticket
-    fullName: TicketSystem.RestApiClient.Model.Ticket
+  - uid: TicketSystem.RestApiClient.Model.TicketEvent
+    name: TicketEvent
+    nameWithType: TicketEvent
+    fullName: TicketSystem.RestApiClient.Model.TicketEvent
   - name: )
     nameWithType: )
     fullName: )

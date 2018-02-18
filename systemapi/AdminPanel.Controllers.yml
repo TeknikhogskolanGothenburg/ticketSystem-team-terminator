@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdminPanel.Controllers
+  commentId: N:AdminPanel.Controllers
+  id: AdminPanel.Controllers
+  children:
+  - AdminPanel.Controllers.AccountController
+  - AdminPanel.Controllers.HomeController
+  - AdminPanel.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: AdminPanel.Controllers
+  nameWithType: AdminPanel.Controllers
+  fullName: AdminPanel.Controllers
+  type: Namespace
+  assemblies:
+  - AdminPanel
+references:
+- uid: AdminPanel.Controllers.AccountController
+  commentId: T:AdminPanel.Controllers.AccountController
+  isExternal: false
+  name: AccountController
+  nameWithType: AccountController
+  fullName: AdminPanel.Controllers.AccountController
+- uid: AdminPanel.Controllers.HomeController
+  commentId: T:AdminPanel.Controllers.HomeController
+  isExternal: false
+  name: HomeController
+  nameWithType: HomeController
+  fullName: AdminPanel.Controllers.HomeController
+- uid: AdminPanel.Controllers.ManageController
+  commentId: T:AdminPanel.Controllers.ManageController
+  isExternal: false
+  name: ManageController
+  nameWithType: ManageController
+  fullName: AdminPanel.Controllers.ManageController

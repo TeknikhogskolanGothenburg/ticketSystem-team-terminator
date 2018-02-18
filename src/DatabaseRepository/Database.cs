@@ -166,20 +166,20 @@ namespace TicketSystem.DatabaseRepository
             }
         }
 
-        //public bool CreateNewTransaction( Order value)
+        //public bool CreateNewTransaction()
         //{
         //    //      SELECT TOP(1000) [TransactionID]
         //    //,
         //    //  FROM[TicketSystem].[dbo].[TicketTransactions]
-        //    string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
-        //    using (var connection = new SqlConnection(connectionString))
-        //    {
-        //        connection.Open();
-        //        connection.Query("insert into TicketTransactions ([BuyerLastName],[BuyerFirstName],[BuyerAddress],[BuyerCity],[PaymentStatus],[PaymentReferenceId]) values(@BuyerLastName,@BuyerFirstName,@BuyerAddress,@BuyerCity,@PaymentStatus,@PaymentReferenceId)", new { Name = name, Address = address, City = city, Country = country });
-        //        var addedVenueQuery = connection.Query<int>("SELECT IDENT_CURRENT ('Venues') AS Current_Identity").First();
-        //        return addedVenueQuery;
-        //        //return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueID=@Id", new { Id = addedVenueQuery }).First();
-        //    }
+        //    //string connectionString = CONN; /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+        //    //using (var connection = new SqlConnection(connectionString))
+        //    //{
+        //    //    connection.Open();
+        //    //    connection.Query("insert into TicketTransactions ([BuyerLastName],[Address],[City],[Country]) values(@Name,@Address, @City, @Country)", new { Name = name, Address = address, City = city, Country = country });
+        //    //    var addedVenueQuery = connection.Query<int>("SELECT IDENT_CURRENT ('Venues') AS Current_Identity").First();
+        //    //    return addedVenueQuery;
+        //    //    //return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueID=@Id", new { Id = addedVenueQuery }).First();
+        //    //}
 
 
         //}
@@ -282,6 +282,16 @@ namespace TicketSystem.DatabaseRepository
                 var addedTicketQuery = connection.Query<int>("SELECT IDENT_CURRENT ('Venues') AS Current_Identity").First();
                 //return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueID=@Id", new { Id = addedVenueQuery }).First();
                 return addedTicketQuery;
+            }
+        }
+
+        public List<Order> GetAllOrders()
+        {
+            string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                return connection.Query<Order>("SELECT TTT.TicketID, TT.BuyerLastName,TT.BuyerFirstName,TT.BuyerAddress,TT.BuyerCity FROM TicketsToTransactions AS TTT INNER JOIN TicketTransactions AS TT ON TTT.TransactionID = TT.TransactionID ").ToList();
             }
         }
 

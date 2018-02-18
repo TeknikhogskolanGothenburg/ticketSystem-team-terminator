@@ -1,0 +1,1934 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketSystem.DatabaseRepository.Database
+  commentId: T:TicketSystem.DatabaseRepository.Database
+  id: Database
+  parent: TicketSystem.DatabaseRepository
+  children:
+  - TicketSystem.DatabaseRepository.Database.AllTickets
+  - TicketSystem.DatabaseRepository.Database.AllVenues
+  - TicketSystem.DatabaseRepository.Database.EventAdd(System.String,System.String)
+  - TicketSystem.DatabaseRepository.Database.EventDelete(System.String)
+  - TicketSystem.DatabaseRepository.Database.EventUpdate(TicketSystem.DatabaseRepository.Model.TicketEvent)
+  - TicketSystem.DatabaseRepository.Database.FindEvent
+  - TicketSystem.DatabaseRepository.Database.FindEvent(System.String)
+  - TicketSystem.DatabaseRepository.Database.FindSeatID(System.Int32)
+  - TicketSystem.DatabaseRepository.Database.FindTicketEventDate
+  - TicketSystem.DatabaseRepository.Database.FindTicketEventDate(System.String)
+  - TicketSystem.DatabaseRepository.Database.FindVenue(System.String)
+  - TicketSystem.DatabaseRepository.Database.GetTicketsByOrderId(System.Int32)
+  - TicketSystem.DatabaseRepository.Database.SeatsAtEventDateAdd(System.Int32)
+  - TicketSystem.DatabaseRepository.Database.TicketAdd(System.Int32)
+  - TicketSystem.DatabaseRepository.Database.TicketEventDate(System.Int32,System.Int32,System.DateTime)
+  - TicketSystem.DatabaseRepository.Database.TicketEventDateDelete(System.Int32)
+  - TicketSystem.DatabaseRepository.Database.TicketEventDateUpdate(System.Int32,System.Int32,System.Int32,System.DateTime)
+  - TicketSystem.DatabaseRepository.Database.VenueAdd(System.String,System.String,System.String,System.String)
+  - TicketSystem.DatabaseRepository.Database.VenueDelete(System.Int32)
+  - TicketSystem.DatabaseRepository.Database.VenueUpdate(System.Int32,System.String,System.String,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: Database
+  nameWithType: Database
+  fullName: TicketSystem.DatabaseRepository.Database
+  type: Class
+  source:
+    id: Database
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 10
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: 'public class Database : IDatabaseInterface'
+    content.vb: >-
+      Public Class Database
+          Implements IDatabaseInterface
+  inheritance:
+  - System.Object
+  implements:
+  - TicketSystem.DatabaseRepository.IDatabaseInterface
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketSystem.DatabaseRepository.Database.GetTicketsByOrderId(System.Int32)
+  commentId: M:TicketSystem.DatabaseRepository.Database.GetTicketsByOrderId(System.Int32)
+  id: GetTicketsByOrderId(System.Int32)
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: GetTicketsByOrderId(Int32)
+  nameWithType: Database.GetTicketsByOrderId(Int32)
+  fullName: TicketSystem.DatabaseRepository.Database.GetTicketsByOrderId(System.Int32)
+  type: Method
+  source:
+    id: GetTicketsByOrderId
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 15
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public List<Ticket> GetTicketsByOrderId(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Ticket}
+    content.vb: Public Function GetTicketsByOrderId(id As Integer) As List(Of Ticket)
+  overload: TicketSystem.DatabaseRepository.Database.GetTicketsByOrderId*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.FindEvent
+  commentId: M:TicketSystem.DatabaseRepository.Database.FindEvent
+  id: FindEvent
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: FindEvent()
+  nameWithType: Database.FindEvent()
+  fullName: TicketSystem.DatabaseRepository.Database.FindEvent()
+  type: Method
+  source:
+    id: FindEvent
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 26
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public List<TicketEvent> FindEvent()
+    return:
+      type: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.TicketEvent}
+    content.vb: Public Function FindEvent As List(Of TicketEvent)
+  overload: TicketSystem.DatabaseRepository.Database.FindEvent*
+  implements:
+  - TicketSystem.DatabaseRepository.IDatabaseInterface.FindEvent
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.EventAdd(System.String,System.String)
+  commentId: M:TicketSystem.DatabaseRepository.Database.EventAdd(System.String,System.String)
+  id: EventAdd(System.String,System.String)
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: EventAdd(String, String)
+  nameWithType: Database.EventAdd(String, String)
+  fullName: TicketSystem.DatabaseRepository.Database.EventAdd(System.String, System.String)
+  type: Method
+  source:
+    id: EventAdd
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 37
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public int EventAdd(string name, string description)
+    parameters:
+    - id: name
+      type: System.String
+    - id: description
+      type: System.String
+    return:
+      type: System.Int32
+    content.vb: Public Function EventAdd(name As String, description As String) As Integer
+  overload: TicketSystem.DatabaseRepository.Database.EventAdd*
+  implements:
+  - TicketSystem.DatabaseRepository.IDatabaseInterface.EventAdd(System.String,System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.FindEvent(System.String)
+  commentId: M:TicketSystem.DatabaseRepository.Database.FindEvent(System.String)
+  id: FindEvent(System.String)
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: FindEvent(String)
+  nameWithType: Database.FindEvent(String)
+  fullName: TicketSystem.DatabaseRepository.Database.FindEvent(System.String)
+  type: Method
+  source:
+    id: FindEvent
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 50
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public List<TicketEvent> FindEvent(string query)
+    parameters:
+    - id: query
+      type: System.String
+    return:
+      type: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.TicketEvent}
+    content.vb: Public Function FindEvent(query As String) As List(Of TicketEvent)
+  overload: TicketSystem.DatabaseRepository.Database.FindEvent*
+  implements:
+  - TicketSystem.DatabaseRepository.IDatabaseInterface.FindEvent(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.EventDelete(System.String)
+  commentId: M:TicketSystem.DatabaseRepository.Database.EventDelete(System.String)
+  id: EventDelete(System.String)
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: EventDelete(String)
+  nameWithType: Database.EventDelete(String)
+  fullName: TicketSystem.DatabaseRepository.Database.EventDelete(System.String)
+  type: Method
+  source:
+    id: EventDelete
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 59
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public void EventDelete(string id)
+    parameters:
+    - id: id
+      type: System.String
+    content.vb: Public Sub EventDelete(id As String)
+  overload: TicketSystem.DatabaseRepository.Database.EventDelete*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.EventUpdate(TicketSystem.DatabaseRepository.Model.TicketEvent)
+  commentId: M:TicketSystem.DatabaseRepository.Database.EventUpdate(TicketSystem.DatabaseRepository.Model.TicketEvent)
+  id: EventUpdate(TicketSystem.DatabaseRepository.Model.TicketEvent)
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: EventUpdate(TicketEvent)
+  nameWithType: Database.EventUpdate(TicketEvent)
+  fullName: TicketSystem.DatabaseRepository.Database.EventUpdate(TicketSystem.DatabaseRepository.Model.TicketEvent)
+  type: Method
+  source:
+    id: EventUpdate
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 68
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public void EventUpdate(TicketEvent ticketEvent)
+    parameters:
+    - id: ticketEvent
+      type: TicketSystem.DatabaseRepository.Model.TicketEvent
+    content.vb: Public Sub EventUpdate(ticketEvent As TicketEvent)
+  overload: TicketSystem.DatabaseRepository.Database.EventUpdate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.VenueAdd(System.String,System.String,System.String,System.String)
+  commentId: M:TicketSystem.DatabaseRepository.Database.VenueAdd(System.String,System.String,System.String,System.String)
+  id: VenueAdd(System.String,System.String,System.String,System.String)
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: VenueAdd(String, String, String, String)
+  nameWithType: Database.VenueAdd(String, String, String, String)
+  fullName: TicketSystem.DatabaseRepository.Database.VenueAdd(System.String, System.String, System.String, System.String)
+  type: Method
+  source:
+    id: VenueAdd
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 156
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public int VenueAdd(string name, string address, string city, string country)
+    parameters:
+    - id: name
+      type: System.String
+    - id: address
+      type: System.String
+    - id: city
+      type: System.String
+    - id: country
+      type: System.String
+    return:
+      type: System.Int32
+    content.vb: Public Function VenueAdd(name As String, address As String, city As String, country As String) As Integer
+  overload: TicketSystem.DatabaseRepository.Database.VenueAdd*
+  implements:
+  - TicketSystem.DatabaseRepository.IDatabaseInterface.VenueAdd(System.String,System.String,System.String,System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.VenueUpdate(System.Int32,System.String,System.String,System.String,System.String)
+  commentId: M:TicketSystem.DatabaseRepository.Database.VenueUpdate(System.Int32,System.String,System.String,System.String,System.String)
+  id: VenueUpdate(System.Int32,System.String,System.String,System.String,System.String)
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: VenueUpdate(Int32, String, String, String, String)
+  nameWithType: Database.VenueUpdate(Int32, String, String, String, String)
+  fullName: TicketSystem.DatabaseRepository.Database.VenueUpdate(System.Int32, System.String, System.String, System.String, System.String)
+  type: Method
+  source:
+    id: VenueUpdate
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 169
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public void VenueUpdate(int id, string name, string address, string city, string country)
+    parameters:
+    - id: id
+      type: System.Int32
+    - id: name
+      type: System.String
+    - id: address
+      type: System.String
+    - id: city
+      type: System.String
+    - id: country
+      type: System.String
+    content.vb: Public Sub VenueUpdate(id As Integer, name As String, address As String, city As String, country As String)
+  overload: TicketSystem.DatabaseRepository.Database.VenueUpdate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.FindVenue(System.String)
+  commentId: M:TicketSystem.DatabaseRepository.Database.FindVenue(System.String)
+  id: FindVenue(System.String)
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: FindVenue(String)
+  nameWithType: Database.FindVenue(String)
+  fullName: TicketSystem.DatabaseRepository.Database.FindVenue(System.String)
+  type: Method
+  source:
+    id: FindVenue
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 179
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public List<Venue> FindVenue(string query)
+    parameters:
+    - id: query
+      type: System.String
+    return:
+      type: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Venue}
+    content.vb: Public Function FindVenue(query As String) As List(Of Venue)
+  overload: TicketSystem.DatabaseRepository.Database.FindVenue*
+  implements:
+  - TicketSystem.DatabaseRepository.IDatabaseInterface.FindVenue(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.AllVenues
+  commentId: M:TicketSystem.DatabaseRepository.Database.AllVenues
+  id: AllVenues
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: AllVenues()
+  nameWithType: Database.AllVenues()
+  fullName: TicketSystem.DatabaseRepository.Database.AllVenues()
+  type: Method
+  source:
+    id: AllVenues
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 189
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public List<Venue> AllVenues()
+    return:
+      type: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Venue}
+    content.vb: Public Function AllVenues As List(Of Venue)
+  overload: TicketSystem.DatabaseRepository.Database.AllVenues*
+  implements:
+  - TicketSystem.DatabaseRepository.IDatabaseInterface.AllVenues
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.VenueDelete(System.Int32)
+  commentId: M:TicketSystem.DatabaseRepository.Database.VenueDelete(System.Int32)
+  id: VenueDelete(System.Int32)
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: VenueDelete(Int32)
+  nameWithType: Database.VenueDelete(Int32)
+  fullName: TicketSystem.DatabaseRepository.Database.VenueDelete(System.Int32)
+  type: Method
+  source:
+    id: VenueDelete
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 199
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public void VenueDelete(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    content.vb: Public Sub VenueDelete(id As Integer)
+  overload: TicketSystem.DatabaseRepository.Database.VenueDelete*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.FindTicketEventDate(System.String)
+  commentId: M:TicketSystem.DatabaseRepository.Database.FindTicketEventDate(System.String)
+  id: FindTicketEventDate(System.String)
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: FindTicketEventDate(String)
+  nameWithType: Database.FindTicketEventDate(String)
+  fullName: TicketSystem.DatabaseRepository.Database.FindTicketEventDate(System.String)
+  type: Method
+  source:
+    id: FindTicketEventDate
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 210
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public List<TicketEventDate> FindTicketEventDate(string query)
+    parameters:
+    - id: query
+      type: System.String
+    return:
+      type: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.TicketEventDate}
+    content.vb: Public Function FindTicketEventDate(query As String) As List(Of TicketEventDate)
+  overload: TicketSystem.DatabaseRepository.Database.FindTicketEventDate*
+  implements:
+  - TicketSystem.DatabaseRepository.IDatabaseInterface.FindTicketEventDate(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.FindTicketEventDate
+  commentId: M:TicketSystem.DatabaseRepository.Database.FindTicketEventDate
+  id: FindTicketEventDate
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: FindTicketEventDate()
+  nameWithType: Database.FindTicketEventDate()
+  fullName: TicketSystem.DatabaseRepository.Database.FindTicketEventDate()
+  type: Method
+  source:
+    id: FindTicketEventDate
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 221
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public List<TicketEventDate> FindTicketEventDate()
+    return:
+      type: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.TicketEventDate}
+    content.vb: Public Function FindTicketEventDate As List(Of TicketEventDate)
+  overload: TicketSystem.DatabaseRepository.Database.FindTicketEventDate*
+  implements:
+  - TicketSystem.DatabaseRepository.IDatabaseInterface.FindTicketEventDate
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.TicketEventDateUpdate(System.Int32,System.Int32,System.Int32,System.DateTime)
+  commentId: M:TicketSystem.DatabaseRepository.Database.TicketEventDateUpdate(System.Int32,System.Int32,System.Int32,System.DateTime)
+  id: TicketEventDateUpdate(System.Int32,System.Int32,System.Int32,System.DateTime)
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: TicketEventDateUpdate(Int32, Int32, Int32, DateTime)
+  nameWithType: Database.TicketEventDateUpdate(Int32, Int32, Int32, DateTime)
+  fullName: TicketSystem.DatabaseRepository.Database.TicketEventDateUpdate(System.Int32, System.Int32, System.Int32, System.DateTime)
+  type: Method
+  source:
+    id: TicketEventDateUpdate
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 233
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public void TicketEventDateUpdate(int TicketEventDateID, int TicketEventID, int VenueId, DateTime EventStartDateTime)
+    parameters:
+    - id: TicketEventDateID
+      type: System.Int32
+    - id: TicketEventID
+      type: System.Int32
+    - id: VenueId
+      type: System.Int32
+    - id: EventStartDateTime
+      type: System.DateTime
+    content.vb: Public Sub TicketEventDateUpdate(TicketEventDateID As Integer, TicketEventID As Integer, VenueId As Integer, EventStartDateTime As Date)
+  overload: TicketSystem.DatabaseRepository.Database.TicketEventDateUpdate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.TicketEventDateDelete(System.Int32)
+  commentId: M:TicketSystem.DatabaseRepository.Database.TicketEventDateDelete(System.Int32)
+  id: TicketEventDateDelete(System.Int32)
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: TicketEventDateDelete(Int32)
+  nameWithType: Database.TicketEventDateDelete(Int32)
+  fullName: TicketSystem.DatabaseRepository.Database.TicketEventDateDelete(System.Int32)
+  type: Method
+  source:
+    id: TicketEventDateDelete
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 243
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public void TicketEventDateDelete(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    content.vb: Public Sub TicketEventDateDelete(id As Integer)
+  overload: TicketSystem.DatabaseRepository.Database.TicketEventDateDelete*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.SeatsAtEventDateAdd(System.Int32)
+  commentId: M:TicketSystem.DatabaseRepository.Database.SeatsAtEventDateAdd(System.Int32)
+  id: SeatsAtEventDateAdd(System.Int32)
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: SeatsAtEventDateAdd(Int32)
+  nameWithType: Database.SeatsAtEventDateAdd(Int32)
+  fullName: TicketSystem.DatabaseRepository.Database.SeatsAtEventDateAdd(System.Int32)
+  type: Method
+  source:
+    id: SeatsAtEventDateAdd
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 258
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public void SeatsAtEventDateAdd(int ticketEventDateID)
+    parameters:
+    - id: ticketEventDateID
+      type: System.Int32
+    content.vb: Public Sub SeatsAtEventDateAdd(ticketEventDateID As Integer)
+  overload: TicketSystem.DatabaseRepository.Database.SeatsAtEventDateAdd*
+  implements:
+  - TicketSystem.DatabaseRepository.IDatabaseInterface.SeatsAtEventDateAdd(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.TicketEventDate(System.Int32,System.Int32,System.DateTime)
+  commentId: M:TicketSystem.DatabaseRepository.Database.TicketEventDate(System.Int32,System.Int32,System.DateTime)
+  id: TicketEventDate(System.Int32,System.Int32,System.DateTime)
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: TicketEventDate(Int32, Int32, DateTime)
+  nameWithType: Database.TicketEventDate(Int32, Int32, DateTime)
+  fullName: TicketSystem.DatabaseRepository.Database.TicketEventDate(System.Int32, System.Int32, System.DateTime)
+  type: Method
+  source:
+    id: TicketEventDate
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 268
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public int TicketEventDate(int TicketEventID, int VenueID, DateTime EventStartDate)
+    parameters:
+    - id: TicketEventID
+      type: System.Int32
+    - id: VenueID
+      type: System.Int32
+    - id: EventStartDate
+      type: System.DateTime
+    return:
+      type: System.Int32
+    content.vb: Public Function TicketEventDate(TicketEventID As Integer, VenueID As Integer, EventStartDate As Date) As Integer
+  overload: TicketSystem.DatabaseRepository.Database.TicketEventDate*
+  implements:
+  - TicketSystem.DatabaseRepository.IDatabaseInterface.TicketEventDate(System.Int32,System.Int32,System.DateTime)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.FindSeatID(System.Int32)
+  commentId: M:TicketSystem.DatabaseRepository.Database.FindSeatID(System.Int32)
+  id: FindSeatID(System.Int32)
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: FindSeatID(Int32)
+  nameWithType: Database.FindSeatID(Int32)
+  fullName: TicketSystem.DatabaseRepository.Database.FindSeatID(System.Int32)
+  type: Method
+  source:
+    id: FindSeatID
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 282
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public List<Ticket> FindSeatID(int ticketID)
+    parameters:
+    - id: ticketID
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Ticket}
+    content.vb: Public Function FindSeatID(ticketID As Integer) As List(Of Ticket)
+  overload: TicketSystem.DatabaseRepository.Database.FindSeatID*
+  implements:
+  - TicketSystem.DatabaseRepository.IDatabaseInterface.FindSeatID(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.AllTickets
+  commentId: M:TicketSystem.DatabaseRepository.Database.AllTickets
+  id: AllTickets
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: AllTickets()
+  nameWithType: Database.AllTickets()
+  fullName: TicketSystem.DatabaseRepository.Database.AllTickets()
+  type: Method
+  source:
+    id: AllTickets
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 292
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public List<Ticket> AllTickets()
+    return:
+      type: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Ticket}
+    content.vb: Public Function AllTickets As List(Of Ticket)
+  overload: TicketSystem.DatabaseRepository.Database.AllTickets*
+  implements:
+  - TicketSystem.DatabaseRepository.IDatabaseInterface.AllTickets
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Database.TicketAdd(System.Int32)
+  commentId: M:TicketSystem.DatabaseRepository.Database.TicketAdd(System.Int32)
+  id: TicketAdd(System.Int32)
+  parent: TicketSystem.DatabaseRepository.Database
+  langs:
+  - csharp
+  - vb
+  name: TicketAdd(Int32)
+  nameWithType: Database.TicketAdd(Int32)
+  fullName: TicketSystem.DatabaseRepository.Database.TicketAdd(System.Int32)
+  type: Method
+  source:
+    id: TicketAdd
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\DatabaseRepository\Database.cs
+    startLine: 302
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public int TicketAdd(int seatID)
+    parameters:
+    - id: seatID
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function TicketAdd(seatID As Integer) As Integer
+  overload: TicketSystem.DatabaseRepository.Database.TicketAdd*
+  implements:
+  - TicketSystem.DatabaseRepository.IDatabaseInterface.TicketAdd(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketSystem.DatabaseRepository
+  commentId: N:TicketSystem.DatabaseRepository
+  isExternal: false
+  name: TicketSystem.DatabaseRepository
+  nameWithType: TicketSystem.DatabaseRepository
+  fullName: TicketSystem.DatabaseRepository
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TicketSystem.DatabaseRepository.IDatabaseInterface
+  commentId: T:TicketSystem.DatabaseRepository.IDatabaseInterface
+  parent: TicketSystem.DatabaseRepository
+  isExternal: false
+  name: IDatabaseInterface
+  nameWithType: IDatabaseInterface
+  fullName: TicketSystem.DatabaseRepository.IDatabaseInterface
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketSystem.DatabaseRepository.Database.GetTicketsByOrderId*
+  commentId: Overload:TicketSystem.DatabaseRepository.Database.GetTicketsByOrderId
+  isExternal: false
+  name: GetTicketsByOrderId
+  nameWithType: Database.GetTicketsByOrderId
+  fullName: TicketSystem.DatabaseRepository.Database.GetTicketsByOrderId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Ticket}
+  commentId: T:System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Ticket}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Ticket>
+  nameWithType: List<Ticket>
+  fullName: System.Collections.Generic.List<TicketSystem.DatabaseRepository.Model.Ticket>
+  nameWithType.vb: List(Of Ticket)
+  fullName.vb: System.Collections.Generic.List(Of TicketSystem.DatabaseRepository.Model.Ticket)
+  name.vb: List(Of Ticket)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketSystem.DatabaseRepository.Model.Ticket
+    name: Ticket
+    nameWithType: Ticket
+    fullName: TicketSystem.DatabaseRepository.Model.Ticket
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketSystem.DatabaseRepository.Model.Ticket
+    name: Ticket
+    nameWithType: Ticket
+    fullName: TicketSystem.DatabaseRepository.Model.Ticket
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TicketSystem.DatabaseRepository.Database.FindEvent*
+  commentId: Overload:TicketSystem.DatabaseRepository.Database.FindEvent
+  isExternal: false
+  name: FindEvent
+  nameWithType: Database.FindEvent
+  fullName: TicketSystem.DatabaseRepository.Database.FindEvent
+- uid: TicketSystem.DatabaseRepository.IDatabaseInterface.FindEvent
+  commentId: M:TicketSystem.DatabaseRepository.IDatabaseInterface.FindEvent
+  parent: TicketSystem.DatabaseRepository.IDatabaseInterface
+  isExternal: false
+  name: FindEvent()
+  nameWithType: IDatabaseInterface.FindEvent()
+  fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.FindEvent()
+  spec.csharp:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.FindEvent
+    name: FindEvent
+    nameWithType: IDatabaseInterface.FindEvent
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.FindEvent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.FindEvent
+    name: FindEvent
+    nameWithType: IDatabaseInterface.FindEvent
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.FindEvent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.TicketEvent}
+  commentId: T:System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.TicketEvent}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<TicketEvent>
+  nameWithType: List<TicketEvent>
+  fullName: System.Collections.Generic.List<TicketSystem.DatabaseRepository.Model.TicketEvent>
+  nameWithType.vb: List(Of TicketEvent)
+  fullName.vb: System.Collections.Generic.List(Of TicketSystem.DatabaseRepository.Model.TicketEvent)
+  name.vb: List(Of TicketEvent)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketSystem.DatabaseRepository.Model.TicketEvent
+    name: TicketEvent
+    nameWithType: TicketEvent
+    fullName: TicketSystem.DatabaseRepository.Model.TicketEvent
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketSystem.DatabaseRepository.Model.TicketEvent
+    name: TicketEvent
+    nameWithType: TicketEvent
+    fullName: TicketSystem.DatabaseRepository.Model.TicketEvent
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketSystem.DatabaseRepository.Database.EventAdd*
+  commentId: Overload:TicketSystem.DatabaseRepository.Database.EventAdd
+  isExternal: false
+  name: EventAdd
+  nameWithType: Database.EventAdd
+  fullName: TicketSystem.DatabaseRepository.Database.EventAdd
+- uid: TicketSystem.DatabaseRepository.IDatabaseInterface.EventAdd(System.String,System.String)
+  commentId: M:TicketSystem.DatabaseRepository.IDatabaseInterface.EventAdd(System.String,System.String)
+  parent: TicketSystem.DatabaseRepository.IDatabaseInterface
+  isExternal: true
+  name: EventAdd(String, String)
+  nameWithType: IDatabaseInterface.EventAdd(String, String)
+  fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.EventAdd(System.String, System.String)
+  spec.csharp:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.EventAdd(System.String,System.String)
+    name: EventAdd
+    nameWithType: IDatabaseInterface.EventAdd
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.EventAdd
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.EventAdd(System.String,System.String)
+    name: EventAdd
+    nameWithType: IDatabaseInterface.EventAdd
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.EventAdd
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketSystem.DatabaseRepository.IDatabaseInterface.FindEvent(System.String)
+  commentId: M:TicketSystem.DatabaseRepository.IDatabaseInterface.FindEvent(System.String)
+  parent: TicketSystem.DatabaseRepository.IDatabaseInterface
+  isExternal: true
+  name: FindEvent(String)
+  nameWithType: IDatabaseInterface.FindEvent(String)
+  fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.FindEvent(System.String)
+  spec.csharp:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.FindEvent(System.String)
+    name: FindEvent
+    nameWithType: IDatabaseInterface.FindEvent
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.FindEvent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.FindEvent(System.String)
+    name: FindEvent
+    nameWithType: IDatabaseInterface.FindEvent
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.FindEvent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketSystem.DatabaseRepository.Database.EventDelete*
+  commentId: Overload:TicketSystem.DatabaseRepository.Database.EventDelete
+  isExternal: false
+  name: EventDelete
+  nameWithType: Database.EventDelete
+  fullName: TicketSystem.DatabaseRepository.Database.EventDelete
+- uid: TicketSystem.DatabaseRepository.Database.EventUpdate*
+  commentId: Overload:TicketSystem.DatabaseRepository.Database.EventUpdate
+  isExternal: false
+  name: EventUpdate
+  nameWithType: Database.EventUpdate
+  fullName: TicketSystem.DatabaseRepository.Database.EventUpdate
+- uid: TicketSystem.DatabaseRepository.Model.TicketEvent
+  commentId: T:TicketSystem.DatabaseRepository.Model.TicketEvent
+  parent: TicketSystem.DatabaseRepository.Model
+  isExternal: false
+  name: TicketEvent
+  nameWithType: TicketEvent
+  fullName: TicketSystem.DatabaseRepository.Model.TicketEvent
+- uid: TicketSystem.DatabaseRepository.Model
+  commentId: N:TicketSystem.DatabaseRepository.Model
+  isExternal: false
+  name: TicketSystem.DatabaseRepository.Model
+  nameWithType: TicketSystem.DatabaseRepository.Model
+  fullName: TicketSystem.DatabaseRepository.Model
+- uid: TicketSystem.DatabaseRepository.Database.VenueAdd*
+  commentId: Overload:TicketSystem.DatabaseRepository.Database.VenueAdd
+  isExternal: false
+  name: VenueAdd
+  nameWithType: Database.VenueAdd
+  fullName: TicketSystem.DatabaseRepository.Database.VenueAdd
+- uid: TicketSystem.DatabaseRepository.IDatabaseInterface.VenueAdd(System.String,System.String,System.String,System.String)
+  commentId: M:TicketSystem.DatabaseRepository.IDatabaseInterface.VenueAdd(System.String,System.String,System.String,System.String)
+  parent: TicketSystem.DatabaseRepository.IDatabaseInterface
+  isExternal: true
+  name: VenueAdd(String, String, String, String)
+  nameWithType: IDatabaseInterface.VenueAdd(String, String, String, String)
+  fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.VenueAdd(System.String, System.String, System.String, System.String)
+  spec.csharp:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.VenueAdd(System.String,System.String,System.String,System.String)
+    name: VenueAdd
+    nameWithType: IDatabaseInterface.VenueAdd
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.VenueAdd
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.VenueAdd(System.String,System.String,System.String,System.String)
+    name: VenueAdd
+    nameWithType: IDatabaseInterface.VenueAdd
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.VenueAdd
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketSystem.DatabaseRepository.Database.VenueUpdate*
+  commentId: Overload:TicketSystem.DatabaseRepository.Database.VenueUpdate
+  isExternal: false
+  name: VenueUpdate
+  nameWithType: Database.VenueUpdate
+  fullName: TicketSystem.DatabaseRepository.Database.VenueUpdate
+- uid: TicketSystem.DatabaseRepository.Database.FindVenue*
+  commentId: Overload:TicketSystem.DatabaseRepository.Database.FindVenue
+  isExternal: false
+  name: FindVenue
+  nameWithType: Database.FindVenue
+  fullName: TicketSystem.DatabaseRepository.Database.FindVenue
+- uid: TicketSystem.DatabaseRepository.IDatabaseInterface.FindVenue(System.String)
+  commentId: M:TicketSystem.DatabaseRepository.IDatabaseInterface.FindVenue(System.String)
+  parent: TicketSystem.DatabaseRepository.IDatabaseInterface
+  isExternal: true
+  name: FindVenue(String)
+  nameWithType: IDatabaseInterface.FindVenue(String)
+  fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.FindVenue(System.String)
+  spec.csharp:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.FindVenue(System.String)
+    name: FindVenue
+    nameWithType: IDatabaseInterface.FindVenue
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.FindVenue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.FindVenue(System.String)
+    name: FindVenue
+    nameWithType: IDatabaseInterface.FindVenue
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.FindVenue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Venue}
+  commentId: T:System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Venue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Venue>
+  nameWithType: List<Venue>
+  fullName: System.Collections.Generic.List<TicketSystem.DatabaseRepository.Model.Venue>
+  nameWithType.vb: List(Of Venue)
+  fullName.vb: System.Collections.Generic.List(Of TicketSystem.DatabaseRepository.Model.Venue)
+  name.vb: List(Of Venue)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketSystem.DatabaseRepository.Model.Venue
+    name: Venue
+    nameWithType: Venue
+    fullName: TicketSystem.DatabaseRepository.Model.Venue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketSystem.DatabaseRepository.Model.Venue
+    name: Venue
+    nameWithType: Venue
+    fullName: TicketSystem.DatabaseRepository.Model.Venue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketSystem.DatabaseRepository.Database.AllVenues*
+  commentId: Overload:TicketSystem.DatabaseRepository.Database.AllVenues
+  isExternal: false
+  name: AllVenues
+  nameWithType: Database.AllVenues
+  fullName: TicketSystem.DatabaseRepository.Database.AllVenues
+- uid: TicketSystem.DatabaseRepository.IDatabaseInterface.AllVenues
+  commentId: M:TicketSystem.DatabaseRepository.IDatabaseInterface.AllVenues
+  parent: TicketSystem.DatabaseRepository.IDatabaseInterface
+  isExternal: false
+  name: AllVenues()
+  nameWithType: IDatabaseInterface.AllVenues()
+  fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.AllVenues()
+  spec.csharp:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.AllVenues
+    name: AllVenues
+    nameWithType: IDatabaseInterface.AllVenues
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.AllVenues
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.AllVenues
+    name: AllVenues
+    nameWithType: IDatabaseInterface.AllVenues
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.AllVenues
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketSystem.DatabaseRepository.Database.VenueDelete*
+  commentId: Overload:TicketSystem.DatabaseRepository.Database.VenueDelete
+  isExternal: false
+  name: VenueDelete
+  nameWithType: Database.VenueDelete
+  fullName: TicketSystem.DatabaseRepository.Database.VenueDelete
+- uid: TicketSystem.DatabaseRepository.Database.FindTicketEventDate*
+  commentId: Overload:TicketSystem.DatabaseRepository.Database.FindTicketEventDate
+  isExternal: false
+  name: FindTicketEventDate
+  nameWithType: Database.FindTicketEventDate
+  fullName: TicketSystem.DatabaseRepository.Database.FindTicketEventDate
+- uid: TicketSystem.DatabaseRepository.IDatabaseInterface.FindTicketEventDate(System.String)
+  commentId: M:TicketSystem.DatabaseRepository.IDatabaseInterface.FindTicketEventDate(System.String)
+  parent: TicketSystem.DatabaseRepository.IDatabaseInterface
+  isExternal: true
+  name: FindTicketEventDate(String)
+  nameWithType: IDatabaseInterface.FindTicketEventDate(String)
+  fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.FindTicketEventDate(System.String)
+  spec.csharp:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.FindTicketEventDate(System.String)
+    name: FindTicketEventDate
+    nameWithType: IDatabaseInterface.FindTicketEventDate
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.FindTicketEventDate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.FindTicketEventDate(System.String)
+    name: FindTicketEventDate
+    nameWithType: IDatabaseInterface.FindTicketEventDate
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.FindTicketEventDate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.TicketEventDate}
+  commentId: T:System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.TicketEventDate}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<TicketEventDate>
+  nameWithType: List<TicketEventDate>
+  fullName: System.Collections.Generic.List<TicketSystem.DatabaseRepository.Model.TicketEventDate>
+  nameWithType.vb: List(Of TicketEventDate)
+  fullName.vb: System.Collections.Generic.List(Of TicketSystem.DatabaseRepository.Model.TicketEventDate)
+  name.vb: List(Of TicketEventDate)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketSystem.DatabaseRepository.Model.TicketEventDate
+    name: TicketEventDate
+    nameWithType: TicketEventDate
+    fullName: TicketSystem.DatabaseRepository.Model.TicketEventDate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketSystem.DatabaseRepository.Model.TicketEventDate
+    name: TicketEventDate
+    nameWithType: TicketEventDate
+    fullName: TicketSystem.DatabaseRepository.Model.TicketEventDate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketSystem.DatabaseRepository.IDatabaseInterface.FindTicketEventDate
+  commentId: M:TicketSystem.DatabaseRepository.IDatabaseInterface.FindTicketEventDate
+  parent: TicketSystem.DatabaseRepository.IDatabaseInterface
+  isExternal: false
+  name: FindTicketEventDate()
+  nameWithType: IDatabaseInterface.FindTicketEventDate()
+  fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.FindTicketEventDate()
+  spec.csharp:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.FindTicketEventDate
+    name: FindTicketEventDate
+    nameWithType: IDatabaseInterface.FindTicketEventDate
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.FindTicketEventDate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.FindTicketEventDate
+    name: FindTicketEventDate
+    nameWithType: IDatabaseInterface.FindTicketEventDate
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.FindTicketEventDate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketSystem.DatabaseRepository.Database.TicketEventDateUpdate*
+  commentId: Overload:TicketSystem.DatabaseRepository.Database.TicketEventDateUpdate
+  isExternal: false
+  name: TicketEventDateUpdate
+  nameWithType: Database.TicketEventDateUpdate
+  fullName: TicketSystem.DatabaseRepository.Database.TicketEventDateUpdate
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: TicketSystem.DatabaseRepository.Database.TicketEventDateDelete*
+  commentId: Overload:TicketSystem.DatabaseRepository.Database.TicketEventDateDelete
+  isExternal: false
+  name: TicketEventDateDelete
+  nameWithType: Database.TicketEventDateDelete
+  fullName: TicketSystem.DatabaseRepository.Database.TicketEventDateDelete
+- uid: TicketSystem.DatabaseRepository.Database.SeatsAtEventDateAdd*
+  commentId: Overload:TicketSystem.DatabaseRepository.Database.SeatsAtEventDateAdd
+  isExternal: false
+  name: SeatsAtEventDateAdd
+  nameWithType: Database.SeatsAtEventDateAdd
+  fullName: TicketSystem.DatabaseRepository.Database.SeatsAtEventDateAdd
+- uid: TicketSystem.DatabaseRepository.IDatabaseInterface.SeatsAtEventDateAdd(System.Int32)
+  commentId: M:TicketSystem.DatabaseRepository.IDatabaseInterface.SeatsAtEventDateAdd(System.Int32)
+  parent: TicketSystem.DatabaseRepository.IDatabaseInterface
+  isExternal: true
+  name: SeatsAtEventDateAdd(Int32)
+  nameWithType: IDatabaseInterface.SeatsAtEventDateAdd(Int32)
+  fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.SeatsAtEventDateAdd(System.Int32)
+  spec.csharp:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.SeatsAtEventDateAdd(System.Int32)
+    name: SeatsAtEventDateAdd
+    nameWithType: IDatabaseInterface.SeatsAtEventDateAdd
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.SeatsAtEventDateAdd
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.SeatsAtEventDateAdd(System.Int32)
+    name: SeatsAtEventDateAdd
+    nameWithType: IDatabaseInterface.SeatsAtEventDateAdd
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.SeatsAtEventDateAdd
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketSystem.DatabaseRepository.Database.TicketEventDate*
+  commentId: Overload:TicketSystem.DatabaseRepository.Database.TicketEventDate
+  isExternal: false
+  name: TicketEventDate
+  nameWithType: Database.TicketEventDate
+  fullName: TicketSystem.DatabaseRepository.Database.TicketEventDate
+- uid: TicketSystem.DatabaseRepository.IDatabaseInterface.TicketEventDate(System.Int32,System.Int32,System.DateTime)
+  commentId: M:TicketSystem.DatabaseRepository.IDatabaseInterface.TicketEventDate(System.Int32,System.Int32,System.DateTime)
+  parent: TicketSystem.DatabaseRepository.IDatabaseInterface
+  isExternal: true
+  name: TicketEventDate(Int32, Int32, DateTime)
+  nameWithType: IDatabaseInterface.TicketEventDate(Int32, Int32, DateTime)
+  fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.TicketEventDate(System.Int32, System.Int32, System.DateTime)
+  spec.csharp:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.TicketEventDate(System.Int32,System.Int32,System.DateTime)
+    name: TicketEventDate
+    nameWithType: IDatabaseInterface.TicketEventDate
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.TicketEventDate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.TicketEventDate(System.Int32,System.Int32,System.DateTime)
+    name: TicketEventDate
+    nameWithType: IDatabaseInterface.TicketEventDate
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.TicketEventDate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketSystem.DatabaseRepository.Database.FindSeatID*
+  commentId: Overload:TicketSystem.DatabaseRepository.Database.FindSeatID
+  isExternal: false
+  name: FindSeatID
+  nameWithType: Database.FindSeatID
+  fullName: TicketSystem.DatabaseRepository.Database.FindSeatID
+- uid: TicketSystem.DatabaseRepository.IDatabaseInterface.FindSeatID(System.Int32)
+  commentId: M:TicketSystem.DatabaseRepository.IDatabaseInterface.FindSeatID(System.Int32)
+  parent: TicketSystem.DatabaseRepository.IDatabaseInterface
+  isExternal: true
+  name: FindSeatID(Int32)
+  nameWithType: IDatabaseInterface.FindSeatID(Int32)
+  fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.FindSeatID(System.Int32)
+  spec.csharp:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.FindSeatID(System.Int32)
+    name: FindSeatID
+    nameWithType: IDatabaseInterface.FindSeatID
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.FindSeatID
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.FindSeatID(System.Int32)
+    name: FindSeatID
+    nameWithType: IDatabaseInterface.FindSeatID
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.FindSeatID
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketSystem.DatabaseRepository.Database.AllTickets*
+  commentId: Overload:TicketSystem.DatabaseRepository.Database.AllTickets
+  isExternal: false
+  name: AllTickets
+  nameWithType: Database.AllTickets
+  fullName: TicketSystem.DatabaseRepository.Database.AllTickets
+- uid: TicketSystem.DatabaseRepository.IDatabaseInterface.AllTickets
+  commentId: M:TicketSystem.DatabaseRepository.IDatabaseInterface.AllTickets
+  parent: TicketSystem.DatabaseRepository.IDatabaseInterface
+  isExternal: false
+  name: AllTickets()
+  nameWithType: IDatabaseInterface.AllTickets()
+  fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.AllTickets()
+  spec.csharp:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.AllTickets
+    name: AllTickets
+    nameWithType: IDatabaseInterface.AllTickets
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.AllTickets
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.AllTickets
+    name: AllTickets
+    nameWithType: IDatabaseInterface.AllTickets
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.AllTickets
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketSystem.DatabaseRepository.Database.TicketAdd*
+  commentId: Overload:TicketSystem.DatabaseRepository.Database.TicketAdd
+  isExternal: false
+  name: TicketAdd
+  nameWithType: Database.TicketAdd
+  fullName: TicketSystem.DatabaseRepository.Database.TicketAdd
+- uid: TicketSystem.DatabaseRepository.IDatabaseInterface.TicketAdd(System.Int32)
+  commentId: M:TicketSystem.DatabaseRepository.IDatabaseInterface.TicketAdd(System.Int32)
+  parent: TicketSystem.DatabaseRepository.IDatabaseInterface
+  isExternal: true
+  name: TicketAdd(Int32)
+  nameWithType: IDatabaseInterface.TicketAdd(Int32)
+  fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.TicketAdd(System.Int32)
+  spec.csharp:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.TicketAdd(System.Int32)
+    name: TicketAdd
+    nameWithType: IDatabaseInterface.TicketAdd
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.TicketAdd
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface.TicketAdd(System.Int32)
+    name: TicketAdd
+    nameWithType: IDatabaseInterface.TicketAdd
+    fullName: TicketSystem.DatabaseRepository.IDatabaseInterface.TicketAdd
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

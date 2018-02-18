@@ -5,6 +5,7 @@ items:
   id: TicketSystem.RestApiClient.Model
   children:
   - TicketSystem.RestApiClient.Model.Ticket
+  - TicketSystem.RestApiClient.Model.TicketEvent
   langs:
   - csharp
   - vb
@@ -22,6 +23,12 @@ references:
   name: Ticket
   nameWithType: Ticket
   fullName: TicketSystem.RestApiClient.Model.Ticket
+- uid: TicketSystem.RestApiClient.Model.TicketEvent
+  commentId: T:TicketSystem.RestApiClient.Model.TicketEvent
+  isExternal: false
+  name: TicketEvent
+  nameWithType: TicketEvent
+  fullName: TicketSystem.RestApiClient.Model.TicketEvent
 - uid: TicketSystem.RestApiClient.Model
   commentId: N:TicketSystem.RestApiClient.Model
   isExternal: false

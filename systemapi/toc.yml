@@ -1,18 +1,256 @@
 ### YamlMime:TableOfContent
+- uid: AdminPanel
+  name: AdminPanel
+  items:
+  - uid: AdminPanel.Program
+    name: Program
+  - uid: AdminPanel.Startup
+    name: Startup
+- uid: AdminPanel.Controllers
+  name: AdminPanel.Controllers
+  items:
+  - uid: AdminPanel.Controllers.AccountController
+    name: AccountController
+  - uid: AdminPanel.Controllers.HomeController
+    name: HomeController
+  - uid: AdminPanel.Controllers.ManageController
+    name: ManageController
+- uid: AdminPanel.Data
+  name: AdminPanel.Data
+  items:
+  - uid: AdminPanel.Data.ApplicationDbContext
+    name: ApplicationDbContext
+- uid: AdminPanel.Data.Migrations
+  name: AdminPanel.Data.Migrations
+  items:
+  - uid: AdminPanel.Data.Migrations.CreateIdentitySchema
+    name: CreateIdentitySchema
+- uid: AdminPanel.Models
+  name: AdminPanel.Models
+  items:
+  - uid: AdminPanel.Models.ApplicationUser
+    name: ApplicationUser
+  - uid: AdminPanel.Models.ErrorViewModel
+    name: ErrorViewModel
+- uid: AdminPanel.Models.AccountViewModels
+  name: AdminPanel.Models.AccountViewModels
+  items:
+  - uid: AdminPanel.Models.AccountViewModels.ExternalLoginViewModel
+    name: ExternalLoginViewModel
+  - uid: AdminPanel.Models.AccountViewModels.ForgotPasswordViewModel
+    name: ForgotPasswordViewModel
+  - uid: AdminPanel.Models.AccountViewModels.LoginViewModel
+    name: LoginViewModel
+  - uid: AdminPanel.Models.AccountViewModels.LoginWith2faViewModel
+    name: LoginWith2faViewModel
+  - uid: AdminPanel.Models.AccountViewModels.LoginWithRecoveryCodeViewModel
+    name: LoginWithRecoveryCodeViewModel
+  - uid: AdminPanel.Models.AccountViewModels.RegisterViewModel
+    name: RegisterViewModel
+  - uid: AdminPanel.Models.AccountViewModels.ResetPasswordViewModel
+    name: ResetPasswordViewModel
+- uid: AdminPanel.Models.ManageViewModels
+  name: AdminPanel.Models.ManageViewModels
+  items:
+  - uid: AdminPanel.Models.ManageViewModels.ChangePasswordViewModel
+    name: ChangePasswordViewModel
+  - uid: AdminPanel.Models.ManageViewModels.EnableAuthenticatorViewModel
+    name: EnableAuthenticatorViewModel
+  - uid: AdminPanel.Models.ManageViewModels.ExternalLoginsViewModel
+    name: ExternalLoginsViewModel
+  - uid: AdminPanel.Models.ManageViewModels.GenerateRecoveryCodesViewModel
+    name: GenerateRecoveryCodesViewModel
+  - uid: AdminPanel.Models.ManageViewModels.IndexViewModel
+    name: IndexViewModel
+  - uid: AdminPanel.Models.ManageViewModels.RemoveLoginViewModel
+    name: RemoveLoginViewModel
+  - uid: AdminPanel.Models.ManageViewModels.SetPasswordViewModel
+    name: SetPasswordViewModel
+  - uid: AdminPanel.Models.ManageViewModels.TwoFactorAuthenticationViewModel
+    name: TwoFactorAuthenticationViewModel
+- uid: AdminPanel.Services
+  name: AdminPanel.Services
+  items:
+  - uid: AdminPanel.Services.EmailSender
+    name: EmailSender
+  - uid: AdminPanel.Services.EmailSenderExtensions
+    name: EmailSenderExtensions
+  - uid: AdminPanel.Services.IEmailSender
+    name: IEmailSender
+- uid: AdminPanel.Views.Manage
+  name: AdminPanel.Views.Manage
+  items:
+  - uid: AdminPanel.Views.Manage.ManageNavPages
+    name: ManageNavPages
+- uid: Api_Start
+  name: Api_Start
+  items:
+  - uid: Api_Start.Program
+    name: Program
+  - uid: Api_Start.Startup
+    name: Startup
+- uid: Api_Start.Controllers
+  name: Api_Start.Controllers
+  items:
+  - uid: Api_Start.Controllers.EventController
+    name: EventController
+  - uid: Api_Start.Controllers.OrdersController
+    name: OrdersController
+  - uid: Api_Start.Controllers.ValuesController
+    name: ValuesController
+- uid: Microsoft.AspNetCore.Mvc
+  name: Microsoft.AspNetCore.Mvc
+  items:
+  - uid: Microsoft.AspNetCore.Mvc.UrlHelperExtensions
+    name: UrlHelperExtensions
+- uid: TicketShopWebApplication
+  name: TicketShopWebApplication
+  items:
+  - uid: TicketShopWebApplication.Program
+    name: Program
+  - uid: TicketShopWebApplication.Startup
+    name: Startup
+- uid: TicketShopWebApplication.Controllers
+  name: TicketShopWebApplication.Controllers
+  items:
+  - uid: TicketShopWebApplication.Controllers.AccountController
+    name: AccountController
+  - uid: TicketShopWebApplication.Controllers.HomeController
+    name: HomeController
+- uid: TicketShopWebApplication.Data
+  name: TicketShopWebApplication.Data
+  items:
+  - uid: TicketShopWebApplication.Data.ApplicationDbContext
+    name: ApplicationDbContext
+  - uid: TicketShopWebApplication.Data.ApplicationUser
+    name: ApplicationUser
+- uid: TicketShopWebApplication.Data.Migrations
+  name: TicketShopWebApplication.Data.Migrations
+  items:
+  - uid: TicketShopWebApplication.Data.Migrations.CreateIdentitySchema
+    name: CreateIdentitySchema
+- uid: TicketShopWebApplication.Pages
+  name: TicketShopWebApplication.Pages
+  items:
+  - uid: TicketShopWebApplication.Pages.AboutModel
+    name: AboutModel
+  - uid: TicketShopWebApplication.Pages.ContactModel
+    name: ContactModel
+  - uid: TicketShopWebApplication.Pages.ErrorModel
+    name: ErrorModel
+  - uid: TicketShopWebApplication.Pages.IndexModel
+    name: IndexModel
+- uid: TicketShopWebApplication.Pages.Account
+  name: TicketShopWebApplication.Pages.Account
+  items:
+  - uid: TicketShopWebApplication.Pages.Account.AccessDeniedModel
+    name: AccessDeniedModel
+  - uid: TicketShopWebApplication.Pages.Account.ConfirmEmailModel
+    name: ConfirmEmailModel
+  - uid: TicketShopWebApplication.Pages.Account.ExternalLoginModel
+    name: ExternalLoginModel
+  - uid: TicketShopWebApplication.Pages.Account.ExternalLoginModel.InputModel
+    name: ExternalLoginModel.InputModel
+  - uid: TicketShopWebApplication.Pages.Account.ForgotPasswordConfirmation
+    name: ForgotPasswordConfirmation
+  - uid: TicketShopWebApplication.Pages.Account.ForgotPasswordModel
+    name: ForgotPasswordModel
+  - uid: TicketShopWebApplication.Pages.Account.ForgotPasswordModel.InputModel
+    name: ForgotPasswordModel.InputModel
+  - uid: TicketShopWebApplication.Pages.Account.LockoutModel
+    name: LockoutModel
+  - uid: TicketShopWebApplication.Pages.Account.LoginModel
+    name: LoginModel
+  - uid: TicketShopWebApplication.Pages.Account.LoginModel.InputModel
+    name: LoginModel.InputModel
+  - uid: TicketShopWebApplication.Pages.Account.LoginWith2faModel
+    name: LoginWith2faModel
+  - uid: TicketShopWebApplication.Pages.Account.LoginWith2faModel.InputModel
+    name: LoginWith2faModel.InputModel
+  - uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel
+    name: LoginWithRecoveryCodeModel
+  - uid: TicketShopWebApplication.Pages.Account.LoginWithRecoveryCodeModel.InputModel
+    name: LoginWithRecoveryCodeModel.InputModel
+  - uid: TicketShopWebApplication.Pages.Account.RegisterModel
+    name: RegisterModel
+  - uid: TicketShopWebApplication.Pages.Account.RegisterModel.InputModel
+    name: RegisterModel.InputModel
+  - uid: TicketShopWebApplication.Pages.Account.ResetPasswordConfirmationModel
+    name: ResetPasswordConfirmationModel
+  - uid: TicketShopWebApplication.Pages.Account.ResetPasswordModel
+    name: ResetPasswordModel
+  - uid: TicketShopWebApplication.Pages.Account.ResetPasswordModel.InputModel
+    name: ResetPasswordModel.InputModel
+- uid: TicketShopWebApplication.Pages.Account.Manage
+  name: TicketShopWebApplication.Pages.Account.Manage
+  items:
+  - uid: TicketShopWebApplication.Pages.Account.Manage.ChangePasswordModel
+    name: ChangePasswordModel
+  - uid: TicketShopWebApplication.Pages.Account.Manage.ChangePasswordModel.InputModel
+    name: ChangePasswordModel.InputModel
+  - uid: TicketShopWebApplication.Pages.Account.Manage.Disable2faModel
+    name: Disable2faModel
+  - uid: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel
+    name: EnableAuthenticatorModel
+  - uid: TicketShopWebApplication.Pages.Account.Manage.EnableAuthenticatorModel.InputModel
+    name: EnableAuthenticatorModel.InputModel
+  - uid: TicketShopWebApplication.Pages.Account.Manage.ExternalLoginsModel
+    name: ExternalLoginsModel
+  - uid: TicketShopWebApplication.Pages.Account.Manage.GenerateRecoveryCodesModel
+    name: GenerateRecoveryCodesModel
+  - uid: TicketShopWebApplication.Pages.Account.Manage.IndexModel
+    name: IndexModel
+  - uid: TicketShopWebApplication.Pages.Account.Manage.IndexModel.InputModel
+    name: IndexModel.InputModel
+  - uid: TicketShopWebApplication.Pages.Account.Manage.ManageNavPages
+    name: ManageNavPages
+  - uid: TicketShopWebApplication.Pages.Account.Manage.ResetAuthenticatorModel
+    name: ResetAuthenticatorModel
+  - uid: TicketShopWebApplication.Pages.Account.Manage.SetPasswordModel
+    name: SetPasswordModel
+  - uid: TicketShopWebApplication.Pages.Account.Manage.SetPasswordModel.InputModel
+    name: SetPasswordModel.InputModel
+  - uid: TicketShopWebApplication.Pages.Account.Manage.ShowRecoveryCodesModel
+    name: ShowRecoveryCodesModel
+  - uid: TicketShopWebApplication.Pages.Account.Manage.TwoFactorAuthenticationModel
+    name: TwoFactorAuthenticationModel
+- uid: TicketShopWebApplication.Services
+  name: TicketShopWebApplication.Services
+  items:
+  - uid: TicketShopWebApplication.Services.EmailSender
+    name: EmailSender
+  - uid: TicketShopWebApplication.Services.EmailSenderExtensions
+    name: EmailSenderExtensions
+  - uid: TicketShopWebApplication.Services.IEmailSender
+    name: IEmailSender
 - uid: TicketSystem.DatabaseRepository
   name: TicketSystem.DatabaseRepository
   items:
-  - uid: TicketSystem.DatabaseRepository.ITicketDatabase
-    name: ITicketDatabase
-  - uid: TicketSystem.DatabaseRepository.TicketDatabase
-    name: TicketDatabase
+  - uid: TicketSystem.DatabaseRepository.Database
+    name: Database
+  - uid: TicketSystem.DatabaseRepository.IDatabaseInterface
+    name: IDatabaseInterface
 - uid: TicketSystem.DatabaseRepository.Model
   name: TicketSystem.DatabaseRepository.Model
   items:
+  - uid: TicketSystem.DatabaseRepository.Model.Event
+    name: Event
+  - uid: TicketSystem.DatabaseRepository.Model.EventList
+    name: EventList
+  - uid: TicketSystem.DatabaseRepository.Model.Order
+    name: Order
+  - uid: TicketSystem.DatabaseRepository.Model.OrderList
+    name: OrderList
+  - uid: TicketSystem.DatabaseRepository.Model.Ticket
+    name: Ticket
   - uid: TicketSystem.DatabaseRepository.Model.TicketEvent
     name: TicketEvent
   - uid: TicketSystem.DatabaseRepository.Model.TicketEventDate
     name: TicketEventDate
+  - uid: TicketSystem.DatabaseRepository.Model.TicketsToTransaction
+    name: TicketsToTransaction
+  - uid: TicketSystem.DatabaseRepository.Model.TicketTransaction
+    name: TicketTransaction
   - uid: TicketSystem.DatabaseRepository.Model.Venue
     name: Venue
 - uid: TicketSystem.PaymentProvider
@@ -38,3 +276,5 @@
   items:
   - uid: TicketSystem.RestApiClient.Model.Ticket
     name: Ticket
+  - uid: TicketSystem.RestApiClient.Model.TicketEvent
+    name: TicketEvent

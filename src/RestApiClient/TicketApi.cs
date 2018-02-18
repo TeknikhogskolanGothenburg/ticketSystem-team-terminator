@@ -18,7 +18,7 @@ namespace TicketSystem.RestApiClient
             var response = client.Execute<List<EventTest>>(request);
             return response.Data;
         }
-      
+
         //public Ticket TicketTicketIdGet(int ticketId)
         //{
         //    var client = new RestClient("http://localhost:55792/");
@@ -33,5 +33,13 @@ namespace TicketSystem.RestApiClient
 
         //    return response.Data;
         //}
+
+        public List<Order> GetOrders()
+        {
+            var client = new RestClient("http://localhost:55792/");
+            var request = new RestRequest("api/Order", Method.GET);
+            var response = client.Execute<List<Order>>(request);
+            return response.Data;
+        }
     }
 }

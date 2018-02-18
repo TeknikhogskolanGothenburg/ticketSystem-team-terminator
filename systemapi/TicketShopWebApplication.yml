@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShopWebApplication
+  commentId: N:TicketShopWebApplication
+  id: TicketShopWebApplication
+  children:
+  - TicketShopWebApplication.Program
+  - TicketShopWebApplication.Startup
+  langs:
+  - csharp
+  - vb
+  name: TicketShopWebApplication
+  nameWithType: TicketShopWebApplication
+  fullName: TicketShopWebApplication
+  type: Namespace
+  assemblies:
+  - TicketShopWebApplication
+references:
+- uid: TicketShopWebApplication.Program
+  commentId: T:TicketShopWebApplication.Program
+  isExternal: false
+  name: Program
+  nameWithType: Program
+  fullName: TicketShopWebApplication.Program
+- uid: TicketShopWebApplication.Startup
+  commentId: T:TicketShopWebApplication.Startup
+  isExternal: false
+  name: Startup
+  nameWithType: Startup
+  fullName: TicketShopWebApplication.Startup

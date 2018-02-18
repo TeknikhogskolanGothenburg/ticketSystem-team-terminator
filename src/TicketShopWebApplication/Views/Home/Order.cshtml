@@ -1,0 +1,35 @@
+﻿@model List<TicketSystem.RestApiClient.Model.Order>
+@{
+    ViewData["Title"] = "Order";
+}
+
+<h2>GetOrders</h2>
+
+
+
+<div class="container">
+    @{foreach (var i in Model)
+        {
+
+
+            <div class="row">
+                <div class="col-sm">
+                    <h1> @i.TicketID;</h1>
+                    <h1> @i.BuyerLastName;</h1>
+                    <h1> @i.BuyerFirstName;</h1>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <h1> @i.BuyerAddress;</h1>
+                    <h1> @i.BuyerCity;</h1>
+                </div>
+
+            </div>  
+
+        }
+
+
+    }
+</div>

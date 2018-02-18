@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Api_Start
+  commentId: N:Api_Start
+  id: Api_Start
+  children:
+  - Api_Start.Program
+  - Api_Start.Startup
+  langs:
+  - csharp
+  - vb
+  name: Api_Start
+  nameWithType: Api_Start
+  fullName: Api_Start
+  type: Namespace
+  assemblies:
+  - Api_Start
+references:
+- uid: Api_Start.Program
+  commentId: T:Api_Start.Program
+  isExternal: false
+  name: Program
+  nameWithType: Program
+  fullName: Api_Start.Program
+- uid: Api_Start.Startup
+  commentId: T:Api_Start.Startup
+  isExternal: false
+  name: Startup
+  nameWithType: Startup
+  fullName: Api_Start.Startup

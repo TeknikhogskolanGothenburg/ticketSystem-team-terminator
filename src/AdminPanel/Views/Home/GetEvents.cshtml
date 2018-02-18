@@ -1,49 +1,63 @@
 ﻿
-@model List< TicketSystem.RestApiClient.Model.EventTest>
+@model List<TicketSystem.RestApiClient.Model.EventTest>
 @{
     ViewData["Title"] = "GetEvents";
 }
 
-<h2>GetEvents</h2>
+<h2>All events</h2>
 
 
 
-        <div class="container">
-       @{foreach (var i in Model)
+<div class="container-fluid">
+
+    @{foreach (var i in Model)
         {
 
 
-        <div class="row">
-            <div class="col-sm">
-                <h1> @i.EventStartDateTime;</h1>
-                <h1> @i.TicketEventDateID;</h1>
-            </div>
-          
-        </div>
-        <div class="row">
-            <div class="col-sm">
-                <h1> @i.EventName;</h1>
-                <h1> @i.EventHtmlDescription;</h1>
-            </div>
+            @*<div class=".col-lg" style="background-color:lightgray;"><b>Eventstart: @i.EventStartDateTime</b></div>
+            <div class=".col-lg" style="background-color:lightgray;"><b>Ticketid: @i.TicketEventDateID</b></div>
+            <div class=".col-lg" style="background-color:lightgray;"><b>Eventname: @i.EventName</b></div>
+            <div class=".col-lg" style="background-color:lightgray;"><b>Eventdescription: @i.EventHtmlDescription</b></div>
+            <div class=".col-lg" style="background-color:lightgray;"><b>Venuename: @i.VenueName</b></div>
+            <div class=".col-lg" style="background-color:lightgray;"><b>Address: @i.Address</b></div>
+            <div class=".col-lg" style="background-color:lightgray;"><b>City: @i.City</b></div>
+            <h1>Click Here To Book</h1>
+            <button type="button" class="btn btn-outline-success">Book event</button>*@
 
-        </div>
-        <div class="row">
-            <div class="col-sm">
-                <h1> @i.VenueName;</h1>
-            </div>
+            <div class="alert alert-success">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <u><b>Eventstart</b></u> <br/>
+                <p class="mb-0">@i.EventStartDateTime </p>    
+                <u> <b>TicketID</b></u> <br/>
+                <p class="mb-0">  @i.TicketEventDateID <br/>
+               <u> <b>EventName</b></u> <br/>
+                <p class="mb-0">  @i.EventName <br/>
+                <u><b>EventDescription</b></u> <br/>
+                <p class="mb-0">@i.EventHtmlDescription <br/>
+                <u><b>VenueName</b></u> <br />
+                <p class="mb-0"> @i.VenueName <br/>
+               <u> <b>Address</b> </u><br />
+                <p class="mb-0">  @i.Address <br/>
+                <u><b>City</b></u> <br />
+                <p class="mb-0"> @i.City <br/>
 
-        </div>
+                <p1><b>Click here to buy ticket</b></p1> <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> <button type="button" class="btn btn-outline-success">Buy ticket</button>
 
-        <div class="row">
-            <div class="col-sm">
-                <h1> @i.Address;</h1>
-                <h1> @i.City;</h1>
-            </div>
+</div>
 
-        </div>
-        
+
+
+            @*@i.EventStartDateTime , @i.TicketEventDateID , @i.EventName, @i.EventHtmlDescription,  @i.VenueName, @i.Address, @i.City*@ 
+
+
+
+
+
+
+        }
+
+
     }
 
-
-}
 </div>
+

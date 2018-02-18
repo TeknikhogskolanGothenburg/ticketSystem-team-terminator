@@ -1,0 +1,233 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdminPanel.Services.IEmailSender
+  commentId: T:AdminPanel.Services.IEmailSender
+  id: IEmailSender
+  parent: AdminPanel.Services
+  children:
+  - AdminPanel.Services.IEmailSender.SendEmailAsync(System.String,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: IEmailSender
+  nameWithType: IEmailSender
+  fullName: AdminPanel.Services.IEmailSender
+  type: Interface
+  source:
+    id: IEmailSender
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\AdminPanel\Services\IEmailSender.cs
+    startLine: 7
+  assemblies:
+  - AdminPanel
+  namespace: AdminPanel.Services
+  syntax:
+    content: public interface IEmailSender
+    content.vb: Public Interface IEmailSender
+  extensionMethods:
+  - AdminPanel.Services.IEmailSender.AdminPanel.Services.EmailSenderExtensions.SendEmailConfirmationAsync(System.String,System.String)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: AdminPanel.Services.IEmailSender.SendEmailAsync(System.String,System.String,System.String)
+  commentId: M:AdminPanel.Services.IEmailSender.SendEmailAsync(System.String,System.String,System.String)
+  id: SendEmailAsync(System.String,System.String,System.String)
+  parent: AdminPanel.Services.IEmailSender
+  langs:
+  - csharp
+  - vb
+  name: SendEmailAsync(String, String, String)
+  nameWithType: IEmailSender.SendEmailAsync(String, String, String)
+  fullName: AdminPanel.Services.IEmailSender.SendEmailAsync(System.String, System.String, System.String)
+  type: Method
+  source:
+    id: SendEmailAsync
+    path: C:\Users\Adriana\Documents\GitHub\ticketSystem-team-terminator\src\AdminPanel\Services\IEmailSender.cs
+    startLine: 9
+  assemblies:
+  - AdminPanel
+  namespace: AdminPanel.Services
+  syntax:
+    content: Task SendEmailAsync(string email, string subject, string message)
+    parameters:
+    - id: email
+      type: System.String
+    - id: subject
+      type: System.String
+    - id: message
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function SendEmailAsync(email As String, subject As String, message As String) As Task
+  overload: AdminPanel.Services.IEmailSender.SendEmailAsync*
+references:
+- uid: AdminPanel.Services
+  commentId: N:AdminPanel.Services
+  isExternal: false
+  name: AdminPanel.Services
+  nameWithType: AdminPanel.Services
+  fullName: AdminPanel.Services
+- uid: AdminPanel.Services.IEmailSender.AdminPanel.Services.EmailSenderExtensions.SendEmailConfirmationAsync(System.String,System.String)
+  commentId: M:AdminPanel.Services.EmailSenderExtensions.SendEmailConfirmationAsync(AdminPanel.Services.IEmailSender,System.String,System.String)
+  parent: AdminPanel.Services.EmailSenderExtensions
+  definition: AdminPanel.Services.EmailSenderExtensions.SendEmailConfirmationAsync(AdminPanel.Services.IEmailSender,System.String,System.String)
+  name: SendEmailConfirmationAsync(String, String)
+  nameWithType: EmailSenderExtensions.SendEmailConfirmationAsync(String, String)
+  fullName: AdminPanel.Services.EmailSenderExtensions.SendEmailConfirmationAsync(System.String, System.String)
+  spec.csharp:
+  - uid: AdminPanel.Services.EmailSenderExtensions.SendEmailConfirmationAsync(System.String,System.String)
+    name: SendEmailConfirmationAsync
+    nameWithType: EmailSenderExtensions.SendEmailConfirmationAsync
+    fullName: AdminPanel.Services.EmailSenderExtensions.SendEmailConfirmationAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AdminPanel.Services.EmailSenderExtensions.SendEmailConfirmationAsync(System.String,System.String)
+    name: SendEmailConfirmationAsync
+    nameWithType: EmailSenderExtensions.SendEmailConfirmationAsync
+    fullName: AdminPanel.Services.EmailSenderExtensions.SendEmailConfirmationAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AdminPanel.Services.EmailSenderExtensions.SendEmailConfirmationAsync(AdminPanel.Services.IEmailSender,System.String,System.String)
+  commentId: M:AdminPanel.Services.EmailSenderExtensions.SendEmailConfirmationAsync(AdminPanel.Services.IEmailSender,System.String,System.String)
+  isExternal: true
+  name: SendEmailConfirmationAsync(IEmailSender, String, String)
+  nameWithType: EmailSenderExtensions.SendEmailConfirmationAsync(IEmailSender, String, String)
+  fullName: AdminPanel.Services.EmailSenderExtensions.SendEmailConfirmationAsync(AdminPanel.Services.IEmailSender, System.String, System.String)
+  spec.csharp:
+  - uid: AdminPanel.Services.EmailSenderExtensions.SendEmailConfirmationAsync(AdminPanel.Services.IEmailSender,System.String,System.String)
+    name: SendEmailConfirmationAsync
+    nameWithType: EmailSenderExtensions.SendEmailConfirmationAsync
+    fullName: AdminPanel.Services.EmailSenderExtensions.SendEmailConfirmationAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AdminPanel.Services.IEmailSender
+    name: IEmailSender
+    nameWithType: IEmailSender
+    fullName: AdminPanel.Services.IEmailSender
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AdminPanel.Services.EmailSenderExtensions.SendEmailConfirmationAsync(AdminPanel.Services.IEmailSender,System.String,System.String)
+    name: SendEmailConfirmationAsync
+    nameWithType: EmailSenderExtensions.SendEmailConfirmationAsync
+    fullName: AdminPanel.Services.EmailSenderExtensions.SendEmailConfirmationAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AdminPanel.Services.IEmailSender
+    name: IEmailSender
+    nameWithType: IEmailSender
+    fullName: AdminPanel.Services.IEmailSender
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AdminPanel.Services.EmailSenderExtensions
+  commentId: T:AdminPanel.Services.EmailSenderExtensions
+  parent: AdminPanel.Services
+  isExternal: false
+  name: EmailSenderExtensions
+  nameWithType: EmailSenderExtensions
+  fullName: AdminPanel.Services.EmailSenderExtensions
+- uid: AdminPanel.Services.IEmailSender.SendEmailAsync*
+  commentId: Overload:AdminPanel.Services.IEmailSender.SendEmailAsync
+  isExternal: false
+  name: SendEmailAsync
+  nameWithType: IEmailSender.SendEmailAsync
+  fullName: AdminPanel.Services.IEmailSender.SendEmailAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: false
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

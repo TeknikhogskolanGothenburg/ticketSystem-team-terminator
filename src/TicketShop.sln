@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestApiClient", "RestApiClient\RestApiClient.csproj", "{5480771D-2461-443E-AF88-B81C9EDA5C2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketShopWebApplication", "TicketShopWebApplication\TicketShopWebApplication.csproj", "{4E6DA75F-57AF-43AD-8948-6A32758909D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketShopWebApplication", "TicketShopWebApplication\TicketShopWebApplication.csproj", "{4E6DA75F-57AF-43AD-8948-6A32758909D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

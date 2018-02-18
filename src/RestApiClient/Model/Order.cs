@@ -7,11 +7,13 @@ namespace TicketSystem.RestApiClient.Model
 {
     public class Order
     {
-        [Required]
-        public Ticket Ticket { get; set; }
-        [Required]
-        public TicketsToTransaction TicketsToTransaction { get; set; }
-        [Required]
-        public TicketTransaction TicketTransaction { get; set; }
+         
+         public int TicketID { get; set; }
+         public string BuyerLastName { get; set; }
+         public string BuyerFirstName { get; set; }
+         public string BuyerAddress { get; set; }
+         public string BuyerCity { get; set; }
+           
+        
     }
 }
