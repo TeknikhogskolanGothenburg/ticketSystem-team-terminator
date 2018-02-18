@@ -88,17 +88,24 @@ namespace TicketSystem.DatabaseRepository
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                return connection.Query<EventTest>("SELECT TE.EventName,TE.EventHtmlDescription,TED.TicketEventDateID, TED.EventStartDateTime,V.VenueName, V.Address, V.City, V.Country FROM TicketEvents AS TE INNER JOIN TicketEventDates AS TED ON TE.TicketEventID = TED.TicketEventID INNER JOIN Venues AS V ON TED.VenueId = V.VenueID").ToList();
-            }
+                try
+                {
+                    return connection.Query<EventTest>("SELECT TE.EventName,TE.EventHtmlDescription,TED.TicketEventDateID, TED.EventStartDateTime,V.VenueName, V.Address, V.City, V.Country FROM TicketEvents AS TE INNER JOIN TicketEventDates AS TED ON TE.TicketEventID = TED.TicketEventID INNER JOIN Venues AS V ON TED.VenueId = V.VenueID").ToList();
+                }
+                catch
+                {
+                    throw new Exception();
+                }
+                }
         }
        
-        public List<EventTest> SearchEvent( EventTest value)
+        public List<EventTest> SearchEvent( string value)
         {
             string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                return connection.Query<EventTest>("SELECT TI.TicketID,  S.SeatID, TE.EventName,TE.EventHtmlDescription,TED.TicketEventDateID, TED.EventStartDateTime,V.VenueName, V.Address, V.City, V.Country FROM TicketEvents AS TE INNER JOIN TicketEventDates AS TED ON TE.TicketEventID = TED.TicketEventID INNER JOIN Venues AS V ON TED.VenueId = V.VenueID INNER JOIN SeatsAtEventDate AS S ON S.TicketEventDateID = TED.TicketEventDateID INNER JOIN Tickets AS TI ON TI.SeatID = S.SeatID Where TE.EventName like '%@EventName%' OR TED.EventStartDateTime like '%@EventDate%' OR V.VenueName like '%2018-02-20%'   OR V.Address like '%2018-02-20%'  OR V.City like '%2018-02-20%'  OR V.Country like '%2018-02-20%'", new { Name = value..EventName, Description = value.TicketEvents.EventHtmlDescription }).ToList();
+                return connection.Query<EventTest>("SELECT TI.TicketID,  S.SeatID, TE.EventName,TE.EventHtmlDescription,TED.TicketEventDateID, TED.EventStartDateTime,V.VenueName, V.Address, V.City, V.Country FROM TicketEvents AS TE INNER JOIN TicketEventDates AS TED ON TE.TicketEventID = TED.TicketEventID INNER JOIN Venues AS V ON TED.VenueId = V.VenueID INNER JOIN SeatsAtEventDate AS S ON S.TicketEventDateID = TED.TicketEventDateID INNER JOIN Tickets AS TI ON TI.SeatID = S.SeatID Where TE.EventName like '%"+value+"%' OR TED.EventStartDateTime like '%"+value+"%' OR V.VenueName like '%"+value+"%' OR V.Address like '%"+value+"%'  OR V.City like '%+"+value+"+%'  OR V.Country like '%"+value+"%'").ToList();
             }
         }
 

@@ -13,7 +13,7 @@ namespace TicketSystem.DatabaseRepository
         bool CreateEvent(Event value);
   
         List<EventTest> GetallEventsAvadible();
-
+        List<EventTest> SearchEvent(string value);
 
         //Get all orders
         List<Order> GetAllOrders();

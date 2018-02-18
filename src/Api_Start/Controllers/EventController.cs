@@ -13,7 +13,7 @@ namespace Api_Start.Controllers
     public class EventController : Controller
     {
         IDatabaseInterface DbHandler = new Database();
-        // GET: api/CEvent
+        // GET: api/Event
         [HttpGet]
         public List<EventTest> Get()
         {
@@ -23,12 +23,13 @@ namespace Api_Start.Controllers
            
         }
 
-        //GET: api/CreateEvent/5
+        //GET: api/Event/Sök
         [HttpGet("{Search}", Name = "SearchEVent")]
         public List<EventTest> Get(string Search)
         {
+
            
-            return ;
+            return DbHandler.SearchEvent(Search);
         }
 
         // POST: api/CreateEvent

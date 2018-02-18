@@ -14,12 +14,13 @@ namespace Api_Start.Controllers
     public class OrdersController : Controller
     {
         IDatabaseInterface db = new Database();
+        //visar en lista av event som går att boka 
         //GET: api/Order
        [HttpGet]
-       public List<Order> Get()
+       public List<EventTest> Get()
         {
            
-            return db.GetAllOrders();
+            return db.GetallEventsAvadible();
         }
 
         //// GET: api/Order/5
