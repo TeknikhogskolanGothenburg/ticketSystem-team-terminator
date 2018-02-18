@@ -13,39 +13,33 @@ namespace Api_Start.Controllers
     public class EventController : Controller
     {
         IDatabaseInterface DbHandler = new Database();
-        // GET: api/CEvent
+        // GET: api/Event
         [HttpGet]
-        public List<EventTest> Get()
+        public List<EventForbooking> Get()
         {
-            var result = DbHandler.GetallEventsAvadible();
 
-            return result;
+                return DbHandler.GetallEventsAvadible();
            
            
         }
 
-       // GET: api/CreateEvent/search
-       [HttpGet("{Search}", Name = "SearchEVent")]
+        //GET: api/Event/Sök
+        [HttpGet("{Search}", Name = "SearchEVent")]
         public List<EventTest> Get(string Search)
         {
-            return DbHandler.SearchEvents(Search);
+
+           
+            return DbHandler.SearchEvent(Search);
         }
 
-        //
         // POST: api/CreateEvent
         [HttpPost]
         public IActionResult Post([FromBody]Event value)
         {
             try
             {
-                int VenueId = DbHandler.VenueAdd(value.Venues.VenueName, value.Venues.Address, value.Venues.City, value.Venues.Country);
-                int eventID = DbHandler.EventAdd(value.TicketEvents.EventName, value.TicketEvents.EventHtmlDescription);
-                int TicketeventdateID = DbHandler.TicketEventDate(eventID, VenueId, value.TicketEventDates.EventStartDateTime);
-                for (int i = 0; i < value.Seats; i++)
-                {
-                    DbHandler.SeatsAtEventDateAdd(TicketeventdateID);
-                }
-
+                DbHandler.CreateEvent(value);
+                
             }
             catch
             {

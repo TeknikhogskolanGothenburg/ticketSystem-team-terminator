@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TicketSystem.DatabaseRepository;
 using TicketSystem.DatabaseRepository.Model;
+using TicketSystem.PaymentProvider;
 
 namespace Api_Start.Controllers
 {
@@ -14,12 +15,19 @@ namespace Api_Start.Controllers
     public class OrdersController : Controller
     {
         IDatabaseInterface db = new Database();
+        //visar en lista av event som går att boka , visar ej gamla event
         //GET: api/Order
        [HttpGet]
-       public List<Order> Get()
+       public List<EventForbooking> Get()
         {
-           
-            return db.GetAllOrders();
+            List<EventForbooking> e = new List<EventForbooking>();
+            e.Add(new EventForbooking()
+            {
+                EventStartDateTime = DateTime.Now,
+            });
+              
+       
+            return db.GetallEventsAvadible().Where( x => x.EventStartDateTime >= e[0].EventStartDateTime && x.Status == 0).ToList();
         }
 
         //// GET: api/Order/5
@@ -34,17 +42,37 @@ namespace Api_Start.Controllers
         ////    }
         ////}
 
-        // POST: api/Order
-        //[HttpPost]
-        //public IActionResult Post([FromBody] Order value)
-        //{
-        //    try {
+       // POST: api/Order
+       [HttpPost]
+        public IActionResult Post([FromBody] Order value)
+        {
+            try
+            {
+                if (db.CheckTicket(value.TicketID))
+                {
+                    return StatusCode(500);
+                }
+                IPaymentProvider payment = new PaymentProvider();
+               Payment e = payment.Pay(value.amountToPay,value.valuta,value.TicketID.ToString());
+                if(e.PaymentStatus == PaymentStatus.PaymentApproved)
+                {
 
+                    db.CreateOrder(value, e);
 
-        //    }
-        //    catch { }
+                }
+                else
+                {
+                    return StatusCode(500);
+                }
 
-        //}
+            }
+            catch {
+                return StatusCode(500);
+
+            }
+            return Ok();
+        }
+
 
         // PUT: api/Order/5
         [HttpPut("{id}")]

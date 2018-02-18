@@ -37,8 +37,8 @@ namespace Api_Start
             {
                 app.UseDeveloperExceptionPage();
             }
-          
-            app.UseCors(options => options.WithOrigins("https://localhost:44304").AllowAnyMethod().AllowAnyHeader());
+            //WithOrigins("https://localhost:44304").AllowAnyMethod().AllowAnyHeader());
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseMvc();
         }
     }

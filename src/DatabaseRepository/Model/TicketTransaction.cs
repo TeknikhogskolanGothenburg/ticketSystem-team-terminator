@@ -22,10 +22,7 @@ namespace TicketSystem.DatabaseRepository.Model
 
 
 
-        [Required]
-        public Ticket Tickets { get; set; }
-        [Required]
-        public TicketsToTransaction TicketsToTransactions { get; set; }
+       
 
     }
 }
