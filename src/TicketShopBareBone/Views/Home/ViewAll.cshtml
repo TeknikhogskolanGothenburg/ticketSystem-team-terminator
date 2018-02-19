@@ -11,11 +11,13 @@
 
     @foreach (var item in @Model)
     {
-        <form action="~/Home/Index" >
+
+        <form action="~/Home/Details" method="post"   >
             <lu>
                 <h1> @item.EventStartDateTime</h1>
                 <h1> @item.EventName</h1>
-                <input type="submit" value="Book this Now" />
+                <input type="hidden" name="id" value="@item.TicketEventDateID" />
+                <input type="submit"  value="Book this Now" />
 
 
             </lu>

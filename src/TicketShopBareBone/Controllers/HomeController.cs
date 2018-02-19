@@ -49,7 +49,8 @@ namespace TicketShopBareBone.Controllers
 
         public IActionResult Details(int id)
         {
-            return View();
+           
+            return View(ViewBag.ID = id);
         }
 
         //public IActionResult Buy(int price)
