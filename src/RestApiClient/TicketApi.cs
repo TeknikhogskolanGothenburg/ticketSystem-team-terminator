@@ -13,7 +13,7 @@ namespace TicketSystem.RestApiClient
         public List<EventTest> GetEvents()
         {
 
-            var client = new RestClient("http://localhost:50697/");
+            var client = new RestClient("http://localhost:55792/");
             var request = new RestRequest("api/Event", Method.GET);
             var response = client.Execute<List<EventTest>>(request);
             return response.Data;

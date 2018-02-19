@@ -24,24 +24,42 @@
             <h1>Click Here To Book</h1>
             <button type="button" class="btn btn-outline-success">Book event</button>*@
 
-            <div class="container" style="background-color:dimgrey">
+            <div class="container" style="background-color:dimgrey; border:double;">
                 <button type="button" id="btn Delete" class="close" data-dismiss="alert">&times;</button>
-                <u><b>Eventstart</b></u> <br/>
-                <p class="mb-0">@i.EventStartDateTime </p>    
-                <u> <b>TicketID</b></u> <br/>
-                <p class="mb-0">  @i.TicketEventDateID <br/>
-               <u> <b>EventName</b></u> <br/>
-                <p class="mb-0">  @i.EventName <br/>
-                <u><b>EventDescription</b></u> <br/>
-                <p class="mb-0">@i.EventHtmlDescription <br/>
+                <u><b>Eventstart</b></u> <br />
+                <p class="mb-0">@i.EventStartDateTime </p>
+                <u> <b>ID</b></u> <br />
+                <p class="mb-0">
+                    @i.TicketEventDateID <br />
+                    <u> <b>EventName</b></u> <br />
+                <p class="mb-0">
+                    @i.EventName <br />
+                    <u><b>EventDescription</b></u> <br />
+                <p class="mb-0">
+                    @i.EventHtmlDescription <br />
                 <u><b>VenueName</b></u> <br />
-                <p class="mb-0"> @i.VenueName <br/>
-               <u> <b>Address</b> </u><br />
-                <p class="mb-0">  @i.Address <br/>
+            <p class="mb-0">
+                @i.VenueName <br />
+                <u> <b>Address</b> </u><br />
+            <p class="mb-0">
+                @i.Address <br />
                 <u><b>City</b></u> <br />
-                <p class="mb-0"> @i.City <br/>
+            <p class="mb-0">
+                @i.City <br />
+               
+                    <u><b>booked people </b></u> <br />
+                    @if (i.PeopleCount > 0)
+                    {
 
-                <p1><b>UPDate</b></p1> <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> <button type="button" class="btn btn-outline-success">Buy ticket</button>
+                    <p class="mb-0" style="background-color:red;"/> @i.PeopleCount <br />
+                    }
+                    else
+                    {
+                     <p class="mb-0" style="background-color:green;" /> @i.PeopleCount <br />
+
+                    }
+               
+                   <p1><b>UPDate</b></p1> <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> <button type="button" class="btn btn-outline-success">UpDate Event</button>
 
 </div>
 
