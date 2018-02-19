@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestApiClient", "RestApiCli
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketShopWebApplication", "TicketShopWebApplication\TicketShopWebApplication.csproj", "{4E6DA75F-57AF-43AD-8948-6A32758909D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketShopBareBone", "TicketShopBareBone\TicketShopBareBone.csproj", "{2EE704BC-2EE7-4C00-AA5C-2F60C426A7DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketShop", "TicketShopBareBone\TicketShop.csproj", "{2EE704BC-2EE7-4C00-AA5C-2F60C426A7DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -123,7 +123,7 @@ namespace TicketSystem.DatabaseRepository
                 {
                     List<EventTest> e = new List<EventTest>();
                    
-                   e = connection.Query<EventTest>("SELECT TE.EventName,TE.EventHtmlDescription,TED.TicketEventDateID, TED.EventStartDateTime,V.VenueName, V.Address, V.City, V.Country FROM TicketEvents AS TE INNER JOIN TicketEventDates AS TED ON TE.TicketEventID = TED.TicketEventID INNER JOIN Venues AS V ON TED.VenueId = V.VenueID" ).ToList();
+                   e = connection.Query<EventTest>("SELECT TE.EventName,TE.EventHtmlDescription,TED.TicketEventDateID, TED.EventStartDateTime,V.VenueName, V.Address, V.City, V.Country, TP.TicketPrice FROM TicketEvents AS TE INNER JOIN TicketEventDates AS TED ON TE.TicketEventID = TED.TicketEventID INNER JOIN Venues AS V ON TED.VenueId = V.VenueID INNER JOIN TicketPrice AS TP ON TE.TicketEventID = TP.TicketEventID").ToList();
                 foreach(var item in e)
                     {
                        e[e.IndexOf(item)].PeopleCount = connection.Query<int>("SELECT COUNT(TI.IsTaken ) FROM TicketEvents AS TE INNER JOIN TicketEventDates AS TED ON TE.TicketEventID = TED.TicketEventID INNER JOIN Venues AS V ON TED.VenueId = V.VenueID INNER JOIN SeatsAtEventDate AS S ON S.TicketEventDateID = TED.TicketEventDateID INNER JOIN Tickets AS TI ON TI.SeatID = S.SeatID Where TI.IsTaken = '1' AND TED.TicketEventDateID = '" + item.TicketEventDateID +"'").First();
@@ -156,7 +156,18 @@ namespace TicketSystem.DatabaseRepository
                 }
                 }
         }
-       
+
+        public List<EventTest> AllEvents()
+        {
+            string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                return connection.Query<EventTest>("SELECT TE.EventName,TE.EventHtmlDescription,TED.TicketEventDateID, TED.EventStartDateTime,V.VenueName, V.Address, V.City, V.Country, TP.TicketPrice FROM TicketEvents AS TE INNER JOIN TicketEventDates AS TED ON TE.TicketEventID = TED.TicketEventID INNER JOIN Venues AS V ON TED.VenueId = V.VenueID INNER JOIN TicketPrice AS TP ON TE.TicketEventID = TP.TicketEventID").ToList();
+            }
+        }
+
+
         public List<EventTest> SearchEvent( string value)
         {
             string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/

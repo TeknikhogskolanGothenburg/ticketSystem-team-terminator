@@ -14,6 +14,9 @@ namespace TicketSystem.DatabaseRepository
         bool CreateEvent(Event value);
         List<EventTest> GetallEvents();
          List<EventForbooking> GetallEventsAvadible();
+
+        List<EventTest> AllEvents();
+
         List<EventTest> SearchEvent(string value);
         void CreateOrder(Order value, Payment e);
         bool CheckTicket(int TickedID);
