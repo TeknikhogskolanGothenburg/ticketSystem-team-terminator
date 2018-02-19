@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TicketSystem.RestApiClient.Model.EventTest>
+﻿@model List<TicketSystem.RestApiClient.Model.EventForbooking>
 
 
 @using TicketSystem.RestApiClient.Model;
@@ -8,15 +8,19 @@
 
 <h2>AllEvents</h2>
 
-<ul>
-    @foreach (EventTest eventTest in @Model)
-    {
-        <li>
-            @Html.ActionLink(eventTest.EventName, "Details", new { id = eventTest.TicketEventDateID })
 
-        </li>
+    @foreach (var item in @Model)
+    {
+        <form action="~/Home/Index" >
+            <lu>
+                <h1> @item.EventStartDateTime</h1>
+                <h1> @item.EventName</h1>
+                <input type="submit" value="Book this Now" />
+
+
+            </lu>
+        </form>
 
     }
 
 
-</ul>

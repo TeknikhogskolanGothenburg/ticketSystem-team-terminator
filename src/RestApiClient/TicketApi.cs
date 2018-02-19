@@ -13,12 +13,19 @@ namespace TicketSystem.RestApiClient
         public List<EventTest> GetEvents()
         {
 
-            var client = new RestClient("http://localhost:59279/");
+            var client = new RestClient("http://localhost:55792/");
             var request = new RestRequest("api/Event", Method.GET);
             var response = client.Execute<List<EventTest>>(request);
             return response.Data;
         }
+     public List<EventForbooking> GetAllEventsToBooking()
+        {
+            var client = new RestClient("http://localhost:55792/");
+            var request = new RestRequest("api/Orders", Method.GET);
+            var response = client.Execute<List<EventForbooking>>(request);
+            return response.Data;
 
+        }
 
         public List<EventTest> SearchEvents()
         {

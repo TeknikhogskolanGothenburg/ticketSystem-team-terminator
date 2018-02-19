@@ -13,11 +13,11 @@ namespace TicketShopBareBone.Controllers
     public class HomeController : Controller
     {
 
-        private readonly TicketApi ticketApi;
+        private ITicketApi ClienApi = new TicketApi ();
 
         public HomeController()
         {
-            ticketApi = new TicketApi();
+          
         }
         public IActionResult Index()
         {
@@ -38,19 +38,18 @@ namespace TicketShopBareBone.Controllers
             return View();
         }
 
+        // visar en lista på event som finns att boka 
         public IActionResult ViewAll()
         {
-            
-            var allEvents = ticketApi.GetEvents();
-            return View(allEvents);
+
+
+            return View(ClienApi.GetAllEventsToBooking());
+
         }
 
         public IActionResult Details(int id)
         {
-            var eventTests = ticketApi.GetEvents();
-            var eventTest = eventTests.FirstOrDefault(x=> x.TicketEventDateID == id);
-            return View(eventTest);
-
+            return View();
         }
 
         //public IActionResult Buy(int price)
