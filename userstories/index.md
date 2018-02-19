@@ -26,6 +26,7 @@ There is in the system (at least) three kind of users:
 * As a admin I want Backoffice och TicketShop to be on Swedish and English
 * As a admin I want to logg in with .Net Core logging and SEQ
 * As a buyer I want to receive ordered ticket by mail
+* As a buyer I want to be able to see how many tickets there are left
 
 
 
