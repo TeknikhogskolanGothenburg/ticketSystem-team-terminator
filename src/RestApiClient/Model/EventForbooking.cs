@@ -26,7 +26,8 @@ namespace TicketSystem.RestApiClient.Model
         [Required]
         public int TicketID { get; set; }
         [Required]
-        public int Status { get; set; }
+        public int IsTaken { get; set; }
+
 
     }
 }

@@ -9,7 +9,7 @@ namespace TicketSystem.DatabaseRepository.Model
     {
         //
         [Required]
-        public int TicketEventDateID { get; set; }
+        public int TickeEventDateID { get; set; }
         [Required]
         public string EventName { get; set; }
         [Required]
@@ -27,7 +27,7 @@ namespace TicketSystem.DatabaseRepository.Model
         [Required]
         public int TicketID { get; set; }
         [Required]
-        public int Status { get; set; }
+        public int IsTaken { get; set; }
 
 
 

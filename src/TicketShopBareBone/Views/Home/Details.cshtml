@@ -1,4 +1,4 @@
-﻿
+﻿@model int;
 @{
     ViewBag.Title = "Details";
     
@@ -9,7 +9,7 @@
 
 <div class="form-group">
 
-    <input type="hidden" class="form-control" id="TicketID" value="ViewBag.ID">
+    <input type="hidden" class="form-control" id="TicketID" value="@Model">
     <small id="Info" class="form-text text-muted">Please enter a name for your Event </small>
 </div>
 <div class="form-group">
@@ -33,7 +33,11 @@
 
 <div class="form-group">
     <label for="DescriptionLabel">BuyerCity</label>
-    <input type="email" class="form-control" id="Email" placeholder=" Email ">
+    <input type="text" class="form-control" id="#BuyerCity" placeholder=" Email ">
+</div>
+<div class="form-group">
+    <label for="DescriptionLabel">BuyerCity</label>
+    <input type="email" class="form-control" id="#Email" placeholder=" Email ">
 </div>
 
 <button type="submit" id="buttonsaw123" class="btn btn-primary"> Enter</button>
@@ -47,13 +51,14 @@
 
             // declare the object
             var order = {
-                TicketID: $('#TicketID').val(),
+             TicketID: $('#TicketID').val(),
             BuyerLastName:$('#BuyerLastName').val(),
             BuyerFirstName: $('#BuyerFirstName').val(),
-            BuyerAddress: $('#BuyerAddress').val(),
-            BuyerCity: $('#BuyerCity').val(),
+            BuyerAddress:$('#BuyerAddress').val(),
+            BuyerCity:$('#BuyerCity').val(),
             amountToPay:500,
-            Email:$('#Email').val(),
+            Email: $('#Email').val(),
+            Valuta:"abc"
 
             }
            

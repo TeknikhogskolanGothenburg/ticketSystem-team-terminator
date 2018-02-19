@@ -27,7 +27,7 @@ namespace Api_Start.Controllers
             });
               
        
-            return db.GetallEventsAvadible().Where( x => x.EventStartDateTime.Date.Day >= e[0].EventStartDateTime.Date.Day && x.Status == 0).ToList();
+            return db.GetallEventsAvadible().Where( x => x.EventStartDateTime.Date.Day >= e[0].EventStartDateTime.Date.Day && x.IsTaken == 0).ToList();
         }
 
         //// GET: api/Order/5
