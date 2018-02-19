@@ -21,7 +21,8 @@ namespace TicketSystem.DatabaseRepository.Model
         public decimal amountToPay { get; set; }
         [Required]
         public string valuta { get; set; }
-
+        [Required]
+        public string Email { get; set; }
 
     }
 }

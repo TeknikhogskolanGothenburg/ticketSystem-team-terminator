@@ -15,10 +15,7 @@ namespace TicketShopBareBone.Controllers
 
         private ITicketApi ClienApi = new TicketApi ();
 
-        public HomeController()
-        {
-          
-        }
+       
         public IActionResult Index()
         {
             return View();

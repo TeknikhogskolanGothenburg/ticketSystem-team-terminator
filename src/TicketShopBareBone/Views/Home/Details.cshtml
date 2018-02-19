@@ -1,14 +1,9 @@
 ﻿
-
 @{
     ViewBag.Title = "Details";
     
 }
 
-
-  [Required]
-      
-        @*public string valuta { get; set; }*@
 
 <h2></h2>
 
@@ -38,7 +33,7 @@
 
 <div class="form-group">
     <label for="DescriptionLabel">BuyerCity</label>
-    <input type="email" class="form-control" id="Email" placeholder=" type Venue Addres ">
+    <input type="email" class="form-control" id="Email" placeholder=" Email ">
 </div>
 
 <button type="submit" id="buttonsaw123" class="btn btn-primary"> Enter</button>
@@ -70,7 +65,7 @@
 
             // simple ajax call to post your json data
             $.ajax({
-                url: "http://localhost:55792/api/Event",
+                url: "http://localhost:55792/api/Orders",
                 type: "POST",
                 dataType: "json",
                 data: JSON.stringify(order),

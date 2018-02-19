@@ -20,7 +20,7 @@ namespace TicketSystem.RestApiClient
         }
      public List<EventForbooking> GetAllEventsToBooking()
         {
-            var client = new RestClient("http://localhost:55792/");
+            var client = new RestClient("http://localhost:55792");
             var request = new RestRequest("api/Orders", Method.GET);
             var response = client.Execute<List<EventForbooking>>(request);
             return response.Data;
