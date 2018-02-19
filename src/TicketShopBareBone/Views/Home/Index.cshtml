@@ -1,4 +1,12 @@
-﻿
+﻿INDEX HTML
+
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
 
 @using TicketSystem.RestApiClient.Model;
 
@@ -20,7 +28,7 @@
                 <p>
 
                     <a class="btn btn-default" @Html.ActionLink("More", "Details", new { id = 3 })>
-                        
+
                     </a>
                 </p>
             </div>
@@ -31,7 +39,7 @@
                 <p>
 
                     <a class="btn btn-default" @Html.ActionLink("More", "Details", new { id = 4 })>
-                        
+
                     </a>
                 </p>
             </div>
@@ -42,13 +50,13 @@
                 <p>
 
                     <a class="btn btn-default" @Html.ActionLink("More", "Details", new { id = 5 })>
-                        
+
                     </a>
                 </p>
             </div>
         </div>
-        
-            
+
+
     </div>
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -60,24 +68,218 @@
     </a>
 </div>
 
-<ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#firstTab">View All Events</a></li>
-    <li><a data-toggle="tab" href="#secondTab">Search Events</a></li>
-</ul>
-<div class="tab-content">
-    <div id="firstTab" class="tab-pane fade in active">
-        <ul>
-            @Html.ActionLink("ViewAllEvents", "ViewAll", "Home")
+<center>
+    <ul class="nav nav-tabs" @*style="width: 50%; margin: 0px auto;" *@>
+        <li class="active"><a data-toggle="tab" href="#firstTab">View All Events</a></li>
+        <li><a data-toggle="tab" href="#secondTab">Search Events</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="firstTab" class="tab-pane fade in active">
+            <ul>
+                @Html.ActionLink("ViewAllEvents", "ViewAll", "Home")
 
-        </ul>
+            </ul>
 
 
+        </div>
+        <div id="secondTab" class="tab-pane fade in">
+            <input type="text" id="SearchEvent">
+            <button type="submit" name="SearchButton1" value="Search"> Search </button>
+
+        </div>
     </div>
-    <div id="secondTab" class="tab-pane fade in">
-        <input type="text" id="SearchEvent">
-        <button type="submit" name="SearchButton1" value="Search"> Search </button>
+</center>
 
+<head>
+
+    <title>Bootstrap Theme Company Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+
+
+        .container-fluid {
+            padding: 60px 50px;
+        }
+
+        .logo-small {
+            color: #f4511e;
+            font-size: 50px;
+        }
+
+        .panel {
+            border: 1px solid #f4511e;
+            border-radius: 0;
+            transition: box-shadow 0.5s;
+        }
+
+            .panel:hover {
+                box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+            }
+
+        .panel-footer .btn:hover {
+            border: 1px solid #f4511e;
+            background-color: #fff !important;
+            color: #f4511e;
+        }
+
+        .panel-heading {
+            color: #fff !important;
+            background-color: #f4511e !important;
+            padding: 25px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .panel-footer {
+            background-color: #fff !important;
+        }
+
+            .panel-footer h3 {
+                font-size: 32px;
+            }
+
+            .panel-footer h4 {
+                color: #aaa;
+                font-size: 14px;
+            }
+
+            .panel-footer .btn {
+                margin: 15px 0;
+                background-color: #f4511e;
+                color: #fff;
+            }
+    </style>
+</head>
+<body>
+
+
+
+
+
+    <div class="container-fluid">
+        <div class="text-center">
+            <h2>Våra event</h2>
+        </div>
+
+        <!-- Container (Products) -->
+        <div class="row">
+
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Melodifestivalen</h1>
+                    </div>
+                    <div class="panel-body">
+                        <p><strong>Platser:</strong>Sektion V99-V105</p>
+                    </div>
+                    <div class="panel-footer">
+                        <h3>500:-</h3>
+                        <h4>Oj vad billigt</h4>
+                        <button class="btn btn-lg">KÖP</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Ed Sheeran</h1>
+                    </div>
+                    <div class="panel-body">
+                        <p><strong>Platser:</strong>Sektion Q13-Q15</p>
+                    </div>
+                    <div class="panel-footer">
+                        <h3>250 :-</h3>
+                        <h4>Oj vad billigt</h4>
+                        <button class="btn btn-lg">KÖP</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Eminem</h1>
+                    </div>
+                    <div class="panel-body">
+                        <p><strong>Platser:</strong>Sektion S12-S14</p>
+                    </div>
+                    <div class="panel-footer">
+                        <h3>700:-</h3>
+                        <h4>Oj vad billigt</h4>
+                        <button class="btn btn-lg">KÖP</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Summerburst</h1>
+                    </div>
+                    <div class="panel-body">
+                        <p><strong>Platser:</strong>Sektion stående</p>
+                    </div>
+                    <div class="panel-footer">
+                        <h3>1200:-</h3>
+                        <h4>Oj vad billigt</h4>
+                        <button class="btn btn-lg">KÖP</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-</div>
 
 
+    <!-- Container (Services Section) -->
+    <div class="container-fluid text-center">
+        <h2>Tjänster</h2>
+        <h4>Vad vi erbjuder</h4>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-off logo-small"></span>
+                <h4>Kraft</h4>
+                <p>Kraftigt företag</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-heart logo-small"></span>
+                <h4>Kärlek</h4>
+                <p>Mer kärlek åt folket</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-lock logo-small"></span>
+                <h4>Vi får jobbet gjort</h4>
+                <p>Det kanske går långsamt men framsteg är alltid framsteg</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-leaf logo-small"></span>
+                <h4>Naturvänner</h4>
+                <p>Vi tänker alltid på naturen i första hand</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-certificate logo-small"></span>
+                <h4>Certifierade</h4>
+                <p>Våra operativsystem är defenitivt inte certiferade</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-wrench logo-small"></span>
+                <h4 style="color:#303030;">Hårt arbete</h4>
+                <p>Vi jobbar som maskiner</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
