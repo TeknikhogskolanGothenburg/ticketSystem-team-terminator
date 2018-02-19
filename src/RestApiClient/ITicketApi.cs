@@ -7,8 +7,9 @@ namespace TicketSystem.RestApiClient
     public interface ITicketApi
     {
         List<EventTest> GetEvents();
+        List<EventForbooking> GetAllEventsToBooking();
 
-        //Get all orders
-        List<Order> GetOrders();
+       //Get all orders
+       List<Order> GetOrders();
     }
 }
