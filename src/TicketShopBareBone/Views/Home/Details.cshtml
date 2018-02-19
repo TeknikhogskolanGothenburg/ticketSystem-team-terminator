@@ -7,18 +7,7 @@
 
 
   [Required]
-        public int TicketID { get; set; }
-        [Required]
-        public string BuyerLastName { get; set; }
-        [Required]
-        public string BuyerFirstName { get; set; }
-        [Required]
-        public string BuyerAddress{ get; set; }
-        [Required]
-        public string BuyerCity { get; set; }
-        [Required]
-        public decimal amountToPay { get; set; }
-        [Required]
+      
         @*public string valuta { get; set; }*@
 
 <h2></h2>
@@ -48,22 +37,10 @@
 
 
 <div class="form-group">
-    <label for="DescriptionLabel">Venue Addres</label>
-    <input type="text" class="form-control" id="VenueAddres" placeholder=" type Venue Addres ">
+    <label for="DescriptionLabel">BuyerCity</label>
+    <input type="email" class="form-control" id="Email" placeholder=" type Venue Addres ">
 </div>
-<div class="form-group">
-    <label for="DescriptionLabel">Venue city</label>
-    <input type="text" class="form-control" id="Venuecity" placeholder="Venue city">
-</div>
-<div class="form-group">
-    <label for="DescriptionLabel">Type venue Contry</label>
-    <input type="text" class="form-control" id="Venuecountry" placeholder="Type venue Contry">
-</div>
-<div class="form-group">
-    <label for="DescriptionLabel">Event Date</label>
-    <input type="text" class="form-control" id="EventDate" placeholder="Enter Event Date">
 
-</div>
 <button type="submit" id="buttonsaw123" class="btn btn-primary"> Enter</button>
 
 @section scripts
@@ -74,27 +51,17 @@
 
 
             // declare the object
-            var Order = {
-                venueName: $('#VenueName').val(),
-                address: $('#VenueAddres').val(),
-                city: $('#Venuecity').val(),
-                country: $('#Venuecountry').val()
+            var order = {
+                TicketID: $('#TicketID').val(),
+            BuyerLastName:$('#BuyerLastName').val(),
+            BuyerFirstName: $('#BuyerFirstName').val(),
+            BuyerAddress: $('#BuyerAddress').val(),
+            BuyerCity: $('#BuyerCity').val(),
+            amountToPay:500,
+            Email:$('#Email').val(),
 
-            };
-            var ticketEvents = {
-                eventName: $('#EventName').val(),
-                eventHtmlDescription: $('#EventDescription').val(),
-
-            };
-            var ticketEventDates = {
-                eventStartDateTime: $('#EventDate').val()
-            };
-            var event = {
-                seats: $('#seats').val(),
-                venues, ticketEvents, ticketEventDates
-
-            };
-
+            }
+           
 
 
 
@@ -106,7 +73,7 @@
                 url: "http://localhost:55792/api/Event",
                 type: "POST",
                 dataType: "json",
-                data: JSON.stringify(event),
+                data: JSON.stringify(order),
                 contentType: "application/json; charset=utf-8",
                 success: function (data) {
 
