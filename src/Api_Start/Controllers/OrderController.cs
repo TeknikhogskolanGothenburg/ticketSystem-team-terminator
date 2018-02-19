@@ -58,7 +58,7 @@ namespace Api_Start.Controllers
                 {
 
                     db.CreateOrder(value, e);
-
+                    MailService.MailHandler.SendEmail("smtp.gmail.com", 587, "ticketstore mail account password", "noreply@ticketstore.com", "customerEmail", "Order Receipt", "You have successfuly bought a ticket!");
                 }
                 else
                 {
