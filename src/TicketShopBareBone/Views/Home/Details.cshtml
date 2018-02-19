@@ -1,69 +1,132 @@
-﻿@@*model TicketSystem.RestApiClient.Model.EventForbooking*@
+﻿
 
 @{
     ViewBag.Title = "Details";
     
 }
 
-<h2>ViewBag.ID</h2>
+
+  [Required]
+        public int TicketID { get; set; }
+        [Required]
+        public string BuyerLastName { get; set; }
+        [Required]
+        public string BuyerFirstName { get; set; }
+        [Required]
+        public string BuyerAddress{ get; set; }
+        [Required]
+        public string BuyerCity { get; set; }
+        [Required]
+        public decimal amountToPay { get; set; }
+        [Required]
+        @*public string valuta { get; set; }*@
+
+<h2></h2>
+
+<div class="form-group">
+
+    <input type="hidden" class="form-control" id="TicketID" value="ViewBag.ID">
+    <small id="Info" class="form-text text-muted">Please enter a name for your Event </small>
+</div>
+<div class="form-group">
+    <label for="DescriptionLabel">BuyerLastName</label>
+    <input type="text" class="form-control" id="BuyerLastName" placeholder="Enter Event Description">
+
+
+</div>
+<div class="form-group">
+    <label for="DescriptionLabel"> BuyerFirstName</label>
+    <input type="text" class="form-control" id="BuyerFirstName" placeholder="Enter Venue Name">
+
+</div>
+<div class="form-group">
+    <label for="DescriptionLabel">BuyerAddress</label>
+    <input type="text" class="form-control" id="BuyerAddress" placeholder="Enter adrees">
+
+</div>
 
 
 
-@*<table class="table">
-    <thead>
-        <tr>
-              
-                <th>
-                    @Html.DisplayNameFor(model => model.EventName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.EventHtmlDescription)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.EventStartDateTime)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.VenueName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Address)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.City)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Country)
-                </th>
-            <th></th>
-        </tr>
-        <tr>
-            <td>
-                @Model.EventName
-            </td>
-            <td>
-                @Model.EventHtmlDescription
-            </td>
-            <td>
-                @Model.EventStartDateTime
-            </td>
-            <td>
-                @Model.VenueName
-            </td>
-            <td>
-                @Model.Address
-            </td>
-            <td>
-                @Model.City
-            </td>
-            <td>
-                @Model.Country
-            </td>
-        </tr>
-    </thead>
-    <tbody>
-</table>
+<div class="form-group">
+    <label for="DescriptionLabel">Venue Addres</label>
+    <input type="text" class="form-control" id="VenueAddres" placeholder=" type Venue Addres ">
+</div>
+<div class="form-group">
+    <label for="DescriptionLabel">Venue city</label>
+    <input type="text" class="form-control" id="Venuecity" placeholder="Venue city">
+</div>
+<div class="form-group">
+    <label for="DescriptionLabel">Type venue Contry</label>
+    <input type="text" class="form-control" id="Venuecountry" placeholder="Type venue Contry">
+</div>
+<div class="form-group">
+    <label for="DescriptionLabel">Event Date</label>
+    <input type="text" class="form-control" id="EventDate" placeholder="Enter Event Date">
 
-<label> Price: </label>
-<label>@Model.TicketPrice</label><label>kr</label><br>
-<input type="submit" name="submitbutton1" value="Buy" />*@
+</div>
+<button type="submit" id="buttonsaw123" class="btn btn-primary"> Enter</button>
+
+@section scripts
+    {
+    <script>
+        $("#buttonsaw123").click(function () {
+
+
+
+            // declare the object
+            var Order = {
+                venueName: $('#VenueName').val(),
+                address: $('#VenueAddres').val(),
+                city: $('#Venuecity').val(),
+                country: $('#Venuecountry').val()
+
+            };
+            var ticketEvents = {
+                eventName: $('#EventName').val(),
+                eventHtmlDescription: $('#EventDescription').val(),
+
+            };
+            var ticketEventDates = {
+                eventStartDateTime: $('#EventDate').val()
+            };
+            var event = {
+                seats: $('#seats').val(),
+                venues, ticketEvents, ticketEventDates
+
+            };
+
+
+
+
+            // convert the object into a json string
+
+
+            // simple ajax call to post your json data
+            $.ajax({
+                url: "http://localhost:55792/api/Event",
+                type: "POST",
+                dataType: "json",
+                data: JSON.stringify(event),
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+
+                    alert("good");
+                },
+                error: function (result) {
+                    alert(result);
+                    alert(JSON.stringify(event));
+
+                }
+            }).done(function (data){
+                alert("Done");
+
+            });
+
+
+        })
+
+    </script>
+}
+
+
 
