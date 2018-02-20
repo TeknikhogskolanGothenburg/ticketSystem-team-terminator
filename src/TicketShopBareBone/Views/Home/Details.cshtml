@@ -75,16 +75,22 @@
                 dataType: "json",
                 data: JSON.stringify(order),
                 contentType: "application/json; charset=utf-8",
-                success: function (data) {
-
-                    alert("good");
+                error: function (xhr, status, error) {
+                    console.log(xhr.status);
+                    alert(xhr.status, xhr.responseText);
+                    
                 },
-                error: function (result) {
-                    alert(result);
-                    alert(JSON.stringify(event));
+                success: function (data, textStatus, xhr) {
+                    console.log(xhr.status);
+                    alert(xhr.statusCode);
+                    
+                   
 
-                }
-            }).done(function (data){
+                },
+                complete: function (xhr, textStatus) {
+                    console.log(xhr.status);
+                } 
+            }).done(function (order){
                 alert("Done");
 
             });

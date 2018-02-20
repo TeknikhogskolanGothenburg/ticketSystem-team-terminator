@@ -16,18 +16,10 @@ namespace MailService
        public static string template()
         {
           
-          return @"< !DOCTYPE html >" +
-             "< html >" +
-             "< head >" +
-             "< style >" +
-             @"<link rel = ""stylesheet"" type = ""text/css"" href = ""http://www.stackmates.se/styler.css""  >" +
-            "</ style >" +
-            "</ head >" +
-            "< body >" +
-                    @"< div id = ""invoice-POS"" >" +
+          return  @"< div id = ""invoice-POS"" >" +
                         @"< center id =""top"" >" +
                          @"< div class=""logo""></div>" +
-                 @"<div class=""info"">" +
+                 @"<div class=""info"+">" +
                       @"<h2>" + InfoHeader + "</ h2 >" +
                     "</ div >< !--End Info-- >" +
 

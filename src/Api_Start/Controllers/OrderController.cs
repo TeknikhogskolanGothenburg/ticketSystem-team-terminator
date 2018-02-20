@@ -82,12 +82,12 @@ namespace Api_Start.Controllers
                 }
                 else
                 {
-                    return StatusCode(500);
+                    return StatusCode(500, "Ditt köp kunde inte genomföras");
                 }
 
             }
             catch {
-                return StatusCode(500);
+                return StatusCode(500,"det blev något fel");
 
             }
             return Ok();
