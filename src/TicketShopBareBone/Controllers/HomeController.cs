@@ -18,7 +18,7 @@ namespace TicketShopBareBone.Controllers
        
         public IActionResult Index()
         {
-            return View();
+            return View(ClienApi.GetAllEventsToBooking());
         }
 
         public IActionResult About()

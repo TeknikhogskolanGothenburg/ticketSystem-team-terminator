@@ -8,33 +8,47 @@ using System.Threading.Tasks;
 namespace MailService
 {
 
-    public static class MailHandler
+    public class MailHandler
     {
-        
-        public static void SendEmail(string host, int port, string pasword, string from, string to, string subject, string body)
+        public string host;
+        public int port;
+        public string pasword;
+        public string from;
+        public string to;
+        public string subject;
+        public string body;
+        private SmtpClient client;
+        private MailMessage message;
+
+        public  MailHandler()
         {
             // ta bort dessa om vi har andra, hårdkodade för nu.
-            host = "smtp.gmail.com";
-            port = 587;
 
+            client = new SmtpClient();
+
+            message = new MailMessage();
+
+
+        }
+        public void SEND()
+        {
             if (string.IsNullOrEmpty(from) || string.IsNullOrEmpty(to))
             {
-                return;
+                throw new Exception();
             }
-            SmtpClient client = new SmtpClient();
-            MailMessage message = new MailMessage();
             message.Body = body;
             client.Host = host;
             message.From = new MailAddress(from);
             message.Sender = new MailAddress(from);
             message.To.Add(to);
             message.Subject = subject;
+            message.IsBodyHtml = true;
             client.EnableSsl = true;
             client.Port = port;
             client.DeliveryMethod = SmtpDeliveryMethod.Network;
-            client.UseDefaultCredentials = false;
+            client.UseDefaultCredentials = true;
             client.Credentials = new System.Net.NetworkCredential(from, pasword);
-            
+
             client.Send(message);
         }
     }

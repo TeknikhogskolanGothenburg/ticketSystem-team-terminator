@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using TicketSystem.DatabaseRepository;
 using TicketSystem.DatabaseRepository.Model;
 using TicketSystem.PaymentProvider;
+using MailService;
 
 namespace Api_Start.Controllers
 {
@@ -27,7 +28,7 @@ namespace Api_Start.Controllers
             });
               
        
-            return db.GetallEventsAvadible().Where( x => x.EventStartDateTime.Date.Day >= e[0].EventStartDateTime.Date.Day && x.IsTaken == 0).ToList();
+            return db.GetallEventsAvadible().Where( x => x.EventStartDateTime.Date.Hour >= e[0].EventStartDateTime.Date.Hour && x.IsTaken == 0).ToList();
         }
 
         //// GET: api/Order/5
@@ -58,7 +59,26 @@ namespace Api_Start.Controllers
                 {
 
                     db.CreateOrder(value, e);
-                    MailService.MailHandler.SendEmail("smtp.gmail.com", 587, "ticketstore mail account password", "noreply@ticketstore.com", "customerEmail", "Order Receipt", "You have successfuly bought a ticket!");
+                    MessageTemplateMaker.InfoHeader = "Tack för ditt köp";
+                    MessageTemplateMaker.PersonEmail = value.Email;
+                    MessageTemplateMaker.VenueAddres = "Working on it";
+                    MessageTemplateMaker.TicketID = value.TicketID.ToString();
+
+                    MailHandler mailSender = new MailHandler();
+                        mailSender.body = MessageTemplateMaker.template();
+                        mailSender.from = "StackCompany@stackmates.se";
+                    mailSender.pasword = "ch3UzNlNiiut";
+                    mailSender.subject = "Ticket Shop";
+                    mailSender.to = value.Email;
+                    mailSender.host = "mx1.hostinger.se";
+                    mailSender.port = 587;
+
+
+
+                    mailSender.SEND();
+                    
+
+               
                 }
                 else
                 {

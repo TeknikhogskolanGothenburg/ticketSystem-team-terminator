@@ -34,7 +34,7 @@ namespace TicketSystem.DatabaseRepository
 
                         connection.Query("Insert into SeatsAtEventDate ([TicketEventDateID]) values (@TicketEventDateID)", new { TicketEventDateID = ticketEventDateID });
                         var seatID = connection.Query<int>("SELECT IDENT_CURRENT ('SeatsAtEventDate') AS Current_Identity").First();
-                        connection.Query("Insert into Tickets([SeatID],[Status]) values(@SeatID, @Status)", new { SeatID = seatID, Status = "0" });
+                        connection.Query("Insert into Tickets([SeatID],[IsTaken]) values(@SeatID, @IsTaken)", new { SeatID = seatID, IsTaken = "0" });
 
                     }
                     return true;
