@@ -32,9 +32,7 @@ namespace MailService
                           "TicketID   :" + TicketID + "</ br >" +
 
                    "</ p > " +
-              "</div>" +
-              "</body>"+
-              "</ html >";
+              "</div>";
 
 
 
