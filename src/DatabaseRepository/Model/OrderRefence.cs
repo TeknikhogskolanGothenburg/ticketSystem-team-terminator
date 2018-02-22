@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TicketSystem.DatabaseRepository.Model
 {
-   public class OrderList
+   public class OrderRefence
     {
 
         public string BuyerFirstName { get; set; }
@@ -14,16 +14,17 @@ namespace TicketSystem.DatabaseRepository.Model
         public int TicketID { get; set; }
         public string EventName { get; set; }
         public string EventHtmlDescription { get; set; }
-        //public string EventHtmlDescription { get; set; }
+        public int TicketEventDateID { get; set; }
+        public DateTime EventStartDateTime { get; set; }
+        public string VenueName { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
 
 
 
 
 
-        //, P.,P., TOTRAC., TT., TE.,TE.,TED.TicketEventDateID, TED.EventStartDateTime,V.VenueName, V.Address, V.City
-
-
-
+       
 
 
 

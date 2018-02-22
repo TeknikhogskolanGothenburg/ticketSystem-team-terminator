@@ -12,6 +12,7 @@ namespace TicketSystem.DatabaseRepository
         //Metoder för Events
 
         bool CreateEvent(Event value);
+        List<OrderRefence> GetOrdesByID(int Id);
         List<EventTest> GetallEvents();
          List<EventForbooking> GetallEventsAvadible();
 

@@ -31,6 +31,13 @@ namespace Api_Start.Controllers
            
             return DbHandler.SearchEvent(Search);
         }
+        [HttpGet("{ID}", Name = "SearchEVentByID")]
+        public List<OrderRefence> Get(int id)
+        {
+
+
+            return DbHandler.GetOrdesByID(id);
+        }
 
         // POST: api/CreateEvent
         [HttpPost]
@@ -46,6 +53,7 @@ namespace Api_Start.Controllers
                 return StatusCode(500);
             }
             return Ok();
+
         }
         
         // PUT: api/CreateEvent/5

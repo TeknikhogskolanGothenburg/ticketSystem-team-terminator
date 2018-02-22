@@ -112,26 +112,26 @@ namespace TicketSystem.DatabaseRepository
             }
 
         }
-        //public void GetOrdesByID(int Id)
-        //{
+        public List< OrderRefence> GetOrdesByID(int Id)
+        {
 
-        //    string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
-        //    using (var connection = new SqlConnection(connectionString))
-        //    {
-        //        connection.Open();
-        //        try
-        //        {
-        //            return connection.Query<EventForbooking>(" SELECT P.BuyerFirstName , P.BuyerLastName,P.PaymentReferenceId, TOTRAC.TransactionID, TT.TicketID, TE.EventName,TE.EventHtmlDescription,TED.TicketEventDateID, TED.EventStartDateTime,V.VenueName, V.Address, V.City, V.Country FROM TicketEvents AS TE INNER JOIN TicketEventDates AS TED ON TE.TicketEventID = TED.TicketEventID INNER JOIN Venues AS V ON TED.VenueId = V.VenueID INNER JOIN SeatsAtEventDate AS S ON S.TicketEventDateID = TED.TicketEventDateID INNER JOIN Tickets AS TT ON TT.SeatID = s.SeatID INNER JOIN TicketsToTransactions AS  TOTRAC ON TOTRAC.TicketID = TT.TicketID INNER JOIN TicketTransactions AS  p ON p.TransactionID = TOTRAC.TransactionID Where TED.TicketEventDateID = @ID ", new {ID = Id }).ToList();
-        //        }
-        //        catch
-        //        {
-        //            throw new Exception();
-        //        }
-        //    }
+            string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                try
+                {
+                    return connection.Query<OrderRefence>(" SELECT P.BuyerFirstName , P.BuyerLastName,P.PaymentReferenceId, TOTRAC.TransactionID, TT.TicketID, TE.EventName,TE.EventHtmlDescription,TED.TicketEventDateID, TED.EventStartDateTime,V.VenueName, V.Address, V.City, V.Country FROM TicketEvents AS TE INNER JOIN TicketEventDates AS TED ON TE.TicketEventID = TED.TicketEventID INNER JOIN Venues AS V ON TED.VenueId = V.VenueID INNER JOIN SeatsAtEventDate AS S ON S.TicketEventDateID = TED.TicketEventDateID INNER JOIN Tickets AS TT ON TT.SeatID = s.SeatID INNER JOIN TicketsToTransactions AS  TOTRAC ON TOTRAC.TicketID = TT.TicketID INNER JOIN TicketTransactions AS  p ON p.TransactionID = TOTRAC.TransactionID Where TED.TicketEventDateID = @ID ", new { ID = Id }).ToList();
+                }
+                catch
+                {
+                    throw new Exception();
+                }
+            }
 
-        //    51
+            51
 
-        //}
+        }
         public List<EventTest> GetallEvents()
         {
             string connectionString = CONN;    /*ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;*/
